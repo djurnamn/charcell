@@ -1,0 +1,24 @@
+{
+  "// purpose": "type-check the rendered svelte target as a strict consumer would, with svelte-check: the same flags as tsconfig.dist.json, over the .svelte components and the declarations beside the rune modules charcell/svelte ships.",
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "types": [],
+    "strict": true,
+    "noUnusedLocals": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+    "noUncheckedIndexedAccess": true,
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "dist/svelte/**/*.svelte",
+    "dist/svelte/**/*.ts",
+    "test/bundler-types.d.ts"
+  ]
+}

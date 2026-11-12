@@ -1,0 +1,554 @@
+@@ variant-boxed
+{m|┌───────────────┬──────────┬──────┐}
+{m|│} {m|rider}         {m|│} {m|weapon}   {m|│} {m|hits} {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a vulture     {m|│} chain    {m|│}    4 {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a vulture     {m|│} chainsaw {m|│}    1 {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a rottwheeler {m|│} mace     {m|│}    4 {m|│}
+{m|└───────────────┴──────────┴──────┘}
+
+@@ variant-boxed:vertical-bar-hover
+{m|┌───────────────┬──────────┬──────┐}
+{m|│} {m|rider}         {m|│} {m|weapon}   {m|│} {m|hits} {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a vulture     {m|│} chain    {m|│}    4 {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a vulture     {m|│} chainsaw {m|│}    1 {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a rottwheeler {m|│} mace     {m|│}    4 {m|│}
+{m|└───────────────┴──────────┴──────┘}
+
+@@ variant-boxed:step-hover
+{m|┌───────────────┬──────────┬──────┐}
+{m|│} {m|rider}         {m|│} {m|weapon}   {m|│} {m|hits} {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a vulture     {m|│} chain    {m|│}    4 {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a vulture     {m|│} chainsaw {m|│}    1 {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a rottwheeler {m|│} mace     {m|│}    4 {m|│}
+{m|└───────────────┴──────────┴──────┘}
+
+@@ variant-boxed:horizontal-bar-hover
+{m|┌───────────────┬──────────┬──────┐}
+{m|│} {m|rider}         {m|│} {m|weapon}   {m|│} {m|hits} {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a vulture     {m|│} chain    {m|│}    4 {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a vulture     {m|│} chainsaw {m|│}    1 {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a rottwheeler {m|│} mace     {m|│}    4 {m|│}
+{m|└───────────────┴──────────┴──────┘}
+
+@@ variant-boxed:press
+{m|┌───────────────┬──────────┬──────┐}
+{m|│} {m|rider}         {m|│} {m|weapon}   {m|│} {m|hits} {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a vulture     {m|│} chain    {m|│}    4 {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a vulture     {m|│} chainsaw {m|│}    1 {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a rottwheeler {m|│} mace     {m|│}    4 {m|│}
+{m|└───────────────┴──────────┴──────┘}
+
+@@ caption
+{m|┌───────────────┬──────────┬──────┐}
+{m|│} {m|rider}         {m|│} {m|weapon}   {m|│} {m|hits} {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a vulture     {m|│} chain    {m|│}    4 {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a vulture     {m|│} chainsaw {m|│}    1 {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a rottwheeler {m|│} mace     {m|│}    4 {m|│}
+{m|└───────────────┴──────────┴──────┘}
+
+@@ caption:vertical-bar-hover
+{m|┌───────────────┬──────────┬──────┐}
+{m|│} {m|rider}         {m|│} {m|weapon}   {m|│} {m|hits} {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a vulture     {m|│} chain    {m|│}    4 {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a vulture     {m|│} chainsaw {m|│}    1 {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a rottwheeler {m|│} mace     {m|│}    4 {m|│}
+{m|└───────────────┴──────────┴──────┘}
+
+@@ caption:step-hover
+{m|┌───────────────┬──────────┬──────┐}
+{m|│} {m|rider}         {m|│} {m|weapon}   {m|│} {m|hits} {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a vulture     {m|│} chain    {m|│}    4 {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a vulture     {m|│} chainsaw {m|│}    1 {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a rottwheeler {m|│} mace     {m|│}    4 {m|│}
+{m|└───────────────┴──────────┴──────┘}
+
+@@ caption:horizontal-bar-hover
+{m|┌───────────────┬──────────┬──────┐}
+{m|│} {m|rider}         {m|│} {m|weapon}   {m|│} {m|hits} {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a vulture     {m|│} chain    {m|│}    4 {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a vulture     {m|│} chainsaw {m|│}    1 {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a rottwheeler {m|│} mace     {m|│}    4 {m|│}
+{m|└───────────────┴──────────┴──────┘}
+
+@@ caption:press
+{m|┌───────────────┬──────────┬──────┐}
+{m|│} {m|rider}         {m|│} {m|weapon}   {m|│} {m|hits} {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a vulture     {m|│} chain    {m|│}    4 {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a vulture     {m|│} chainsaw {m|│}    1 {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a rottwheeler {m|│} mace     {m|│}    4 {m|│}
+{m|└───────────────┴──────────┴──────┘}
+
+@@ hideHeader
+{m|┌───────────────┬──────────┬───┐}
+{m|│} a vulture     {m|│} chain    {m|│} 4 {m|│}
+{m|├───────────────┼──────────┼───┤}
+{m|│} a vulture     {m|│} chainsaw {m|│} 1 {m|│}
+{m|├───────────────┼──────────┼───┤}
+{m|│} a rottwheeler {m|│} mace     {m|│} 4 {m|│}
+{m|└───────────────┴──────────┴───┘}
+
+@@ hideHeader:vertical-bar-hover
+{m|┌───────────────┬──────────┬───┐}
+{m|│} a vulture     {m|│} chain    {m|│} 4 {m|│}
+{m|├───────────────┼──────────┼───┤}
+{m|│} a vulture     {m|│} chainsaw {m|│} 1 {m|│}
+{m|├───────────────┼──────────┼───┤}
+{m|│} a rottwheeler {m|│} mace     {m|│} 4 {m|│}
+{m|└───────────────┴──────────┴───┘}
+
+@@ hideHeader:step-hover
+{m|┌───────────────┬──────────┬───┐}
+{m|│} a vulture     {m|│} chain    {m|│} 4 {m|│}
+{m|├───────────────┼──────────┼───┤}
+{m|│} a vulture     {m|│} chainsaw {m|│} 1 {m|│}
+{m|├───────────────┼──────────┼───┤}
+{m|│} a rottwheeler {m|│} mace     {m|│} 4 {m|│}
+{m|└───────────────┴──────────┴───┘}
+
+@@ hideHeader:horizontal-bar-hover
+{m|┌───────────────┬──────────┬───┐}
+{m|│} a vulture     {m|│} chain    {m|│} 4 {m|│}
+{m|├───────────────┼──────────┼───┤}
+{m|│} a vulture     {m|│} chainsaw {m|│} 1 {m|│}
+{m|├───────────────┼──────────┼───┤}
+{m|│} a rottwheeler {m|│} mace     {m|│} 4 {m|│}
+{m|└───────────────┴──────────┴───┘}
+
+@@ hideHeader:press
+{m|┌───────────────┬──────────┬───┐}
+{m|│} a vulture     {m|│} chain    {m|│} 4 {m|│}
+{m|├───────────────┼──────────┼───┤}
+{m|│} a vulture     {m|│} chainsaw {m|│} 1 {m|│}
+{m|├───────────────┼──────────┼───┤}
+{m|│} a rottwheeler {m|│} mace     {m|│} 4 {m|│}
+{m|└───────────────┴──────────┴───┘}
+
+@@ variant-dense
+ {m|rider          weapon    hits}
+{f|───────────────────────────────}
+ a vulture      chain        4
+ a vulture      chainsaw     1
+ a rottwheeler  mace         4
+
+@@ variant-dense:vertical-bar-hover
+ {m|rider          weapon    hits}
+{f|───────────────────────────────}
+ a vulture      chain        4
+ a vulture      chainsaw     1
+ a rottwheeler  mace         4
+
+@@ variant-dense:step-hover
+ {m|rider          weapon    hits}
+{f|───────────────────────────────}
+ a vulture      chain        4
+ a vulture      chainsaw     1
+ a rottwheeler  mace         4
+
+@@ variant-dense:horizontal-bar-hover
+ {m|rider          weapon    hits}
+{f|───────────────────────────────}
+ a vulture      chain        4
+ a vulture      chainsaw     1
+ a rottwheeler  mace         4
+
+@@ variant-dense:press
+ {m|rider          weapon    hits}
+{f|───────────────────────────────}
+ a vulture      chain        4
+ a vulture      chainsaw     1
+ a rottwheeler  mace         4
+
+@@ separators-rows
+{m|┌───────────────────────────────┐}
+{m|│} {m|rider          weapon    hits} {m|│}
+{m|├───────────────────────────────┤}
+{m|│} a vulture      chain        4 {m|│}
+{m|├───────────────────────────────┤}
+{m|│} a vulture      chainsaw     1 {m|│}
+{m|├───────────────────────────────┤}
+{m|│} a rottwheeler  mace         4 {m|│}
+{m|└───────────────────────────────┘}
+
+@@ separators-rows:vertical-bar-hover
+{m|┌───────────────────────────────┐}
+{m|│} {m|rider          weapon    hits} {m|│}
+{m|├───────────────────────────────┤}
+{m|│} a vulture      chain        4 {m|│}
+{m|├───────────────────────────────┤}
+{m|│} a vulture      chainsaw     1 {m|│}
+{m|├───────────────────────────────┤}
+{m|│} a rottwheeler  mace         4 {m|│}
+{m|└───────────────────────────────┘}
+
+@@ separators-rows:step-hover
+{m|┌───────────────────────────────┐}
+{m|│} {m|rider          weapon    hits} {m|│}
+{m|├───────────────────────────────┤}
+{m|│} a vulture      chain        4 {m|│}
+{m|├───────────────────────────────┤}
+{m|│} a vulture      chainsaw     1 {m|│}
+{m|├───────────────────────────────┤}
+{m|│} a rottwheeler  mace         4 {m|│}
+{m|└───────────────────────────────┘}
+
+@@ separators-rows:horizontal-bar-hover
+{m|┌───────────────────────────────┐}
+{m|│} {m|rider          weapon    hits} {m|│}
+{m|├───────────────────────────────┤}
+{m|│} a vulture      chain        4 {m|│}
+{m|├───────────────────────────────┤}
+{m|│} a vulture      chainsaw     1 {m|│}
+{m|├───────────────────────────────┤}
+{m|│} a rottwheeler  mace         4 {m|│}
+{m|└───────────────────────────────┘}
+
+@@ separators-rows:press
+{m|┌───────────────────────────────┐}
+{m|│} {m|rider          weapon    hits} {m|│}
+{m|├───────────────────────────────┤}
+{m|│} a vulture      chain        4 {m|│}
+{m|├───────────────────────────────┤}
+{m|│} a vulture      chainsaw     1 {m|│}
+{m|├───────────────────────────────┤}
+{m|│} a rottwheeler  mace         4 {m|│}
+{m|└───────────────────────────────┘}
+
+@@ separators-columns
+{m|┌───────────────┬──────────┬──────┐}
+{m|│} {m|rider}         {m|│} {m|weapon}   {m|│} {m|hits} {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a vulture     {m|│} chain    {m|│}    4 {m|│}
+{m|│} a vulture     {m|│} chainsaw {m|│}    1 {m|│}
+{m|│} a rottwheeler {m|│} mace     {m|│}    4 {m|│}
+{m|└───────────────┴──────────┴──────┘}
+
+@@ separators-columns:vertical-bar-hover
+{m|┌───────────────┬──────────┬──────┐}
+{m|│} {m|rider}         {m|│} {m|weapon}   {m|│} {m|hits} {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a vulture     {m|│} chain    {m|│}    4 {m|│}
+{m|│} a vulture     {m|│} chainsaw {m|│}    1 {m|│}
+{m|│} a rottwheeler {m|│} mace     {m|│}    4 {m|│}
+{m|└───────────────┴──────────┴──────┘}
+
+@@ separators-columns:step-hover
+{m|┌───────────────┬──────────┬──────┐}
+{m|│} {m|rider}         {m|│} {m|weapon}   {m|│} {m|hits} {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a vulture     {m|│} chain    {m|│}    4 {m|│}
+{m|│} a vulture     {m|│} chainsaw {m|│}    1 {m|│}
+{m|│} a rottwheeler {m|│} mace     {m|│}    4 {m|│}
+{m|└───────────────┴──────────┴──────┘}
+
+@@ separators-columns:horizontal-bar-hover
+{m|┌───────────────┬──────────┬──────┐}
+{m|│} {m|rider}         {m|│} {m|weapon}   {m|│} {m|hits} {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a vulture     {m|│} chain    {m|│}    4 {m|│}
+{m|│} a vulture     {m|│} chainsaw {m|│}    1 {m|│}
+{m|│} a rottwheeler {m|│} mace     {m|│}    4 {m|│}
+{m|└───────────────┴──────────┴──────┘}
+
+@@ separators-columns:press
+{m|┌───────────────┬──────────┬──────┐}
+{m|│} {m|rider}         {m|│} {m|weapon}   {m|│} {m|hits} {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a vulture     {m|│} chain    {m|│}    4 {m|│}
+{m|│} a vulture     {m|│} chainsaw {m|│}    1 {m|│}
+{m|│} a rottwheeler {m|│} mace     {m|│}    4 {m|│}
+{m|└───────────────┴──────────┴──────┘}
+
+@@ separators-none
+{m|┌───────────────────────────────┐}
+{m|│} {m|rider          weapon    hits} {m|│}
+{m|├───────────────────────────────┤}
+{m|│} a vulture      chain        4 {m|│}
+{m|│} a vulture      chainsaw     1 {m|│}
+{m|│} a rottwheeler  mace         4 {m|│}
+{m|└───────────────────────────────┘}
+
+@@ separators-none:vertical-bar-hover
+{m|┌───────────────────────────────┐}
+{m|│} {m|rider          weapon    hits} {m|│}
+{m|├───────────────────────────────┤}
+{m|│} a vulture      chain        4 {m|│}
+{m|│} a vulture      chainsaw     1 {m|│}
+{m|│} a rottwheeler  mace         4 {m|│}
+{m|└───────────────────────────────┘}
+
+@@ separators-none:step-hover
+{m|┌───────────────────────────────┐}
+{m|│} {m|rider          weapon    hits} {m|│}
+{m|├───────────────────────────────┤}
+{m|│} a vulture      chain        4 {m|│}
+{m|│} a vulture      chainsaw     1 {m|│}
+{m|│} a rottwheeler  mace         4 {m|│}
+{m|└───────────────────────────────┘}
+
+@@ separators-none:horizontal-bar-hover
+{m|┌───────────────────────────────┐}
+{m|│} {m|rider          weapon    hits} {m|│}
+{m|├───────────────────────────────┤}
+{m|│} a vulture      chain        4 {m|│}
+{m|│} a vulture      chainsaw     1 {m|│}
+{m|│} a rottwheeler  mace         4 {m|│}
+{m|└───────────────────────────────┘}
+
+@@ separators-none:press
+{m|┌───────────────────────────────┐}
+{m|│} {m|rider          weapon    hits} {m|│}
+{m|├───────────────────────────────┤}
+{m|│} a vulture      chain        4 {m|│}
+{m|│} a vulture      chainsaw     1 {m|│}
+{m|│} a rottwheeler  mace         4 {m|│}
+{m|└───────────────────────────────┘}
+
+@@ border-none
+                {m|╷}          {m|╷}
+  {m|rider}         {m|│} {m|weapon}   {m|│} {m|hits}
+{m|╶───────────────┼──────────┼──────╴}
+  a vulture     {m|│} chain    {m|│}    4
+{m|╶───────────────┼──────────┼──────╴}
+  a vulture     {m|│} chainsaw {m|│}    1
+{m|╶───────────────┼──────────┼──────╴}
+  a rottwheeler {m|│} mace     {m|│}    4
+                {m|╵}          {m|╵}
+
+@@ border-none:vertical-bar-hover
+                {m|╷}          {m|╷}
+  {m|rider}         {m|│} {m|weapon}   {m|│} {m|hits}
+{m|╶───────────────┼──────────┼──────╴}
+  a vulture     {m|│} chain    {m|│}    4
+{m|╶───────────────┼──────────┼──────╴}
+  a vulture     {m|│} chainsaw {m|│}    1
+{m|╶───────────────┼──────────┼──────╴}
+  a rottwheeler {m|│} mace     {m|│}    4
+                {m|╵}          {m|╵}
+
+@@ border-none:step-hover
+                {m|╷}          {m|╷}
+  {m|rider}         {m|│} {m|weapon}   {m|│} {m|hits}
+{m|╶───────────────┼──────────┼──────╴}
+  a vulture     {m|│} chain    {m|│}    4
+{m|╶───────────────┼──────────┼──────╴}
+  a vulture     {m|│} chainsaw {m|│}    1
+{m|╶───────────────┼──────────┼──────╴}
+  a rottwheeler {m|│} mace     {m|│}    4
+                {m|╵}          {m|╵}
+
+@@ border-none:horizontal-bar-hover
+                {m|╷}          {m|╷}
+  {m|rider}         {m|│} {m|weapon}   {m|│} {m|hits}
+{m|╶───────────────┼──────────┼──────╴}
+  a vulture     {m|│} chain    {m|│}    4
+{m|╶───────────────┼──────────┼──────╴}
+  a vulture     {m|│} chainsaw {m|│}    1
+{m|╶───────────────┼──────────┼──────╴}
+  a rottwheeler {m|│} mace     {m|│}    4
+                {m|╵}          {m|╵}
+
+@@ border-none:press
+                {m|╷}          {m|╷}
+  {m|rider}         {m|│} {m|weapon}   {m|│} {m|hits}
+{m|╶───────────────┼──────────┼──────╴}
+  a vulture     {m|│} chain    {m|│}    4
+{m|╶───────────────┼──────────┼──────╴}
+  a vulture     {m|│} chainsaw {m|│}    1
+{m|╶───────────────┼──────────┼──────╴}
+  a rottwheeler {m|│} mace     {m|│}    4
+                {m|╵}          {m|╵}
+
+@@ border-rounded
+{m|╭───────────────┬──────────┬──────╮}
+{m|│} {m|rider}         {m|│} {m|weapon}   {m|│} {m|hits} {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a vulture     {m|│} chain    {m|│}    4 {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a vulture     {m|│} chainsaw {m|│}    1 {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a rottwheeler {m|│} mace     {m|│}    4 {m|│}
+{m|╰───────────────┴──────────┴──────╯}
+
+@@ border-rounded:vertical-bar-hover
+{m|╭───────────────┬──────────┬──────╮}
+{m|│} {m|rider}         {m|│} {m|weapon}   {m|│} {m|hits} {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a vulture     {m|│} chain    {m|│}    4 {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a vulture     {m|│} chainsaw {m|│}    1 {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a rottwheeler {m|│} mace     {m|│}    4 {m|│}
+{m|╰───────────────┴──────────┴──────╯}
+
+@@ border-rounded:step-hover
+{m|╭───────────────┬──────────┬──────╮}
+{m|│} {m|rider}         {m|│} {m|weapon}   {m|│} {m|hits} {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a vulture     {m|│} chain    {m|│}    4 {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a vulture     {m|│} chainsaw {m|│}    1 {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a rottwheeler {m|│} mace     {m|│}    4 {m|│}
+{m|╰───────────────┴──────────┴──────╯}
+
+@@ border-rounded:horizontal-bar-hover
+{m|╭───────────────┬──────────┬──────╮}
+{m|│} {m|rider}         {m|│} {m|weapon}   {m|│} {m|hits} {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a vulture     {m|│} chain    {m|│}    4 {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a vulture     {m|│} chainsaw {m|│}    1 {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a rottwheeler {m|│} mace     {m|│}    4 {m|│}
+{m|╰───────────────┴──────────┴──────╯}
+
+@@ border-rounded:press
+{m|╭───────────────┬──────────┬──────╮}
+{m|│} {m|rider}         {m|│} {m|weapon}   {m|│} {m|hits} {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a vulture     {m|│} chain    {m|│}    4 {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a vulture     {m|│} chainsaw {m|│}    1 {m|│}
+{m|├───────────────┼──────────┼──────┤}
+{m|│} a rottwheeler {m|│} mace     {m|│}    4 {m|│}
+{m|╰───────────────┴──────────┴──────╯}
+
+@@ border-heavy
+{m|┏━━━━━━━━━━━━━━━┯━━━━━━━━━━┯━━━━━━┓}
+{m|┃} {m|rider}         {m|│} {m|weapon}   {m|│} {m|hits} {m|┃}
+{m|┠───────────────┼──────────┼──────┨}
+{m|┃} a vulture     {m|│} chain    {m|│}    4 {m|┃}
+{m|┠───────────────┼──────────┼──────┨}
+{m|┃} a vulture     {m|│} chainsaw {m|│}    1 {m|┃}
+{m|┠───────────────┼──────────┼──────┨}
+{m|┃} a rottwheeler {m|│} mace     {m|│}    4 {m|┃}
+{m|┗━━━━━━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━┛}
+
+@@ border-heavy:vertical-bar-hover
+{m|┏━━━━━━━━━━━━━━━┯━━━━━━━━━━┯━━━━━━┓}
+{m|┃} {m|rider}         {m|│} {m|weapon}   {m|│} {m|hits} {m|┃}
+{m|┠───────────────┼──────────┼──────┨}
+{m|┃} a vulture     {m|│} chain    {m|│}    4 {m|┃}
+{m|┠───────────────┼──────────┼──────┨}
+{m|┃} a vulture     {m|│} chainsaw {m|│}    1 {m|┃}
+{m|┠───────────────┼──────────┼──────┨}
+{m|┃} a rottwheeler {m|│} mace     {m|│}    4 {m|┃}
+{m|┗━━━━━━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━┛}
+
+@@ border-heavy:step-hover
+{m|┏━━━━━━━━━━━━━━━┯━━━━━━━━━━┯━━━━━━┓}
+{m|┃} {m|rider}         {m|│} {m|weapon}   {m|│} {m|hits} {m|┃}
+{m|┠───────────────┼──────────┼──────┨}
+{m|┃} a vulture     {m|│} chain    {m|│}    4 {m|┃}
+{m|┠───────────────┼──────────┼──────┨}
+{m|┃} a vulture     {m|│} chainsaw {m|│}    1 {m|┃}
+{m|┠───────────────┼──────────┼──────┨}
+{m|┃} a rottwheeler {m|│} mace     {m|│}    4 {m|┃}
+{m|┗━━━━━━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━┛}
+
+@@ border-heavy:horizontal-bar-hover
+{m|┏━━━━━━━━━━━━━━━┯━━━━━━━━━━┯━━━━━━┓}
+{m|┃} {m|rider}         {m|│} {m|weapon}   {m|│} {m|hits} {m|┃}
+{m|┠───────────────┼──────────┼──────┨}
+{m|┃} a vulture     {m|│} chain    {m|│}    4 {m|┃}
+{m|┠───────────────┼──────────┼──────┨}
+{m|┃} a vulture     {m|│} chainsaw {m|│}    1 {m|┃}
+{m|┠───────────────┼──────────┼──────┨}
+{m|┃} a rottwheeler {m|│} mace     {m|│}    4 {m|┃}
+{m|┗━━━━━━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━┛}
+
+@@ border-heavy:press
+{m|┏━━━━━━━━━━━━━━━┯━━━━━━━━━━┯━━━━━━┓}
+{m|┃} {m|rider}         {m|│} {m|weapon}   {m|│} {m|hits} {m|┃}
+{m|┠───────────────┼──────────┼──────┨}
+{m|┃} a vulture     {m|│} chain    {m|│}    4 {m|┃}
+{m|┠───────────────┼──────────┼──────┨}
+{m|┃} a vulture     {m|│} chainsaw {m|│}    1 {m|┃}
+{m|┠───────────────┼──────────┼──────┨}
+{m|┃} a rottwheeler {m|│} mace     {m|│}    4 {m|┃}
+{m|┗━━━━━━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━┛}
+
+@@ border-double
+{m|╔═══════════════╤══════════╤══════╗}
+{m|║} {m|rider}         {m|│} {m|weapon}   {m|│} {m|hits} {m|║}
+{m|╟───────────────┼──────────┼──────╢}
+{m|║} a vulture     {m|│} chain    {m|│}    4 {m|║}
+{m|╟───────────────┼──────────┼──────╢}
+{m|║} a vulture     {m|│} chainsaw {m|│}    1 {m|║}
+{m|╟───────────────┼──────────┼──────╢}
+{m|║} a rottwheeler {m|│} mace     {m|│}    4 {m|║}
+{m|╚═══════════════╧══════════╧══════╝}
+
+@@ border-double:vertical-bar-hover
+{m|╔═══════════════╤══════════╤══════╗}
+{m|║} {m|rider}         {m|│} {m|weapon}   {m|│} {m|hits} {m|║}
+{m|╟───────────────┼──────────┼──────╢}
+{m|║} a vulture     {m|│} chain    {m|│}    4 {m|║}
+{m|╟───────────────┼──────────┼──────╢}
+{m|║} a vulture     {m|│} chainsaw {m|│}    1 {m|║}
+{m|╟───────────────┼──────────┼──────╢}
+{m|║} a rottwheeler {m|│} mace     {m|│}    4 {m|║}
+{m|╚═══════════════╧══════════╧══════╝}
+
+@@ border-double:step-hover
+{m|╔═══════════════╤══════════╤══════╗}
+{m|║} {m|rider}         {m|│} {m|weapon}   {m|│} {m|hits} {m|║}
+{m|╟───────────────┼──────────┼──────╢}
+{m|║} a vulture     {m|│} chain    {m|│}    4 {m|║}
+{m|╟───────────────┼──────────┼──────╢}
+{m|║} a vulture     {m|│} chainsaw {m|│}    1 {m|║}
+{m|╟───────────────┼──────────┼──────╢}
+{m|║} a rottwheeler {m|│} mace     {m|│}    4 {m|║}
+{m|╚═══════════════╧══════════╧══════╝}
+
+@@ border-double:horizontal-bar-hover
+{m|╔═══════════════╤══════════╤══════╗}
+{m|║} {m|rider}         {m|│} {m|weapon}   {m|│} {m|hits} {m|║}
+{m|╟───────────────┼──────────┼──────╢}
+{m|║} a vulture     {m|│} chain    {m|│}    4 {m|║}
+{m|╟───────────────┼──────────┼──────╢}
+{m|║} a vulture     {m|│} chainsaw {m|│}    1 {m|║}
+{m|╟───────────────┼──────────┼──────╢}
+{m|║} a rottwheeler {m|│} mace     {m|│}    4 {m|║}
+{m|╚═══════════════╧══════════╧══════╝}
+
+@@ border-double:press
+{m|╔═══════════════╤══════════╤══════╗}
+{m|║} {m|rider}         {m|│} {m|weapon}   {m|│} {m|hits} {m|║}
+{m|╟───────────────┼──────────┼──────╢}
+{m|║} a vulture     {m|│} chain    {m|│}    4 {m|║}
+{m|╟───────────────┼──────────┼──────╢}
+{m|║} a vulture     {m|│} chainsaw {m|│}    1 {m|║}
+{m|╟───────────────┼──────────┼──────╢}
+{m|║} a rottwheeler {m|│} mace     {m|│}    4 {m|║}
+{m|╚═══════════════╧══════════╧══════╝}

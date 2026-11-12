@@ -1,0 +1,126 @@
+@@ default
+ gangs   {m|⠿} riders
+
+   {m|⠶⠶}         {m|⠶⠶}
+ jailed  {m|⠿} darrel
+
+
+@@ default:hover
+ gangs   {sw|⠿} riders
+         {w| }
+   {m|⠶⠶}    {w| }    {m|⠶⠶}
+ jailed  {sw|⠿} darrel
+         {w| }
+
+@@ default:press
+ gangs   {M|⠿} riders
+         {M| }
+   {m|⠶⠶}    {M| }    {m|⠶⠶}
+ jailed  {M|⠿} darrel
+         {M| }
+
+@@ default:focus
+ gangs   {M|⠿} riders
+         {M| }
+   {m|⠶⠶}    {M| }    {m|⠶⠶}
+ jailed  {M|⠿} darrel
+         {M| }
+
+@@ rule
+ gangs   {m|⠿} riders
+         {f|│}
+{f|───}{m|⠶⠶}{f|────┼────}{m|⠶⠶}{f|────}
+ jailed  {m|⠿} darrel
+         {f|│}
+
+@@ rule:hover
+ gangs   {sw|⠿} riders
+         {w| }
+{f|───}{m|⠶⠶}{f|────}{w| }{f|────}{m|⠶⠶}{f|────}
+ jailed  {sw|⠿} darrel
+         {w| }
+
+@@ rule:press
+ gangs   {M|⠿} riders
+         {M| }
+{f|───}{m|⠶⠶}{f|────}{Mf|─}{f|────}{m|⠶⠶}{f|────}
+ jailed  {M|⠿} darrel
+         {M| }
+
+@@ rule:focus
+ gangs   {M|⠿} riders
+         {M| }
+{f|───}{m|⠶⠶}{f|────}{Mf|─}{f|────}{m|⠶⠶}{f|────}
+ jailed  {M|⠿} darrel
+         {M| }
+
+@@ rowGrips-one
+ gangs   {m|⠿} riders
+
+          {m|⠶⠶}
+ jailed  {m|⠿} darrel
+
+
+@@ rowGrips-one:hover
+ gangs   {sw|⠿} riders
+         {w| }
+         {w| }{m|⠶⠶}
+ jailed  {sw|⠿} darrel
+         {w| }
+
+@@ rowGrips-one:press
+ gangs   {M|⠿} riders
+         {M| }
+         {M| }{m|⠶⠶}
+ jailed  {M|⠿} darrel
+         {M| }
+
+@@ rowGrips-one:focus
+ gangs   {M|⠿} riders
+         {M| }
+         {M| }{m|⠶⠶}
+ jailed  {M|⠿} darrel
+         {M| }
+
+@@ rowGrips-one:handle-row
+ gangs   {m|⠿} riders
+         {f|│}
+ jailed {f|─┼}{m|⠶⠶}{f|─────} +
+ jailed  {m|⠿} darrel
+         {f|│}
+
+@@ rule-join-frame
+{m|┌─────────┬──────────┐}
+{m|│} gangs   {m|⠿} riders   {m|│}
+{m|│}         {m|│}          {m|│}
+{m|├───⠶⠶────┼────⠶⠶────┤}
+{m|│} jailed  {m|⠿} darrel   {m|│}
+{m|│}         {m|│}          {m|│}
+{m|└─────────┴──────────┘}
+
+@@ rule-join-frame:hover
+{m|┌─────────┬──────────┐}
+{m|│} gangs   {sw|⠿} riders   {m|│}
+{m|│}         {w| }          {m|│}
+{m|├───⠶⠶────}{mw|─}{m|────⠶⠶────┤}
+{m|│} jailed  {sw|⠿} darrel   {m|│}
+{m|│}         {w| }          {m|│}
+{m|└─────────┴──────────┘}
+
+@@ rule-join-frame:press
+{m|┌─────────┬──────────┐}
+{m|│} gangs   {M|⠿} riders   {m|│}
+{m|│}         {M| }          {m|│}
+{m|├───⠶⠶────}{M| }{m|────⠶⠶────┤}
+{m|│} jailed  {M|⠿} darrel   {m|│}
+{m|│}         {M| }          {m|│}
+{m|└─────────┴──────────┘}
+
+@@ rule-join-frame:focus
+{m|┌─────────┬──────────┐}
+{m|│} gangs   {M|⠿} riders   {m|│}
+{m|│}         {M| }          {m|│}
+{m|├───⠶⠶────}{M| }{m|────⠶⠶────┤}
+{m|│} jailed  {M|⠿} darrel   {m|│}
+{m|│}         {M| }          {m|│}
+{m|└─────────┴──────────┘}

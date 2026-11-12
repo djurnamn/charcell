@@ -1,0 +1,9 @@
+// charcell's page opinions, opt-in: the element reset and the page canvas.
+//
+// Take this beside `charcell/css` in an app charcell owns (or take
+// `charcell/css/full`, which is both). Leave it out when embedding charcell in
+// a page with its own reset and canvas: the components expect a reset of the
+// same strength underneath (hard-reset ships one on its own), and restate
+// nothing it says.
+@use "reset";
+@use "page";

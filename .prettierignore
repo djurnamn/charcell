@@ -1,0 +1,33 @@
+# Generated output: the kit's build and its add command, which every build
+# rewrites, the preview's generated sources and static build, the site's
+# generated data and build, and the cell check's reports.
+dist/
+bin/add.mjs
+.preview-generated/
+.preview-static/
+site/.astro/
+site/dist/
+site/src/generated/
+test/text/compare.html
+test/text/*report.json
+test/text/scenarios.json
+expressibility/cells/
+pnpm-lock.yaml
+
+# Written by the sibling pin tool, in its own layout.
+sibling-pin.json
+
+# Agent worktrees, which are full copies of the repository.
+.claude/
+
+# The experiments that tested the kit's premise, kept as they were run.
+expressibility/
+
+# Documents are written by hand, tables included.
+*.md
+*.mdx
+
+# Stylesheets: a custom property's value ships verbatim, line breaks included,
+# so a reflow would change the compiled CSS.
+*.scss
+*.css

@@ -1,0 +1,199 @@
+@@ raised
+┌─────────┐
+│{i| details }│
+├─────────┴───────────────────╖
+│ ben, leader of the polecats ║
+╘═════════════════════════════╝
+
+@@ raised:hover
+┌─────────┐
+│{I| details }│
+├─────────┴───────────────────╖
+│ ben, leader of the polecats ║
+╘═════════════════════════════╝
+
+@@ raised:press
+┌─────────┐
+│{I| details }│
+├─────────┴───────────────────╖
+│ ben, leader of the polecats ║
+╘═════════════════════════════╝
+
+@@ raised:focus
+┌─────────┐
+│{i|❯details }│
+├─────────┴───────────────────╖
+│ ben, leader of the polecats ║
+╘═════════════════════════════╝
+
+@@ placement-right-start
+┌─────────┐┌─────────────────────────────╖
+│{i| details }││ ben, leader of the polecats ║
+└─────────┘╘═════════════════════════════╝
+
+@@ placement-right-start:hover
+┌─────────┐┌─────────────────────────────╖
+│{I| details }││ ben, leader of the polecats ║
+└─────────┘╘═════════════════════════════╝
+
+@@ placement-right-start:press
+┌─────────┐┌─────────────────────────────╖
+│{I| details }││ ben, leader of the polecats ║
+└─────────┘╘═════════════════════════════╝
+
+@@ placement-right-start:focus
+┌─────────┐┌─────────────────────────────╖
+│{i|❯details }││ ben, leader of the polecats ║
+└─────────┘╘═════════════════════════════╝
+
+@@ border-none
+┌─────────┐
+│{i| details }│
+└─────────┘
+
+  ben, leader of the polecats
+
+
+@@ border-none:hover
+┌─────────┐
+│{I| details }│
+└─────────┘
+
+  ben, leader of the polecats
+
+
+@@ border-none:press
+┌─────────┐
+│{I| details }│
+└─────────┘
+
+  ben, leader of the polecats
+
+
+@@ border-none:focus
+┌─────────┐
+│{i|❯details }│
+└─────────┘
+
+  ben, leader of the polecats
+
+
+@@ border-single
+┌─────────┐
+│{i| details }│
+├─────────┴───────────────────┐
+│ ben, leader of the polecats │
+└─────────────────────────────┘
+
+@@ border-single:hover
+┌─────────┐
+│{I| details }│
+├─────────┴───────────────────┐
+│ ben, leader of the polecats │
+└─────────────────────────────┘
+
+@@ border-single:press
+┌─────────┐
+│{I| details }│
+├─────────┴───────────────────┐
+│ ben, leader of the polecats │
+└─────────────────────────────┘
+
+@@ border-single:focus
+┌─────────┐
+│{i|❯details }│
+├─────────┴───────────────────┐
+│ ben, leader of the polecats │
+└─────────────────────────────┘
+
+@@ border-rounded
+┌─────────┐
+│{i| details }│
+├─────────┴───────────────────╮
+│ ben, leader of the polecats │
+╰─────────────────────────────╯
+
+@@ border-rounded:hover
+┌─────────┐
+│{I| details }│
+├─────────┴───────────────────╮
+│ ben, leader of the polecats │
+╰─────────────────────────────╯
+
+@@ border-rounded:press
+┌─────────┐
+│{I| details }│
+├─────────┴───────────────────╮
+│ ben, leader of the polecats │
+╰─────────────────────────────╯
+
+@@ border-rounded:focus
+┌─────────┐
+│{i|❯details }│
+├─────────┴───────────────────╮
+│ ben, leader of the polecats │
+╰─────────────────────────────╯
+
+@@ border-heavy
+┌─────────┐
+│{i| details }│
+└─────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ ben, leader of the polecats ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+@@ border-heavy:hover
+┌─────────┐
+│{I| details }│
+└─────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ ben, leader of the polecats ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+@@ border-heavy:press
+┌─────────┐
+│{I| details }│
+└─────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ ben, leader of the polecats ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+@@ border-heavy:focus
+┌─────────┐
+│{i|❯details }│
+└─────────┘
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ ben, leader of the polecats ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+@@ border-double
+┌─────────┐
+│{i| details }│
+└─────────┘
+╔═════════════════════════════╗
+║ ben, leader of the polecats ║
+╚═════════════════════════════╝
+
+@@ border-double:hover
+┌─────────┐
+│{I| details }│
+└─────────┘
+╔═════════════════════════════╗
+║ ben, leader of the polecats ║
+╚═════════════════════════════╝
+
+@@ border-double:press
+┌─────────┐
+│{I| details }│
+└─────────┘
+╔═════════════════════════════╗
+║ ben, leader of the polecats ║
+╚═════════════════════════════╝
+
+@@ border-double:focus
+┌─────────┐
+│{i|❯details }│
+└─────────┘
+╔═════════════════════════════╗
+║ ben, leader of the polecats ║
+╚═════════════════════════════╝

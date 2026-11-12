@@ -1,0 +1,15 @@
+@use "pkg:hard-reset" as reset;
+@use "pkg:charcell/styles/layer-order";
+
+// The element reset, opt-in through the preflight, in charcell's weakest
+// layer: hard-reset's rules, with their reasoning in its README.
+//
+// The link cursor goes through a custom property under charcell's prefix, so
+// the kit squats no generic name. The components expect this reset (or one
+// of the same strength) underneath and restate nothing it says. No control is
+// opted into `$appearance`, which would reach the consumer's own controls:
+// each control charcell draws clears the platform's appearance itself
+// (`native-control`).
+@layer charcell.reset {
+  @include reset.rules($cursor-property: --charcell-cursor);
+}

@@ -1,0 +1,153 @@
+@@ default
+01 ben throttle        {m|▴}
+02 maureen corley      {w| }
+03 malcolm corley      {M| }
+04 adrian ripburger    {w| }
+05 bolus               {m|▾}
+
+@@ default:vertical-bar-hover
+01 ben throttle        {m|▴}
+02 maureen corley      {w| }
+03 malcolm corley      {I| }
+04 adrian ripburger    {w| }
+05 bolus               {m|▾}
+
+@@ default:step-hover
+01 ben throttle        {s|▴}
+02 maureen corley      {w| }
+03 malcolm corley      {M| }
+04 adrian ripburger    {w| }
+05 bolus               {m|▾}
+
+@@ default:horizontal-bar-hover
+01 ben throttle        {m|▴}
+02 maureen corley      {w| }
+03 malcolm corley      {M| }
+04 adrian ripburger    {w| }
+05 bolus               {m|▾}
+
+@@ default:press
+01 ben throttle        ▴
+02 maureen corley      {w| }
+03 malcolm corley      {M| }
+04 adrian ripburger    {w| }
+05 bolus               {m|▾}
+
+@@ scrolling-fluid
+01 ben throttle        {m|▴}
+02 maureen corley      {w| }
+03 malcolm corley      {M| }
+04 adrian ripburger    {w| }
+05 bolus               {m|▾}
+
+@@ scrolling-fluid:vertical-bar-hover
+01 ben throttle        {m|▴}
+02 maureen corley      {w| }
+03 malcolm corley      {I| }
+04 adrian ripburger    {w| }
+05 bolus               {m|▾}
+
+@@ scrolling-fluid:step-hover
+01 ben throttle        {s|▴}
+02 maureen corley      {w| }
+03 malcolm corley      {M| }
+04 adrian ripburger    {w| }
+05 bolus               {m|▾}
+
+@@ scrolling-fluid:horizontal-bar-hover
+01 ben throttle        {m|▴}
+02 maureen corley      {w| }
+03 malcolm corley      {M| }
+04 adrian ripburger    {w| }
+05 bolus               {m|▾}
+
+@@ scrolling-fluid:press
+01 ben throttle        ▴
+02 maureen corley      {w| }
+03 malcolm corley      {M| }
+04 adrian ripburger    {w| }
+05 bolus               {m|▾}
+
+@@ scrollbar-hidden
+01 ben throttle
+02 maureen corley
+03 malcolm corley
+04 adrian ripburger
+05 bolus
+
+@@ scrollbar-native
+01 ben throttle
+02 maureen corley
+03 malcolm corley
+
+
+
+@@ orientation-horizontal
+01 ben throttle
+02 maureen corley
+03 malcolm corley
+04 adrian ripburger
+{m|◂}{w| }{M| }{w|                    }{m|▸}
+
+@@ orientation-horizontal:vertical-bar-hover
+01 ben throttle
+02 maureen corley
+03 malcolm corley
+04 adrian ripburger
+{m|◂}{w| }{M| }{w|                    }{m|▸}
+
+@@ orientation-horizontal:step-hover
+01 ben throttle
+02 maureen corley
+03 malcolm corley
+04 adrian ripburger
+{m|◂}{w| }{M| }{w|                    }{m|▸}
+
+@@ orientation-horizontal:horizontal-bar-hover
+01 ben throttle
+02 maureen corley
+03 malcolm corley
+04 adrian ripburger
+{m|◂}{w| }{I| }{w|                    }{m|▸}
+
+@@ orientation-horizontal:press
+01 ben throttle
+02 maureen corley
+03 malcolm corley
+04 adrian ripburger
+{m|◂}{w| }{M| }{w|                    }{m|▸}
+
+@@ orientation-both
+01 ben throttle        {m|▴}
+02 maureen corley      {w| }
+03 malcolm corley      {M| }
+04 adrian ripburger    {m|▾}
+{m|◂}{w| }{M| }{w|                   }{m|▸}
+
+@@ orientation-both:vertical-bar-hover
+01 ben throttle        {m|▴}
+02 maureen corley      {w| }
+03 malcolm corley      {I| }
+04 adrian ripburger    {m|▾}
+{m|◂}{w| }{M| }{w|                   }{m|▸}
+
+@@ orientation-both:step-hover
+01 ben throttle        {s|▴}
+02 maureen corley      {w| }
+03 malcolm corley      {M| }
+04 adrian ripburger    {m|▾}
+{m|◂}{w| }{M| }{w|                   }{m|▸}
+
+@@ orientation-both:horizontal-bar-hover
+01 ben throttle        {m|▴}
+02 maureen corley      {w| }
+03 malcolm corley      {M| }
+04 adrian ripburger    {m|▾}
+{m|◂}{w| }{I| }{w|                   }{m|▸}
+
+@@ orientation-both:press
+01 ben throttle        ▴
+02 maureen corley      {w| }
+03 malcolm corley      {M| }
+04 adrian ripburger    {m|▾}
+{m|◂}{w| }{M| }{w|                   }{m|▸}

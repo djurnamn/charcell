@@ -1,0 +1,98 @@
+@@ default
+{bm|##} {b|the souvenir stand}
+
+every {b|derby} night the stand sells
+{e|official} smash-a-torium loot, priced in
+{sw|loot.txt}. the {d|stock} is short again:
+{x|bunnies} stolen.
+
+{bm|###} {b|stock}
+
+{m|•} we got yer hats and yer pennants
+{m|•} we watch the {sw|till} whenever the
+  polecats come by
+
+{m|1.} restock the bunny value-pack
+{m|2.} change the derby car's batteries
+
+{f|│} i'm practically givin' this loot away!
+{f|│} what's a couple of bucks in exchange
+{f|│} for a timeless memento?
+
+{f|┌──────────────────────────────────────┐}
+{f|│} hats: plenty                         {f|│}
+{f|│} bunnies: gone                        {f|│}
+{f|└──────────────────────────────────────┘}
+
+{f|────────────────────────────────────────}
+
+ {m|item     count}
+{f|────────────────}
+ pennant  300
+ bunny    0
+
+@@ default:hover
+{bm|##} {b|the souvenir stand}
+
+every {b|derby} night the stand sells
+{e|official} smash-a-torium loot, priced in
+{sw|loot.txt}. the {dw|stock} is short again:
+{x|bunnies} stolen.
+
+{bm|###} {b|stock}
+
+{m|•} we got yer hats and yer pennants
+{m|•} we watch the {sw|till} whenever the
+  polecats come by
+
+{m|1.} restock the bunny value-pack
+{m|2.} change the derby car's batteries
+
+{f|│} i'm practically givin' this loot away!
+{f|│} what's a couple of bucks in exchange
+{f|│} for a timeless memento?
+
+{f|┌──────────────────────────────────────┐}
+{f|│} hats: plenty                         {f|│}
+{f|│} bunnies: gone                        {f|│}
+{f|└──────────────────────────────────────┘}
+
+{f|────────────────────────────────────────}
+
+ {m|item     count}
+{f|────────────────}
+ pennant  300
+ bunny    0
+
+@@ default:focus
+{bm|##} {b|the souvenir stand}
+
+every {b|derby} night the stand sells
+{e|official} smash-a-torium loot, priced in
+{sw|loot.txt}. the {u|stock} is short again:
+{x|bunnies} stolen.
+
+{bm|###} {b|stock}
+
+{m|•} we got yer hats and yer pennants
+{m|•} we watch the {sw|till} whenever the
+  polecats come by
+
+{m|1.} restock the bunny value-pack
+{m|2.} change the derby car's batteries
+
+{f|│} i'm practically givin' this loot away!
+{f|│} what's a couple of bucks in exchange
+{f|│} for a timeless memento?
+
+{f|┌──────────────────────────────────────┐}
+{f|│} hats: plenty                         {f|│}
+{f|│} bunnies: gone                        {f|│}
+{f|└──────────────────────────────────────┘}
+
+{f|────────────────────────────────────────}
+
+ {m|item     count}
+{f|────────────────}
+ pennant  300
+ bunny    0

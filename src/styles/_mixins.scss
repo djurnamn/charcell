@@ -1,0 +1,884 @@
+@use "sass:list";
+@use "sass:map";
+
+// The mixins every component sheet shares. They emit nothing on their own;
+// component templates include them through `stylePreamble`.
+//
+// Each property is declared once. The declaring mixins
+// (`cell`, `paint`, `focusable`, `native-control`) go on the element's base
+// block, and a drawn stroke reads `var(--charcell-stroke--resolved, <rest>)`;
+// the state mixins (`wash`, `inverted`, `disabled`, `focus-cue`) only assign
+// the slots the base block reads, so a state never declares a property over
+// the resting one. An authored modifier
+// states its declarations under its own condition with `oneOf`
+// (`template-helpers/one-of.ts`), so no rule is declared over another.
+
+// The cell. Every charcell block states its own type: the grid is measured in
+// `ch` and rows of the monospace face, so a block rendered inside a host with
+// any other type still lands on it. This is the one thing the page also sets
+// that a block states again: the reset and the page canvas are the preflight's
+// (or the consumer's own), and the components restate nothing else of theirs.
+@mixin cell {
+  font-family: var(--charcell-font-family);
+  font-size: var(--charcell-font-size);
+  line-height: var(--charcell-row);
+  // One character, one cell: no ligatures (the face joins `ff`, `fi`, `fl`
+  // and turns `->` and `<-` into arrows), as a terminal never joins glyphs.
+  font-variant-ligatures: none;
+  // Lighter strokes read better as white-on-black.
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// The cell's two tones, each read from its slot. `$text` and `$fill` are the
+// resting tones.
+// `$background: false` leaves the background to the caller, for a box whose
+// background also draws its ring (`field-ring`).
+@mixin paint($text: var(--charcell-foreground), $fill: none, $background: true) {
+  color: var(--charcell-text--resolved, #{$text});
+  @if $background {
+    background: var(--charcell-fill--resolved, #{$fill});
+  }
+  forced-color-adjust: var(--charcell-forced-color-adjust--resolved, auto);
+}
+
+// The platform appearance of a native control charcell draws itself. The
+// reset clears the margin, the edge and the radius; it leaves appearance to
+// the page, since there it would reach the consumer's own controls too.
+@mixin native-control {
+  appearance: none;
+}
+
+// Keyboard focus is the pointer: `❯` in the cell before the focused part's
+// text, as a terminal list marks the row its cursor is on. The cell is one the
+// part already has, its padding cell, so focus moves nothing. The pointer is a
+// glyph at the foreground whatever the part's own text tone, the inverted
+// text in the inversion (`--charcell-pointer-tone`, which an inverted part
+// hands its pointer): it reads apart from hover's wash, sits in the wash and
+// in the inversion alike, and survives forced-colors, so the ua ring is not
+// needed beside it. `focusable` goes on the part, `pointer` on a
+// pseudo-element of it the part leaves free, and `focus-cue` on that same
+// pseudo-element claims it.
+@mixin focusable {
+  outline: none;
+}
+
+// The pointer's cell: `$start` from the part's start edge and `$top` from its
+// top, against the part, which states its own `position`; `$end: 100%` with
+// `$start: auto` puts it in the cell just before the part instead. The start
+// follows the reading direction, a whole cell from either edge. Empty until
+// `focus-cue` fills it; its alternative text is empty, since the focus it
+// shows is already exposed.
+@mixin pointer($start: 0, $top: 0, $end: auto) {
+  content: var(--charcell-pointer--resolved, none);
+  // Under forced colors the pointer marks the focused or highlighted row in
+  // the system's `Highlight`, unless the row is inverted, which names its
+  // own tone (`HighlightText`, over its `Highlight`).
+  color: var(--charcell-pointer-tone, var(--charcell-pointer--forced-tone, var(--charcell-foreground)));
+  forced-color-adjust: var(--charcell-pointer--forced-adjust, auto);
+  position: absolute;
+  top: $top;
+  inset-inline-end: $end;
+  inset-inline-start: $start;
+
+  @media (forced-colors: active) {
+    --charcell-pointer--forced-tone: Highlight;
+    --charcell-pointer--forced-adjust: none;
+  }
+}
+
+// `❯` as its escape: a literal non-ascii character makes Sass lead the sheet
+// with a byte-order mark, ahead of the layer order. On a right-to-left page
+// the browser draws it mirrored, `❮`, as it does every mirrored character.
+@mixin focus-cue {
+  --charcell-pointer--resolved: "\276F" / "";
+}
+
+// A tree row nested in a TreeGroup draws its own connector, derived from
+// structure: a `│` segment down its height and a `─` tick at its first row's
+// center pixel, through the indent's second cell (`├─`), meeting the padding
+// cell before the label. The last
+// row's segment stops at its tick: the `└` corner. The group says its rows
+// are nested (`--charcell-tree--nested`, 1 on its children, 0 on the tree),
+// so no row keys on the group; the connector draws at that weight, nothing
+// at the top level, and the indent is the row's own padding. On a
+// right-to-left page the connector is the mirror image as the face draws it
+// (`─┤`, `─┘`): the stroke's pixel counts from the cell's left edge either way.
+@mixin tree-branch {
+  $nested: var(--charcell-tree--nested, 0);
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    border-inline-start: calc(1px * #{$nested}) solid var(--charcell-mid);
+  }
+
+  &:where(:not(:dir(rtl)))::before {
+    inset-inline-start: var(--charcell-stroke-x);
+  }
+
+  &:where(:dir(rtl))::before {
+    inset-inline-start: calc(1ch - var(--charcell-stroke-x) - 1px);
+  }
+
+  &:where(:not(:last-child))::before {
+    bottom: 0;
+  }
+
+  &:last-child::before {
+    height: calc(var(--charcell-stroke-y) + 1px);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: var(--charcell-stroke-y);
+    border-top: calc(1px * #{$nested}) solid var(--charcell-mid);
+  }
+
+  &:where(:not(:dir(rtl)))::after {
+    inset-inline-start: var(--charcell-stroke-x);
+    width: calc(2ch - var(--charcell-stroke-x));
+  }
+
+  &:where(:dir(rtl))::after {
+    inset-inline-start: calc(1ch - var(--charcell-stroke-x) - 1px);
+    width: calc(1ch + var(--charcell-stroke-x) + 1px);
+  }
+}
+
+// The ring: a box's outer cells, a column either side and a row above and
+// below, with a stroke through their center pixels (`--charcell-stroke-x`
+// across, `--charcell-stroke-y` down, where the reference text draws `│` and
+// `─`), so content starts one whole cell inside - the `┌─┐` layout, in CSS.
+//
+// Each side has a style, as box drawing does: single (`─`) by default, or
+// `none`, `rounded` (single, with `╭ ╮ ╯ ╰` where two rounded sides meet),
+// `heavy` (`━`, the stroke's pixel and the one before it) or `double` (`═`,
+// a pixel an eighth of a cell either side of it). A side's style is a set of
+// flags, `--charcell-ring--<side>-<none|rounded|heavy|double>`, 1 or unset,
+// and the ring works every line out from them, so a corner is the glyph its
+// two sides make, with no rule per pair:
+//
+// - A line starts at the other side's outer line (`┏ ┍ ┎ ╒ ╓`);
+// - Two double sides meet line for line, outer to outer and inner to inner
+//   (`╔`);
+// - A heavy side and a double one meet in no glyph, and neither does a double
+//   side and none (there is no half `║`), so their corner cell stays empty and
+//   the lines stop at its edge;
+// - Two rounded sides meet in the arc, a 1px quarter circle from the center
+//   row to the center column, the curve the font and the reference text draw;
+// - A side that is none leaves the other's line ending at the center (`╷`);
+// - A side that is open is single for its corners but not drawn: another
+//   box draws it (a panel under its tabs);
+// - A side flagged `tee` turns its corners into tees: the other side runs on
+//   through them into the box beyond (a listbox attached to its trigger,
+//   sharing the row: `├ ┣ ╟ ╠`), rounded or not; one corner can say
+//   otherwise (`--charcell-ring--top-right-tee: 0`);
+// - A corner flagged `run` turns the other way: its horizontal side runs on
+//   through it into the box beyond and its vertical side stops at it (a
+//   trigger's corner on the longer line of a listbox wider than it: `┴ ┻
+//   ╩`), square;
+// - A horizontal side can start part of the way along (`--charcell-ring--
+//   top-from`), leaving the cells before it to the box that shares them,
+//   whose line the ground then leaves showing (`--charcell-ring--top-shared`);
+//   or stop short of the far end (`--charcell-ring--top-until`), the same
+//   on a right-to-left page.
+//
+// The flags are set on the element that draws the ring and read only there,
+// so they never reach a ring nested inside it.
+@function ring-flag($side, $style) {
+  @return var(--charcell-ring--#{$side}-#{$style}, 0);
+}
+
+// A side's outer line (away from the content) and inner line, as offsets from
+// the stroke's pixel: the same pixel for a single side, the pixel before it
+// for heavy's second line, a gap either side for double.
+@function ring-outer($side) {
+  $heavy: ring-flag($side, heavy);
+  $double: ring-flag($side, double);
+  @if $side == left or $side == top {
+    @return calc(-1px * #{$heavy} - var(--charcell-stroke-gap) * #{$double});
+  }
+  @return calc(var(--charcell-stroke-gap) * #{$double});
+}
+
+@function ring-inner($side) {
+  $heavy: ring-flag($side, heavy);
+  $double: ring-flag($side, double);
+  @if $side == left or $side == top {
+    @return calc(var(--charcell-stroke-gap) * #{$double});
+  }
+  @return calc(-1px * #{$heavy} - var(--charcell-stroke-gap) * #{$double});
+}
+
+// The arc: a quarter circle on the stroke's center line, its ends on the
+// center row's and the center column's pixels, and where the lines leave it
+// (scripts/font/build.py and test/text/cases.cjs, `ARC_RADIUS`).
+$ring-arc-radius: 2.5px;
+$ring-arc-reach: 3px;
+
+// How a corner's two sides meet, as numbers: both rounded (no arc in a tee),
+// both double, apart (heavy or none against double), a tee (the corner's
+// horizontal side flagged `tee`: the vertical side runs on through the corner
+// into the box beyond, `├ ┣ ╟ ╠`), and whether the vertical side is double.
+@function ring-corner($across, $down) {
+  $tee: var(--charcell-ring--#{$across}-#{$down}-tee, #{ring-flag($across, tee)});
+  $run: var(--charcell-ring--#{$across}-#{$down}-run, 0);
+  @return (
+    rounded: calc(#{ring-flag($across, rounded)} * #{ring-flag($down, rounded)} * (1 - #{$tee}) * (1 - #{$run})),
+    double: calc(#{ring-flag($across, double)} * #{ring-flag($down, double)}),
+    apart: calc((#{ring-flag($across, heavy)} + #{ring-flag($across, none)}) * #{ring-flag($down, double)} + #{ring-flag($across, double)} * (#{ring-flag($down, heavy)} + #{ring-flag($down, none)})),
+    tee: $tee,
+    run: $run,
+    down-double: ring-flag($down, double)
+  );
+}
+
+// How far a line's end moves from the other side's outer line: a horizontal
+// line's inner one to the inner line of two double sides, and in a tee both
+// of them to a double side's inner line (the outer runs on past them).
+@function ring-shift($corner, $inner, $along) {
+  $gap: calc(2 * var(--charcell-stroke-gap));
+  $double: map.get($corner, double);
+  @if $along == across {
+    $tee: calc(#{map.get($corner, tee)} * #{map.get($corner, down-double)});
+    @if $inner {
+      @return calc(#{$gap} * (#{$double} + #{$tee} - #{$double} * #{$tee}));
+    }
+    @return calc(#{$gap} * #{$tee});
+  }
+  @if $inner {
+    @return calc(#{$gap} * #{$double});
+  }
+  // A run of two double sides: the outer vertical line stops at the inner
+  // horizontal one, the way the inner does.
+  @return calc(#{$gap} * #{$double} * #{map.get($corner, run)});
+}
+
+// In a run, whether a horizontal line runs on to the cell's edge: both of a
+// single or heavy side, the outer of a double one (its inner breaks between
+// the vertical lines, carried on past them by its stub).
+@function ring-runs($corner, $inner) {
+  $run: map.get($corner, run);
+  @if $inner {
+    @return calc(#{$run} * (1 - #{map.get($corner, double)}));
+  }
+  @return $run;
+}
+
+// In a tee, how much of a vertical line runs on through the corner: all of
+// it, but for the inner line of two double sides, which breaks around the
+// horizontal ones (its stub drawn apart).
+@function ring-through($corner, $inner) {
+  $tee: map.get($corner, tee);
+  @if $inner {
+    @return calc(#{$tee} * (1 - #{map.get($corner, double)}));
+  }
+  @return $tee;
+}
+
+// Where a line starts at the corner it shares with `$from`, measured from
+// that corner's cell, toward the content: the other side's outer line,
+// shifted as `ring-shift` says, past the arc for two rounded sides, out of
+// the cell when they are apart, and from the cell's edge where a tee runs it
+// on through. `$center` is the stroke's pixel along the line, `$cell` the
+// cell's length along it, `$along` across or down.
+@function ring-start($from, $corner, $inner, $center, $cell, $along) {
+  $shift: ring-shift($corner, $inner, $along);
+  $apart: map.get($corner, apart);
+  $start: calc(
+    (#{$center} + #{ring-outer($from)} + #{$shift} + #{$ring-arc-reach} * #{map.get($corner, rounded)}) * (1 - #{$apart}) + #{$cell} * #{$apart}
+  );
+  @if $along == down {
+    @return calc(#{$start} * (1 - #{ring-through($corner, $inner)}));
+  }
+  @return calc(#{$start} * (1 - #{ring-runs($corner, $inner)}));
+}
+
+// The same at the far corner, as the last pixel the line covers, from that
+// corner's cell's near edge.
+@function ring-end($from, $corner, $inner, $center, $cell, $along) {
+  $shift: ring-shift($corner, $inner, $along);
+  $apart: map.get($corner, apart);
+  $end: calc(
+    (#{$center} + #{ring-outer($from)} - #{$shift} - #{$ring-arc-reach} * #{map.get($corner, rounded)}) * (1 - #{$apart}) - 1px * #{$apart}
+  );
+  @if $along == down {
+    $through: ring-through($corner, $inner);
+    @return calc(#{$end} * (1 - #{$through}) + (#{$cell} - 1px) * #{$through});
+  }
+  $runs: ring-runs($corner, $inner);
+  @return calc(#{$end} * (1 - #{$runs}) + (#{$cell} - 1px) * #{$runs});
+}
+
+// The ring's strokes as background layers, over a box whose edges are the
+// outer cells' outer edges.
+@function ring-strokes($stroke) {
+  $x: var(--charcell-stroke-x);
+  $y: var(--charcell-stroke-y);
+  $row: var(--charcell-row);
+  $paint: linear-gradient(#{$stroke}, #{$stroke});
+  $layers: ();
+
+  @each $inner in (false, true) {
+    // Along the top and bottom, from the left corner to the right one.
+    @each $side in (top, bottom) {
+      $start: max(
+        #{ring-start(left, ring-corner($side, left), $inner, $x, 1ch, across)},
+        var(--charcell-ring--#{$side}-from, 0px)
+      );
+      // Short of the right edge by `until`, the cells after it the other
+      // box's: the right-to-left counterpart of `from`.
+      $end: min(
+        #{ring-end(right, ring-corner($side, right), $inner, $x, 1ch, across)},
+        calc(1ch - 1px - var(--charcell-ring--#{$side}-until, 0px))
+      );
+      $offset: ring-outer($side);
+      @if $inner {
+        $offset: ring-inner($side);
+      }
+      $place: "top calc(#{$y} + #{$offset})";
+      @if $side == bottom {
+        $place: "bottom calc(#{$row} - #{$y} - #{$offset} - 1px)";
+      }
+      $layers: list.append(
+        $layers,
+        #{$paint} left #{$start} #{$place} / calc(100% - 1ch + #{$end} + 1px - #{$start}) calc(1px * (1 - #{ring-flag($side, none)} - #{ring-flag($side, open)})) no-repeat,
+        comma
+      );
+    }
+    // Down the left and right, from the top corner to the bottom one.
+    @each $side in (left, right) {
+      $start: ring-start(top, ring-corner(top, $side), $inner, $y, $row, down);
+      $end: ring-end(bottom, ring-corner(bottom, $side), $inner, $y, $row, down);
+      $offset: ring-outer($side);
+      @if $inner {
+        $offset: ring-inner($side);
+      }
+      $place: "left calc(#{$x} + #{$offset})";
+      @if $side == right {
+        $place: "right calc(1ch - #{$x} - #{$offset} - 1px)";
+      }
+      $layers: list.append(
+        $layers,
+        #{$paint} #{$place} top #{$start} / calc(1px * (1 - #{ring-flag($side, none)} - #{ring-flag($side, open)})) calc(100% - #{$row} + #{$end} + 1px - #{$start}) no-repeat,
+        comma
+      );
+    }
+  }
+
+  @each $across, $down in (top left, top right, bottom left, bottom right) {
+    $corner: ring-corner($across, $down);
+    $horizontal: "left calc(#{$x} + #{ring-inner($down)})";
+    @if $down == right {
+      $horizontal: "right calc(1ch - #{$x} - #{ring-inner($down)} - 1px)";
+    }
+    // A tee of two double sides: the inner vertical line's stub, from the
+    // cell's edge to the outer horizontal line (`╠`).
+    $stub: calc(1px * #{map.get($corner, tee)} * #{map.get($corner, double)});
+    $vertical: "top 0px";
+    $length: calc(#{$y} + #{ring-outer($across)} + 1px);
+    @if $across == bottom {
+      $vertical: "bottom 0px";
+      $length: calc(#{$row} - #{$y} - #{ring-outer($across)});
+    }
+    $layers: list.append(
+      $layers,
+      #{$paint} #{$horizontal} #{$vertical} / #{$stub} calc(#{$length} * #{map.get($corner, tee)} * #{map.get($corner, double)}) no-repeat,
+      comma
+    );
+    // A run of two double sides: the inner horizontal line carried on from
+    // past the outer vertical line to the cell's edge (`╩`).
+    $run-stub: calc(#{map.get($corner, run)} * #{map.get($corner, double)});
+    $run-horizontal: "left 0px";
+    $run-length: calc(#{$x} + #{ring-outer($down)});
+    @if $down == right {
+      $run-horizontal: "right 0px";
+      $run-length: calc(1ch - #{$x} - #{ring-outer($down)} - 1px);
+    }
+    $run-vertical: "top calc(#{$y} + #{ring-inner($across)})";
+    @if $across == bottom {
+      $run-vertical: "bottom calc(#{$row} - #{$y} - #{ring-inner($across)} - 1px)";
+    }
+    $layers: list.append(
+      $layers,
+      #{$paint} #{$run-horizontal} #{$run-vertical} / calc(#{$run-length} * #{$run-stub}) calc(1px * #{$run-stub}) no-repeat,
+      comma
+    );
+    // The arc, a ring around a circle centered `$ring-arc-reach` in from the
+    // stroke's pixel, in the box between that center and the stroke's far
+    // edge, sized to nothing unless both sides are rounded. Its edges fade
+    // over a device pixel, the way an outline antialiases.
+    $rounded: map.get($corner, rounded);
+    $fade: calc(var(--charcell-device-pixel) / 2);
+    $inner-edge: $ring-arc-radius - 0.5px;
+    $outer-edge: $ring-arc-radius + 0.5px;
+    $center-x: $ring-arc-reach;
+    $arc-horizontal: "left #{$x}";
+    @if $down == right {
+      $center-x: 0px;
+      $arc-horizontal: "right calc(1ch - #{$x} - 1px)";
+    }
+    $center-y: $ring-arc-reach;
+    $arc-vertical: "top #{$y}";
+    @if $across == bottom {
+      $center-y: 0px;
+      $arc-vertical: "bottom calc(#{$row} - #{$y} - 1px)";
+    }
+    $layers: list.append(
+      $layers,
+      radial-gradient(circle at #{$center-x} #{$center-y}, transparent calc(#{$inner-edge} - #{$fade}), #{$stroke} calc(#{$inner-edge} + #{$fade}), #{$stroke} calc(#{$outer-edge} - #{$fade}), transparent calc(#{$outer-edge} + #{$fade})) #{$arc-horizontal} #{$arc-vertical} / calc(#{$ring-arc-reach} * #{$rounded}) calc(#{$ring-arc-reach} * #{$rounded}) no-repeat,
+      comma
+    );
+  }
+  @return $layers;
+}
+
+// Every ring's strokes, the one long list of layers they share: declared on
+// each ring's own box (a pseudo-element, or a text field itself), which
+// extends it, so the cell and stroke properties it reads resolve on that
+// ring, in its stroke.
+@layer charcell.components {
+  %charcell-ring-strokes {
+    --charcell-ring--strokes: #{ring-strokes(var(--charcell-ring--stroke))};
+  }
+}
+
+// The ring, drawn by the box's `::before` (the box is positioned and isolates
+// its stacking, so the ring sits under its content at `z-index: -1`). The
+// background carries the strokes and the rest, so the stroke and fill slots
+// are assigned and read on this one box:
+//
+// - The state fill (`--charcell-fill--resolved`) covers the interior cells
+//   only, whole cells, since a fill reaching the stroke would end mid-cell;
+// - `$ground` is a window's own ground, its whole cells, the ring's
+//   included, under the fill (a floating panel needs one; a control does
+//   not).
+//
+// `$top` and `$bottom` move the ring's top and bottom cells past its host's
+// edges (a ring can reach into the row above or below to meet another's
+// stroke), and `$top-open` leaves the top side to the box above it (a panel
+// under its tabs, which draw that line).
+@mixin ring(
+  $stroke: var(--charcell-mid),
+  $ground: transparent,
+  $top: 0px,
+  $bottom: 0px,
+  $top-open: false
+) {
+  $f: var(--charcell-fill--resolved, transparent);
+  $x: var(--charcell-stroke-x);
+  $y: var(--charcell-stroke-y);
+  $row: var(--charcell-row);
+  // The strokes are the same layers on every ring, written once for them all
+  // (`%charcell-ring-strokes`); each ring names its own stroke.
+  @extend %charcell-ring-strokes;
+  --charcell-ring--stroke: var(--charcell-stroke--resolved, #{$stroke});
+  $layers: var(--charcell-ring--strokes);
+  $layers: list.append(
+    $layers,
+    linear-gradient(#{$f}, #{$f}) left 1ch top #{$row} / calc(100% - 2ch) calc(100% - 2 * #{$row}) no-repeat,
+    comma
+  );
+  // The row a ring shares with a window attached on that side takes the
+  // window's ground, whole cells, under its own line (`--charcell-ring--
+  // bottom-ground`, set while the two are attached).
+  @each $side in (top, bottom) {
+    $shared-ground: var(--charcell-ring--#{$side}-ground, transparent);
+    $layers: list.append(
+      $layers,
+      linear-gradient(#{$shared-ground}, #{$shared-ground}) left 0 #{$side} 0 / 100% #{$row} no-repeat,
+      comma
+    );
+  }
+  @if $ground != transparent {
+    // Whole cells, the ring's included, as a terminal paints a cell's
+    // background; a side whose line another box draws along part of it
+    // (`shared`, as with `from`) keeps its ground below that line, so the
+    // other box's line shows through it.
+    $top-shared: calc((#{$y} + #{ring-inner(top)} + 1px) * var(--charcell-ring--top-shared, 0));
+    $bottom-shared: calc((#{$row} - #{$y} - #{ring-inner(bottom)}) * var(--charcell-ring--bottom-shared, 0));
+    $layers: list.append(
+      $layers,
+      linear-gradient(#{$ground}, #{$ground}) left 0 top #{$top-shared} / 100% calc(100% - #{$top-shared} - #{$bottom-shared}) no-repeat,
+      comma
+    );
+    // Past the other box, the shared row's cells are this one's, whole.
+    @each $side in (top, bottom) {
+      $from: var(--charcell-ring--#{$side}-from, 0px);
+      $until: var(--charcell-ring--#{$side}-until, 0px);
+      $shared: var(--charcell-ring--#{$side}-shared, 0);
+      $layers: list.append(
+        $layers,
+        linear-gradient(#{$ground}, #{$ground}) left #{$from} #{$side} 0 / calc((100% - #{$from} - #{$until}) * #{$shared}) #{$row} no-repeat,
+        comma
+      );
+    }
+  }
+
+  content: "";
+  position: absolute;
+  z-index: -1;
+  // Forced colors drop the gradient strokes, so there the ring is a plain
+  // border on its cells' center pixels (`--charcell-ring--forced-inset`),
+  // and a window's ground a background color, which the system repaints in
+  // its own `Canvas`.
+  inset: calc(#{$top} + var(--charcell-ring--forced-inset, 0px))
+    var(--charcell-ring--forced-inset-inline, 0px)
+    calc(#{$bottom} + var(--charcell-ring--forced-inset, 0px));
+  // Each side as the ring draws it: none where a side is turned off, or left
+  // to the box above (`top-open`).
+  border-style: var(--charcell-ring--forced-border-style, none);
+  border-color: CanvasText;
+  border-width: calc(1px * (1 - max(var(--charcell-ring--top-none, 0), var(--charcell-ring--top-open, 0))))
+    calc(1px * (1 - var(--charcell-ring--right-none, 0))) calc(1px * (1 - var(--charcell-ring--bottom-none, 0)))
+    calc(1px * (1 - var(--charcell-ring--left-none, 0)));
+  @if $top-open {
+    --charcell-ring--top-open: 1;
+  }
+  background: $layers;
+  @if $ground != transparent {
+    background-color: var(--charcell-ring--forced-ground, transparent);
+  }
+  pointer-events: none;
+
+  @media (forced-colors: active) {
+    --charcell-ring--forced-inset: var(--charcell-stroke-y);
+    --charcell-ring--forced-inset-inline: var(--charcell-stroke-x);
+    --charcell-ring--forced-border-style: solid;
+    @if $ground != transparent {
+      --charcell-ring--forced-ground: Canvas;
+    }
+  }
+}
+
+// The ring on a text field, which has no pseudo-elements to draw it with (an
+// `<input>` is void, a `<textarea>` replaced): the ring's cells are a
+// transparent border - a row above and below, a column either side - so the
+// text, which scrolls inside the border, never runs over a stroke, and the
+// strokes are the ring's background layers over the border box. The state
+// fill paints inside the border. Browsers snap a border to whole pixels, so
+// the border takes the cell's whole pixels and the padding the rest of it,
+// plus the cell of space before the text: the field stays on the grid.
+@mixin field-ring($stroke: var(--charcell-mid)) {
+  $row: round(down, var(--charcell-row), 1px);
+  $column: round(down, 1ch, 1px);
+  // The same strokes as every ring's (see `ring`).
+  @extend %charcell-ring-strokes;
+  --charcell-ring--stroke: var(--charcell-ring--forced-stroke, var(--charcell-stroke--resolved, #{$stroke}));
+  $layers: var(--charcell-ring--strokes);
+  $layers: list.append(
+    $layers,
+    var(--charcell-ring--forced-fill, var(--charcell-fill--resolved, transparent)) padding-box,
+    comma
+  );
+
+  border-style: solid;
+  border-color: transparent;
+  border-width: #{$row} #{$column};
+  padding: calc(var(--charcell-row) - #{$row}) calc(2ch - #{$column});
+  background: $layers;
+  background-origin: border-box;
+  outline: none;
+
+  // Forced colors would paint the border the ring's cells take, a row and a
+  // column thick; the field keeps its own colors there instead, the system's:
+  // its strokes and text in `CanvasText` over `Canvas`.
+  @media (forced-colors: active) {
+    --charcell-forced-color-adjust--resolved: none;
+    --charcell-ring--forced-stroke: CanvasText;
+    --charcell-ring--forced-fill: Canvas;
+    --charcell-text--resolved: CanvasText;
+  }
+}
+
+// A side's style, set where the ring is drawn: the flag the ring reads.
+@mixin ring-side($side, $style) {
+  --charcell-ring--#{$side}-#{$style}: 1;
+}
+
+// The grip, `⠿`: braille dots 1 to 6, drawn in whole pixels as a terminal's
+// built-in renderer draws braille (the face has no braille). A cell holds a
+// 2 x 4 grid of dots, each a quarter of the cell wide and an eighth of the row
+// tall, centered in its quarter of the cell; `⠿` is the top three rows of both
+// columns, over `$ground`. The draggable sign: the Splitter's handle and the
+// SortableList's grip carry it. `$rows` picks the dot rows and `$cells` how
+// many cells run side by side: a stacked split's handle carries `⠶⠶`, the
+// middle two rows across two cells, which reads along the row it drags.
+@mixin grip($dot: var(--charcell-mid), $ground: transparent, $rows: (0, 1, 2), $cells: 1) {
+  // Forced colors would drop the dots, which are background layers: there the
+  // grip keeps its own colors, the dots in the system's `CanvasText`.
+  $dot: var(--charcell-grip--forced-dot, #{$dot});
+  $layers: ();
+  @for $cell from 0 to $cells {
+    @each $column in (0, 1) {
+      @each $row in $rows {
+        $layers: list.append(
+          $layers,
+          linear-gradient(#{$dot}, #{$dot}) calc(#{$cell} * 1ch + round(calc(1ch * #{1 + 4 * $column} / 8), 1px))
+            round(calc(var(--charcell-row) * #{1 + 4 * $row} / 16), 1px) / round(calc(1ch / 4), 1px)
+            round(calc(var(--charcell-row) / 8), 1px) no-repeat,
+          comma
+        );
+      }
+    }
+  }
+  background: $layers, $ground;
+  forced-color-adjust: var(--charcell-grip--forced-adjust, auto);
+
+  @media (forced-colors: active) {
+    --charcell-grip--forced-dot: CanvasText;
+    --charcell-grip--forced-adjust: none;
+  }
+}
+
+// Read by assistive technology, never shown, and taking no space: the
+// negative margin keeps its one pixel from adding to its container's
+// scroll range.
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+// Hover's wash: the `faint` fill.
+@mixin wash {
+  --charcell-fill--resolved: var(--charcell-faint);
+}
+
+// Reverse video: the engaged states (pressed, selected, on, open). The fill is
+// a background, which forced-colors repaints away, so under forced-colors the
+// state takes the system's own selection pair instead, and opts out of the
+// repaint: left to it, the browser draws its backplate behind the text and the
+// pair reads as a blank box. The part's focus pointer takes the inverted text
+// with it.
+@mixin inverted($fill: var(--charcell-foreground)) {
+  --charcell-fill--resolved: #{$fill};
+  --charcell-text--resolved: var(--charcell-background);
+  --charcell-pointer-tone: var(--charcell-background);
+
+  @media (forced-colors: active) {
+    --charcell-fill--resolved: Highlight;
+    --charcell-text--resolved: HighlightText;
+    --charcell-pointer-tone: HighlightText;
+    --charcell-forced-color-adjust--resolved: none;
+  }
+}
+
+// disabled: `mid` text; under forced-colors the system's own disabled tone.
+// Hover is guarded against disabled where it is assigned, so a disabled control
+// takes no wash.
+@mixin disabled {
+  --charcell-text--resolved: var(--charcell-mid);
+
+  @media (forced-colors: active) {
+    --charcell-text--resolved: GrayText;
+  }
+}
+
+// Running text: the HTML a consumer writes or a renderer emits (headings,
+// paragraphs, lists, quotes, code, links, rules, tables), each element as a
+// character-cell screen would print it. One size, no color: weight, the tone
+// ladder and terminal attributes carry everything.
+//
+// - Blocks stack one blank row apart; the container is a column with a row
+//   of gap, so no block's margin decides the spacing.
+// - Headings are bold, led by their markdown marker in `mid` (`#` to
+//   `######`).
+// - `strong`/`b` bold (sgr 1), `em`/`i` italic (sgr 3; the face has none, so
+//   it slants), `s`/`del` struck through (sgr 9), `mark` the `faint` wash,
+//   `code` the wash with its text at `strong`, `small` at `mid`.
+// - A link is underlined dotted at rest (sgr 4:4) and solid when focused
+//   (sgr 4): a link in running text has no cell of its own for the focus
+//   pointer, so its focus stays an attribute of its glyphs. Hover washes it.
+// - Lists hang their markers in their own cells: `•` in one, a number and
+//   its point in three.
+// - A quote is a `faint` bar down the center pixel of its first column; a
+//   rule, a `faint` stroke across the center pixel of its own row; a code
+//   block, the quiet ring around its text; a table, the dense Table.
+@mixin wysiwyg-content {
+  flex-direction: column;
+  gap: var(--charcell-row);
+
+  // Its display given up to the hidden attribute (`displayed`).
+  &:where(:not([hidden])) {
+    display: flex;
+  }
+
+  &[hidden] {
+    display: none;
+  }
+
+  :where(&) :where(h1, h2, h3, h4, h5, h6) {
+    font-weight: 700;
+    line-height: var(--charcell-row);
+  }
+
+  :where(&) :where(h1, h2, h3, h4, h5, h6)::before {
+    color: var(--charcell-mid);
+  }
+
+  :where(&) h1::before { content: "# "; }
+  :where(&) h2::before { content: "## "; }
+  :where(&) h3::before { content: "### "; }
+  :where(&) h4::before { content: "#### "; }
+  :where(&) h5::before { content: "##### "; }
+  :where(&) h6::before { content: "###### "; }
+
+  :where(&) :where(strong, b) { font-weight: 700; }
+  :where(&) :where(em, i) { font-style: italic; }
+  :where(&) :where(s, del) { text-decoration-line: line-through; }
+  :where(&) small { color: var(--charcell-mid); }
+
+  :where(&) mark {
+    color: var(--charcell-strong);
+    background: var(--charcell-faint);
+  }
+
+  :where(&) :not(pre) > code {
+    color: var(--charcell-strong);
+    background: var(--charcell-faint);
+  }
+
+  :where(&) a {
+    @include paint;
+    outline: none;
+    text-decoration-line: underline;
+    text-decoration-style: var(--charcell-rich-text--link, dotted);
+    text-decoration-thickness: 1px;
+    cursor: pointer;
+  }
+
+  :where(&) a:hover { @include wash; }
+  :where(&) a:focus-visible { --charcell-rich-text--link: solid; }
+
+  // A list sets its marker and the cells it hangs in; its items read them.
+  :where(&) ul {
+    // `•` as its CSS escape: a literal non-ascii character makes Sass lead
+    // the sheet with a byte-order mark, ahead of the layer order.
+    --charcell-rich-text--marker: #{'"\\2022"'};
+    --charcell-rich-text--hang: 2ch;
+  }
+
+  :where(&) ol {
+    counter-reset: charcell-rich-text;
+    --charcell-rich-text--marker: counter(charcell-rich-text) ".";
+    --charcell-rich-text--hang: 3ch;
+  }
+
+  :where(&) :where(ul, ol) > li {
+    position: relative;
+    padding-inline-start: var(--charcell-rich-text--hang);
+    counter-increment: charcell-rich-text;
+  }
+
+  :where(&) :where(ul, ol) > li::before {
+    content: var(--charcell-rich-text--marker);
+    position: absolute;
+    inset-inline-start: 0;
+    color: var(--charcell-mid);
+  }
+
+  // The quote's bar, on the stroke's pixel of its first cell, which is the
+  // right one on a right-to-left page.
+  :where(&) blockquote {
+    padding-inline-start: 2ch;
+    background-image: linear-gradient(var(--charcell-faint), var(--charcell-faint));
+    background-size: 1px 100%;
+    background-repeat: no-repeat;
+  }
+
+  :where(&) blockquote:where(:not(:dir(rtl))) {
+    background-position: var(--charcell-stroke-x) 0;
+  }
+
+  :where(&) blockquote:where(:dir(rtl)) {
+    background-position: right calc(1ch - var(--charcell-stroke-x) - 1px) top 0;
+  }
+
+  :where(&) hr {
+    height: var(--charcell-row);
+    background: linear-gradient(var(--charcell-faint), var(--charcell-faint)) 0 var(--charcell-stroke-y) / 100% 1px no-repeat;
+  }
+
+  :where(&) pre {
+    position: relative;
+    isolation: isolate;
+    padding: var(--charcell-row) 2ch;
+    white-space: pre;
+    overflow-x: auto;
+  }
+
+  :where(&) pre::before {
+    @include ring($stroke: var(--charcell-faint));
+  }
+
+  :where(&) table {
+    // As wide as its columns, not stretched across the column of blocks.
+    align-self: flex-start;
+    border-collapse: collapse;
+  }
+
+  :where(&) :where(th, td) {
+    padding: 0 1ch var(--charcell-rich-text--below, 0px);
+    text-align: start;
+    white-space: nowrap;
+  }
+
+  :where(&) th {
+    --charcell-rich-text--below: var(--charcell-row);
+    font-weight: 400;
+    color: var(--charcell-mid);
+    background: linear-gradient(var(--charcell-faint), var(--charcell-faint)) 0 calc(var(--charcell-row) + var(--charcell-stroke-y)) / 100% 1px no-repeat;
+  }
+}
+
+
+// The scroll area's stepped painting: two scroll-driven animations an axis
+// on the content, `pin`, linear, following the scroll and canceling it, and
+// `step`, in steps of a cell, moving it back a whole cell at a time - net, the
+// last whole cell the scroll has passed. They move only with the scroll, so
+// the binary look holds. The range, in px, is the engine's, one an axis
+// (`--charcell-scroll-area--block-range`, `--inline-range`), so the content
+// inherits both.
+@mixin scroll-steps {
+  @each $axis in (block, inline) {
+    $range: var(--charcell-scroll-area--#{$axis}-range);
+    $along: 0 calc(#{$range} * 1px);
+    $back: translateY(calc(#{$range} * -1px));
+    // Across, a right-to-left page scrolls its content the other way
+    // (`--charcell-scroll-area--inline-sign`, -1 there).
+    @if $axis == inline {
+      $sign: var(--charcell-scroll-area--inline-sign, 1);
+      $along: calc(#{$range} * 1px * #{$sign}) 0;
+      $back: translateX(calc(#{$range} * -1px * #{$sign}));
+    }
+
+    @keyframes charcell-scroll-area-pin-#{$axis} {
+      from {
+        translate: 0 0;
+      }
+
+      to {
+        translate: $along;
+      }
+    }
+
+    @keyframes charcell-scroll-area-step-#{$axis} {
+      from {
+        transform: none;
+      }
+
+      to {
+        transform: $back;
+      }
+    }
+  }
+}

@@ -1,0 +1,191 @@
+@@ raised
+┌─ poyahoga gorge ─────────────────╖
+│ jumping the poyahoga gorge,      ║
+│ although tempting, is highly     ║
+│ illegal and dangerous.           ║
+│      turn back   jump the gorge  ║
+╘══════════════════════════════════╝
+
+@@ raised:hover
+┌─ poyahoga gorge ─────────────────╖
+│ jumping the poyahoga gorge,      ║
+│ although tempting, is highly     ║
+│ illegal and dangerous.           ║
+│     {w| turn back }  jump the gorge  ║
+╘══════════════════════════════════╝
+
+@@ raised:press
+┌─ poyahoga gorge ─────────────────╖
+│ jumping the poyahoga gorge,      ║
+│ although tempting, is highly     ║
+│ illegal and dangerous.           ║
+│     {i| turn back }  jump the gorge  ║
+╘══════════════════════════════════╝
+
+@@ raised:focus
+┌─ poyahoga gorge ─────────────────╖
+│ jumping the poyahoga gorge,      ║
+│ although tempting, is highly     ║
+│ illegal and dangerous.           ║
+│     ❯turn back   jump the gorge  ║
+╘══════════════════════════════════╝
+
+@@ border-none
+   poyahoga gorge
+  jumping the poyahoga gorge,
+  although tempting, is highly
+  illegal and dangerous.
+       turn back   jump the gorge
+
+
+@@ border-none:hover
+   poyahoga gorge
+  jumping the poyahoga gorge,
+  although tempting, is highly
+  illegal and dangerous.
+      {w| turn back }  jump the gorge
+
+
+@@ border-none:press
+   poyahoga gorge
+  jumping the poyahoga gorge,
+  although tempting, is highly
+  illegal and dangerous.
+      {i| turn back }  jump the gorge
+
+
+@@ border-none:focus
+   poyahoga gorge
+  jumping the poyahoga gorge,
+  although tempting, is highly
+  illegal and dangerous.
+      ❯turn back   jump the gorge
+
+
+@@ border-single
+┌─ poyahoga gorge ─────────────────┐
+│ jumping the poyahoga gorge,      │
+│ although tempting, is highly     │
+│ illegal and dangerous.           │
+│      turn back   jump the gorge  │
+└──────────────────────────────────┘
+
+@@ border-single:hover
+┌─ poyahoga gorge ─────────────────┐
+│ jumping the poyahoga gorge,      │
+│ although tempting, is highly     │
+│ illegal and dangerous.           │
+│     {w| turn back }  jump the gorge  │
+└──────────────────────────────────┘
+
+@@ border-single:press
+┌─ poyahoga gorge ─────────────────┐
+│ jumping the poyahoga gorge,      │
+│ although tempting, is highly     │
+│ illegal and dangerous.           │
+│     {i| turn back }  jump the gorge  │
+└──────────────────────────────────┘
+
+@@ border-single:focus
+┌─ poyahoga gorge ─────────────────┐
+│ jumping the poyahoga gorge,      │
+│ although tempting, is highly     │
+│ illegal and dangerous.           │
+│     ❯turn back   jump the gorge  │
+└──────────────────────────────────┘
+
+@@ border-rounded
+╭─ poyahoga gorge ─────────────────╮
+│ jumping the poyahoga gorge,      │
+│ although tempting, is highly     │
+│ illegal and dangerous.           │
+│      turn back   jump the gorge  │
+╰──────────────────────────────────╯
+
+@@ border-rounded:hover
+╭─ poyahoga gorge ─────────────────╮
+│ jumping the poyahoga gorge,      │
+│ although tempting, is highly     │
+│ illegal and dangerous.           │
+│     {w| turn back }  jump the gorge  │
+╰──────────────────────────────────╯
+
+@@ border-rounded:press
+╭─ poyahoga gorge ─────────────────╮
+│ jumping the poyahoga gorge,      │
+│ although tempting, is highly     │
+│ illegal and dangerous.           │
+│     {i| turn back }  jump the gorge  │
+╰──────────────────────────────────╯
+
+@@ border-rounded:focus
+╭─ poyahoga gorge ─────────────────╮
+│ jumping the poyahoga gorge,      │
+│ although tempting, is highly     │
+│ illegal and dangerous.           │
+│     ❯turn back   jump the gorge  │
+╰──────────────────────────────────╯
+
+@@ border-heavy
+┏━ poyahoga gorge ━━━━━━━━━━━━━━━━━┓
+┃ jumping the poyahoga gorge,      ┃
+┃ although tempting, is highly     ┃
+┃ illegal and dangerous.           ┃
+┃      turn back   jump the gorge  ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+@@ border-heavy:hover
+┏━ poyahoga gorge ━━━━━━━━━━━━━━━━━┓
+┃ jumping the poyahoga gorge,      ┃
+┃ although tempting, is highly     ┃
+┃ illegal and dangerous.           ┃
+┃     {w| turn back }  jump the gorge  ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+@@ border-heavy:press
+┏━ poyahoga gorge ━━━━━━━━━━━━━━━━━┓
+┃ jumping the poyahoga gorge,      ┃
+┃ although tempting, is highly     ┃
+┃ illegal and dangerous.           ┃
+┃     {i| turn back }  jump the gorge  ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+@@ border-heavy:focus
+┏━ poyahoga gorge ━━━━━━━━━━━━━━━━━┓
+┃ jumping the poyahoga gorge,      ┃
+┃ although tempting, is highly     ┃
+┃ illegal and dangerous.           ┃
+┃     ❯turn back   jump the gorge  ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+@@ border-double
+╔═ poyahoga gorge ═════════════════╗
+║ jumping the poyahoga gorge,      ║
+║ although tempting, is highly     ║
+║ illegal and dangerous.           ║
+║      turn back   jump the gorge  ║
+╚══════════════════════════════════╝
+
+@@ border-double:hover
+╔═ poyahoga gorge ═════════════════╗
+║ jumping the poyahoga gorge,      ║
+║ although tempting, is highly     ║
+║ illegal and dangerous.           ║
+║     {w| turn back }  jump the gorge  ║
+╚══════════════════════════════════╝
+
+@@ border-double:press
+╔═ poyahoga gorge ═════════════════╗
+║ jumping the poyahoga gorge,      ║
+║ although tempting, is highly     ║
+║ illegal and dangerous.           ║
+║     {i| turn back }  jump the gorge  ║
+╚══════════════════════════════════╝
+
+@@ border-double:focus
+╔═ poyahoga gorge ═════════════════╗
+║ jumping the poyahoga gorge,      ║
+║ although tempting, is highly     ║
+║ illegal and dangerous.           ║
+║     ❯turn back   jump the gorge  ║
+╚══════════════════════════════════╝

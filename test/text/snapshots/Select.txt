@@ -1,0 +1,274 @@
+@@ variant-boxed
+{m|┌────────────────┐}
+{m|│} {m|ride with}    {m|▾} {m|│}
+{m|└────────────────┘}
+
+@@ variant-boxed:hover
+{s|┌────────────────┐}
+{s|│}{w| }{mw|ride with}{w|    }{mw|▾}{w| }{s|│}
+{s|└────────────────┘}
+
+@@ variant-boxed:focus
+┌────────────────┐
+│❯{m|ride with}    {m|▾} │
+└────────────────┘
+
+@@ variant-boxed:open
+┌────────────────┐
+│{i| polecats     ▾ }│
+├────────────────┤
+│{i| polecats       }│
+│ vultures       │
+│ cavefish       │
+│{w|❯rottwheelers   }│
+└────────────────┘
+
+
+@@ variant-boxed:open-above
+
+┌────────────────┐
+│{i| polecats       }│
+│ vultures       │
+│ cavefish       │
+│{w|❯rottwheelers   }│
+├────────────────┤
+│{i| polecats     ▾ }│
+└────────────────┘
+
+@@ spacious
+{m|┌────────────────┐}
+{m|│} {m|ride with}    {m|▾} {m|│}
+{m|└────────────────┘}
+
+@@ spacious:hover
+{s|┌────────────────┐}
+{s|│}{w| }{mw|ride with}{w|    }{mw|▾}{w| }{s|│}
+{s|└────────────────┘}
+
+@@ spacious:focus
+┌────────────────┐
+│❯{m|ride with}    {m|▾} │
+└────────────────┘
+
+@@ spacious:open
+┌────────────────┐
+│{i| polecats     ▾ }│
+├────────────────┤
+│{i| polecats       }│
+│{i|                }│
+│ vultures       │
+│                │
+│ cavefish       │
+│                │
+│{w|❯rottwheelers   }│
+│{w|                }│
+└────────────────┘
+
+
+@@ disabled
+{f|┌────────────────┐}
+{f|│} {m|ride with}    {m|▾} {f|│}
+{f|└────────────────┘}
+
+@@ variant-dense
+ {m|ride with}    {m|▾}
+
+@@ variant-dense:hover
+{w| }{mw|ride with}{w|    }{mw|▾}{w| }
+
+@@ variant-dense:focus
+❯{m|ride with}    {m|▾}
+
+@@ variant-dense:open
+{i| polecats     ▾ }
+┌──────────────┐
+│{i| polecats     }│
+│ vultures     │
+│ cavefish     │
+│{w|❯rottwheelers }│
+└──────────────┘
+
+@@ fit-value
+{m|┌─────────────┐}
+{m|│} {m|ride with} {m|▾} {m|│}
+{m|└─────────────┘}
+
+@@ fit-value:hover
+{s|┌─────────────┐}
+{s|│}{w| }{mw|ride with}{w| }{mw|▾}{w| }{s|│}
+{s|└─────────────┘}
+
+@@ fit-value:focus
+┌─────────────┐
+│❯{m|ride with} {m|▾} │
+└─────────────┘
+
+@@ fit-value:open
+┌────────────┐
+│{i| polecats ▾ }│
+├────────────┴─┐
+│{i| polecats     }│
+│ vultures     │
+│ cavefish     │
+│{w|❯rottwheelers }│
+└──────────────┘
+
+
+@@ fit-value:open-above
+
+┌──────────────┐
+│{i| polecats     }│
+│ vultures     │
+│ cavefish     │
+│{w|❯rottwheelers }│
+├────────────┬─┘
+│{i| polecats ▾ }│
+└────────────┘
+
+@@ border-none
+
+  {m|ride with}    {m|▾}
+
+
+@@ border-none:hover
+
+ {w| }{mw|ride with}{w|    }{mw|▾}{w| }
+
+
+@@ border-none:focus
+
+ ❯{m|ride with}    {m|▾}
+
+
+@@ border-none:open
+
+ {i| polecats     ▾ }
+
+ {i| polecats       }
+  vultures
+  cavefish
+ {w|❯rottwheelers   }
+
+
+
+@@ border-none:open-above
+
+
+ {i| polecats       }
+  vultures
+  cavefish
+ {w|❯rottwheelers   }
+
+ {i| polecats     ▾ }
+
+
+@@ border-rounded
+{m|╭────────────────╮}
+{m|│} {m|ride with}    {m|▾} {m|│}
+{m|╰────────────────╯}
+
+@@ border-rounded:hover
+{s|╭────────────────╮}
+{s|│}{w| }{mw|ride with}{w|    }{mw|▾}{w| }{s|│}
+{s|╰────────────────╯}
+
+@@ border-rounded:focus
+╭────────────────╮
+│❯{m|ride with}    {m|▾} │
+╰────────────────╯
+
+@@ border-rounded:open
+╭────────────────╮
+│{i| polecats     ▾ }│
+├────────────────┤
+│{i| polecats       }│
+│ vultures       │
+│ cavefish       │
+│{w|❯rottwheelers   }│
+╰────────────────╯
+
+
+@@ border-rounded:open-above
+
+╭────────────────╮
+│{i| polecats       }│
+│ vultures       │
+│ cavefish       │
+│{w|❯rottwheelers   }│
+├────────────────┤
+│{i| polecats     ▾ }│
+╰────────────────╯
+
+@@ border-heavy
+{m|┏━━━━━━━━━━━━━━━━┓}
+{m|┃} {m|ride with}    {m|▾} {m|┃}
+{m|┗━━━━━━━━━━━━━━━━┛}
+
+@@ border-heavy:hover
+{s|┏━━━━━━━━━━━━━━━━┓}
+{s|┃}{w| }{mw|ride with}{w|    }{mw|▾}{w| }{s|┃}
+{s|┗━━━━━━━━━━━━━━━━┛}
+
+@@ border-heavy:focus
+┏━━━━━━━━━━━━━━━━┓
+┃❯{m|ride with}    {m|▾} ┃
+┗━━━━━━━━━━━━━━━━┛
+
+@@ border-heavy:open
+┏━━━━━━━━━━━━━━━━┓
+┃{i| polecats     ▾ }┃
+┣━━━━━━━━━━━━━━━━┫
+┃{i| polecats       }┃
+┃ vultures       ┃
+┃ cavefish       ┃
+┃{w|❯rottwheelers   }┃
+┗━━━━━━━━━━━━━━━━┛
+
+
+@@ border-heavy:open-above
+
+┏━━━━━━━━━━━━━━━━┓
+┃{i| polecats       }┃
+┃ vultures       ┃
+┃ cavefish       ┃
+┃{w|❯rottwheelers   }┃
+┣━━━━━━━━━━━━━━━━┫
+┃{i| polecats     ▾ }┃
+┗━━━━━━━━━━━━━━━━┛
+
+@@ border-double
+{m|╔════════════════╗}
+{m|║} {m|ride with}    {m|▾} {m|║}
+{m|╚════════════════╝}
+
+@@ border-double:hover
+{s|╔════════════════╗}
+{s|║}{w| }{mw|ride with}{w|    }{mw|▾}{w| }{s|║}
+{s|╚════════════════╝}
+
+@@ border-double:focus
+╔════════════════╗
+║❯{m|ride with}    {m|▾} ║
+╚════════════════╝
+
+@@ border-double:open
+╔════════════════╗
+║{i| polecats     ▾ }║
+╠════════════════╣
+║{i| polecats       }║
+║ vultures       ║
+║ cavefish       ║
+║{w|❯rottwheelers   }║
+╚════════════════╝
+
+
+@@ border-double:open-above
+
+╔════════════════╗
+║{i| polecats       }║
+║ vultures       ║
+║ cavefish       ║
+║{w|❯rottwheelers   }║
+╠════════════════╣
+║{i| polecats     ▾ }║
+╚════════════════╝

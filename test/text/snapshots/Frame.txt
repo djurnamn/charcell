@@ -1,0 +1,53 @@
+@@ border-single
+{m|┌─} quohog {m|─────────────────────────────┐}
+{m|│} the customer with the knife is       {m|│}
+{m|│} always right.                        {m|│}
+{m|└──────────────────────────────────────┘}
+
+@@ raised
+{m|┌─} quohog {m|─────────────────────────────╖}
+{m|│} the customer with the knife is       {m|║}
+{m|│} always right.                        {m|║}
+{m|╘══════════════════════════════════════╝}
+
+@@ active
+┌─ quohog ─────────────────────────────┐
+│ the customer with the knife is       │
+│ always right.                        │
+└──────────────────────────────────────┘
+
+@@ border-none
+   quohog
+  the customer with the knife is
+  always right.
+
+
+@@ border-rounded
+{m|╭─} quohog {m|─────────────────────────────╮}
+{m|│} the customer with the knife is       {m|│}
+{m|│} always right.                        {m|│}
+{m|╰──────────────────────────────────────╯}
+
+@@ border-heavy
+{m|┏━} quohog {m|━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓}
+{m|┃} the customer with the knife is       {m|┃}
+{m|┃} always right.                        {m|┃}
+{m|┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛}
+
+@@ border-double
+{m|╔═} quohog {m|═════════════════════════════╗}
+{m|║} the customer with the knife is       {m|║}
+{m|║} always right.                        {m|║}
+{m|╚══════════════════════════════════════╝}
+
+@@ flush
+{m|┌─} quohog {m|─────────────────────────────┐}
+{m|│}the customer with the knife is always {m|│}
+{m|│}right.                                {m|│}
+{m|└──────────────────────────────────────┘}
+
+@@ quiet
+{f|┌─} {m|quohog} {f|─────────────────────────────┐}
+{f|│} the customer with the knife is       {f|│}
+{f|│} always right.                        {f|│}
+{f|└──────────────────────────────────────┘}

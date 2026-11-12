@@ -1,0 +1,129 @@
+@@ variant-boxed
+{m|┌──────────────────────┐}
+{m|│} {m|warning: do not}      {m|│}
+{m|│}                      {m|│}
+{m|│}                      {m|│}
+{m|└──────────────────────┘}
+
+@@ variant-boxed:hover
+{s|┌──────────────────────┐}
+{s|│} {m|warning: do not}      {s|│}
+{s|│}                      {s|│}
+{s|│}                      {s|│}
+{s|└──────────────────────┘}
+
+@@ filled
+{m|┌──────────────────────┐}
+{m|│} warning: do not play {m|│}
+{m|│} in or around         {m|│}
+{m|│} dumpster.            {m|│}
+{m|│} do not kick          {m|│}
+{m|│} dumpster.            {m|│}
+{m|│} do not sleep in      {m|│}
+{m|│} dumpster.            {m|│}
+{m|│} usage of this        {m|│}
+{m|│} container for        {m|│}
+{m|│} disposal of human    {m|│}
+{m|│} remains may be a     {m|│}
+{m|│} violation of local   {m|│}
+{m|│} health ordinances.   {m|│}
+{m|└──────────────────────┘}
+
+@@ filled:hover
+{s|┌──────────────────────┐}
+{s|│} warning: do not play {s|│}
+{s|│} in or around         {s|│}
+{s|│} dumpster.            {s|│}
+{s|│} do not kick          {s|│}
+{s|│} dumpster.            {s|│}
+{s|│} do not sleep in      {s|│}
+{s|│} dumpster.            {s|│}
+{s|│} usage of this        {s|│}
+{s|│} container for        {s|│}
+{s|│} disposal of human    {s|│}
+{s|│} remains may be a     {s|│}
+{s|│} violation of local   {s|│}
+{s|│} health ordinances.   {s|│}
+{s|└──────────────────────┘}
+
+@@ autosize-false
+{m|┌──────────────────────┐}
+{m|│} warning: do not play {m|│}
+{m|│} in or around         {m|│}
+{m|│} dumpster.            {m|│}
+{m|└──────────────────────┘}
+
+@@ autosize-false:hover
+{s|┌──────────────────────┐}
+{s|│} warning: do not play {s|│}
+{s|│} in or around         {s|│}
+{s|│} dumpster.            {s|│}
+{s|└──────────────────────┘}
+
+@@ disabled
+{f|┌──────────────────────┐}
+{f|│} {m|do not kick}          {f|│}
+{f|│} {m|dumpster.}            {f|│}
+{f|│}                      {f|│}
+{f|└──────────────────────┘}
+
+@@ variant-dense
+{w| }{sw|warning: do not}{w|      }
+{w|                      }
+{w|                      }
+
+@@ border-none
+
+  {m|warning: do not}
+
+
+
+
+@@ border-none:hover
+
+  {m|warning: do not}
+
+
+
+
+@@ border-rounded
+{m|╭──────────────────────╮}
+{m|│} {m|warning: do not}      {m|│}
+{m|│}                      {m|│}
+{m|│}                      {m|│}
+{m|╰──────────────────────╯}
+
+@@ border-rounded:hover
+{s|╭──────────────────────╮}
+{s|│} {m|warning: do not}      {s|│}
+{s|│}                      {s|│}
+{s|│}                      {s|│}
+{s|╰──────────────────────╯}
+
+@@ border-heavy
+{m|┏━━━━━━━━━━━━━━━━━━━━━━┓}
+{m|┃} {m|warning: do not}      {m|┃}
+{m|┃}                      {m|┃}
+{m|┃}                      {m|┃}
+{m|┗━━━━━━━━━━━━━━━━━━━━━━┛}
+
+@@ border-heavy:hover
+{s|┏━━━━━━━━━━━━━━━━━━━━━━┓}
+{s|┃} {m|warning: do not}      {s|┃}
+{s|┃}                      {s|┃}
+{s|┃}                      {s|┃}
+{s|┗━━━━━━━━━━━━━━━━━━━━━━┛}
+
+@@ border-double
+{m|╔══════════════════════╗}
+{m|║} {m|warning: do not}      {m|║}
+{m|║}                      {m|║}
+{m|║}                      {m|║}
+{m|╚══════════════════════╝}
+
+@@ border-double:hover
+{s|╔══════════════════════╗}
+{s|║} {m|warning: do not}      {s|║}
+{s|║}                      {s|║}
+{s|║}                      {s|║}
+{s|╚══════════════════════╝}

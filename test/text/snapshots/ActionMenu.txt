@@ -1,0 +1,371 @@
+@@ raised
+┌────────┐
+│{i| turret }│
+├────────┴╖
+│{w|❯aim     }║
+│ fire    ║
+│{f|╶───────╴}║
+│ {m|raise}   ║
+│ lower   ║
+╘═════════╝
+
+@@ raised:hover
+┌────────┐
+│{I| turret }│
+├────────┴╖
+│{w|❯aim     }║
+│ fire    ║
+│{f|╶───────╴}║
+│ {m|raise}   ║
+│ lower   ║
+╘═════════╝
+
+@@ raised:press
+┌────────┐
+│{I| turret }│
+├────────┴╖
+│{w|❯aim     }║
+│ fire    ║
+│{f|╶───────╴}║
+│ {m|raise}   ║
+│ lower   ║
+╘═════════╝
+
+@@ raised:focus
+┌────────┐
+│{i|❯turret }│
+├────────┴╖
+│{w|❯aim     }║
+│ fire    ║
+│{f|╶───────╴}║
+│ {m|raise}   ║
+│ lower   ║
+╘═════════╝
+
+@@ placement-right-start
+┌────────┐┌───────╖
+│{i| turret }││{w|❯aim   }║
+└────────┘│ fire  ║
+          │{f|╶─────╴}║
+          │ {m|raise} ║
+          │ lower ║
+          ╘═══════╝
+
+@@ placement-right-start:hover
+┌────────┐┌───────╖
+│{I| turret }││{w|❯aim   }║
+└────────┘│ fire  ║
+          │{f|╶─────╴}║
+          │ {m|raise} ║
+          │ lower ║
+          ╘═══════╝
+
+@@ placement-right-start:press
+┌────────┐┌───────╖
+│{I| turret }││{w|❯aim   }║
+└────────┘│ fire  ║
+          │{f|╶─────╴}║
+          │ {m|raise} ║
+          │ lower ║
+          ╘═══════╝
+
+@@ placement-right-start:focus
+┌────────┐┌───────╖
+│{i|❯turret }││{w|❯aim   }║
+└────────┘│ fire  ║
+          │{f|╶─────╴}║
+          │ {m|raise} ║
+          │ lower ║
+          ╘═══════╝
+
+@@ spacious
+┌────────┐
+│{i| turret }│
+├────────┴╖
+│{w|❯aim     }║
+│{w|         }║
+│ fire    ║
+│         ║
+│{f|╶───────╴}║
+│ {m|raise}   ║
+│         ║
+│ lower   ║
+│         ║
+╘═════════╝
+
+@@ spacious:hover
+┌────────┐
+│{I| turret }│
+├────────┴╖
+│{w|❯aim     }║
+│{w|         }║
+│ fire    ║
+│         ║
+│{f|╶───────╴}║
+│ {m|raise}   ║
+│         ║
+│ lower   ║
+│         ║
+╘═════════╝
+
+@@ spacious:press
+┌────────┐
+│{I| turret }│
+├────────┴╖
+│{w|❯aim     }║
+│{w|         }║
+│ fire    ║
+│         ║
+│{f|╶───────╴}║
+│ {m|raise}   ║
+│         ║
+│ lower   ║
+│         ║
+╘═════════╝
+
+@@ spacious:focus
+┌────────┐
+│{i|❯turret }│
+├────────┴╖
+│{w|❯aim     }║
+│{w|         }║
+│ fire    ║
+│         ║
+│{f|╶───────╴}║
+│ {m|raise}   ║
+│         ║
+│ lower   ║
+│         ║
+╘═════════╝
+
+@@ border-none
+┌────────┐
+│{i| turret }│
+└────────┘
+
+ {w|❯aim   }
+  fire
+ {f|╶─────╴}
+  {m|raise}
+  lower
+
+
+@@ border-none:hover
+┌────────┐
+│{I| turret }│
+└────────┘
+
+ {w|❯aim   }
+  fire
+ {f|╶─────╴}
+  {m|raise}
+  lower
+
+
+@@ border-none:press
+┌────────┐
+│{I| turret }│
+└────────┘
+
+ {w|❯aim   }
+  fire
+ {f|╶─────╴}
+  {m|raise}
+  lower
+
+
+@@ border-none:focus
+┌────────┐
+│{i|❯turret }│
+└────────┘
+
+ {w|❯aim   }
+  fire
+ {f|╶─────╴}
+  {m|raise}
+  lower
+
+
+@@ border-single
+┌────────┐
+│{i| turret }│
+├────────┴┐
+│{w|❯aim     }│
+│ fire    │
+│{f|╶───────╴}│
+│ {m|raise}   │
+│ lower   │
+└─────────┘
+
+@@ border-single:hover
+┌────────┐
+│{I| turret }│
+├────────┴┐
+│{w|❯aim     }│
+│ fire    │
+│{f|╶───────╴}│
+│ {m|raise}   │
+│ lower   │
+└─────────┘
+
+@@ border-single:press
+┌────────┐
+│{I| turret }│
+├────────┴┐
+│{w|❯aim     }│
+│ fire    │
+│{f|╶───────╴}│
+│ {m|raise}   │
+│ lower   │
+└─────────┘
+
+@@ border-single:focus
+┌────────┐
+│{i|❯turret }│
+├────────┴┐
+│{w|❯aim     }│
+│ fire    │
+│{f|╶───────╴}│
+│ {m|raise}   │
+│ lower   │
+└─────────┘
+
+@@ border-rounded
+┌────────┐
+│{i| turret }│
+├────────┴╮
+│{w|❯aim     }│
+│ fire    │
+│{f|╶───────╴}│
+│ {m|raise}   │
+│ lower   │
+╰─────────╯
+
+@@ border-rounded:hover
+┌────────┐
+│{I| turret }│
+├────────┴╮
+│{w|❯aim     }│
+│ fire    │
+│{f|╶───────╴}│
+│ {m|raise}   │
+│ lower   │
+╰─────────╯
+
+@@ border-rounded:press
+┌────────┐
+│{I| turret }│
+├────────┴╮
+│{w|❯aim     }│
+│ fire    │
+│{f|╶───────╴}│
+│ {m|raise}   │
+│ lower   │
+╰─────────╯
+
+@@ border-rounded:focus
+┌────────┐
+│{i|❯turret }│
+├────────┴╮
+│{w|❯aim     }│
+│ fire    │
+│{f|╶───────╴}│
+│ {m|raise}   │
+│ lower   │
+╰─────────╯
+
+@@ border-heavy
+┌────────┐
+│{i| turret }│
+└────────┘
+┏━━━━━━━┓
+┃{w|❯aim   }┃
+┃ fire  ┃
+┃{f|╶─────╴}┃
+┃ {m|raise} ┃
+┃ lower ┃
+┗━━━━━━━┛
+
+@@ border-heavy:hover
+┌────────┐
+│{I| turret }│
+└────────┘
+┏━━━━━━━┓
+┃{w|❯aim   }┃
+┃ fire  ┃
+┃{f|╶─────╴}┃
+┃ {m|raise} ┃
+┃ lower ┃
+┗━━━━━━━┛
+
+@@ border-heavy:press
+┌────────┐
+│{I| turret }│
+└────────┘
+┏━━━━━━━┓
+┃{w|❯aim   }┃
+┃ fire  ┃
+┃{f|╶─────╴}┃
+┃ {m|raise} ┃
+┃ lower ┃
+┗━━━━━━━┛
+
+@@ border-heavy:focus
+┌────────┐
+│{i|❯turret }│
+└────────┘
+┏━━━━━━━┓
+┃{w|❯aim   }┃
+┃ fire  ┃
+┃{f|╶─────╴}┃
+┃ {m|raise} ┃
+┃ lower ┃
+┗━━━━━━━┛
+
+@@ border-double
+┌────────┐
+│{i| turret }│
+└────────┘
+╔═══════╗
+║{w|❯aim   }║
+║ fire  ║
+║{f|╶─────╴}║
+║ {m|raise} ║
+║ lower ║
+╚═══════╝
+
+@@ border-double:hover
+┌────────┐
+│{I| turret }│
+└────────┘
+╔═══════╗
+║{w|❯aim   }║
+║ fire  ║
+║{f|╶─────╴}║
+║ {m|raise} ║
+║ lower ║
+╚═══════╝
+
+@@ border-double:press
+┌────────┐
+│{I| turret }│
+└────────┘
+╔═══════╗
+║{w|❯aim   }║
+║ fire  ║
+║{f|╶─────╴}║
+║ {m|raise} ║
+║ lower ║
+╚═══════╝
+
+@@ border-double:focus
+┌────────┐
+│{i|❯turret }│
+└────────┘
+╔═══════╗
+║{w|❯aim   }║
+║ fire  ║
+║{f|╶─────╴}║
+║ {m|raise} ║
+║ lower ║
+╚═══════╝

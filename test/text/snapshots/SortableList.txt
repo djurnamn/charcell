@@ -1,0 +1,133 @@
+@@ snap-character
+{m|⠿} fix the fuel leak
+{m|⠿} knife up quohog's table
+{m|⠿} sell mink meat to the schools
+{m|⠿} dodge the cavefish
+
+@@ snap-character:hover
+{sw|⠿} fix the fuel leak
+{m|⠿} knife up quohog's table
+{m|⠿} sell mink meat to the schools
+{m|⠿} dodge the cavefish
+
+@@ snap-character:press
+{M|⠿} fix the fuel leak
+{m|⠿} knife up quohog's table
+{m|⠿} sell mink meat to the schools
+{m|⠿} dodge the cavefish
+
+@@ snap-character:focus
+{M|⠿} fix the fuel leak
+{m|⠿} knife up quohog's table
+{m|⠿} sell mink meat to the schools
+{m|⠿} dodge the cavefish
+
+@@ snap-character:picked
+{M|⠿} fix the fuel leak
+{m|⠿} knife up quohog's table
+{m|⠿} sell mink meat to the schools
+{m|⠿} dodge the cavefish
+
+@@ snap-character:place
+ {m|place here}
+
+@@ snap-character:place-hover
+{w| }{mw|place here}{w| }
+
+@@ snap-character:drop-hint
+ {m|drop here}
+
+@@ snap-character:drop-marker
+{m|⠿} fix the fuel leak
+{m|⠿} knife up quohog's table
+{i| drop here }
+{m|⠿} sell mink meat to the schools
+{m|⠿} dodge the cavefish
+
+@@ spacious
+{m|⠿} fix the fuel leak
+
+{m|⠿} knife up quohog's table
+
+{m|⠿} sell mink meat to the schools
+
+{m|⠿} dodge the cavefish
+
+
+@@ spacious:hover
+{sw|⠿} fix the fuel leak
+{w| }
+{m|⠿} knife up quohog's table
+
+{m|⠿} sell mink meat to the schools
+
+{m|⠿} dodge the cavefish
+
+
+@@ spacious:press
+{M|⠿} fix the fuel leak
+{M| }
+{m|⠿} knife up quohog's table
+
+{m|⠿} sell mink meat to the schools
+
+{m|⠿} dodge the cavefish
+
+
+@@ spacious:focus
+{M|⠿} fix the fuel leak
+{M| }
+{m|⠿} knife up quohog's table
+
+{m|⠿} sell mink meat to the schools
+
+{m|⠿} dodge the cavefish
+
+
+@@ snap-row
+{m|⠿} fix the fuel leak
+{m|⠿} knife up quohog's table
+{m|⠿} sell mink meat to the schools
+{m|⠿} dodge the cavefish
+
+@@ snap-row:hover
+{sw|⠿} fix the fuel leak
+{m|⠿} knife up quohog's table
+{m|⠿} sell mink meat to the schools
+{m|⠿} dodge the cavefish
+
+@@ snap-row:press
+{M|⠿} fix the fuel leak
+{m|⠿} knife up quohog's table
+{m|⠿} sell mink meat to the schools
+{m|⠿} dodge the cavefish
+
+@@ snap-row:focus
+{M|⠿} fix the fuel leak
+{m|⠿} knife up quohog's table
+{m|⠿} sell mink meat to the schools
+{m|⠿} dodge the cavefish
+
+@@ snap-none
+{m|⠿} fix the fuel leak
+{m|⠿} knife up quohog's table
+{m|⠿} sell mink meat to the schools
+{m|⠿} dodge the cavefish
+
+@@ snap-none:hover
+{sw|⠿} fix the fuel leak
+{m|⠿} knife up quohog's table
+{m|⠿} sell mink meat to the schools
+{m|⠿} dodge the cavefish
+
+@@ snap-none:press
+{M|⠿} fix the fuel leak
+{m|⠿} knife up quohog's table
+{m|⠿} sell mink meat to the schools
+{m|⠿} dodge the cavefish
+
+@@ snap-none:focus
+{M|⠿} fix the fuel leak
+{m|⠿} knife up quohog's table
+{m|⠿} sell mink meat to the schools
+{m|⠿} dodge the cavefish

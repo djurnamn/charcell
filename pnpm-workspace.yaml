@@ -1,0 +1,24 @@
+overrides:
+allowBuilds:
+  "@parcel/watcher": true
+  esbuild: true
+
+# the kit author's own packages, exempt from the minimum-release-age guard: a
+# release published from the same machine has nothing to wait out. entries are package
+# names, which cover every version, so a release needs no line here - pnpm
+# would otherwise append one `name@version` per release. read from this file
+# only: an .npmrc entry or an environment variable is ignored.
+minimumReleaseAgeExclude:
+  - "@js-template-engine/core"
+  - "@js-template-engine/extension-bem"
+  - "@js-template-engine/extension-react"
+  - "@js-template-engine/extension-svelte"
+  - "@js-template-engine/extension-tailwind"
+  - "@js-template-engine/extension-vue"
+  - "@js-template-engine/types"
+  - "@scaffold-ui-kit/add"
+  - "@scaffold-ui-kit/helpers"
+  - "@scaffold-ui-kit/testing"
+  - hard-reset
+  - scaffold-ui-kit
+  - use-bem

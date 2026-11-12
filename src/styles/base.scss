@@ -1,0 +1,133 @@
+@use "pkg:charcell/styles/layer-order";
+@use "slots";
+
+// charcell's base layer: the tokens, the self-hosted faces and the mode
+// blocks. It touches no bare element selector, so it is safe inside a document
+// charcell does not own; every component needs it.
+//
+// The theme is strict monochrome: a foreground/background pair plus three gray
+// tints, no accent color. Prefixed `--charcell-` so a published kit squats no
+// generic names. white-on-black by default; `data-charcell-mode="light"` on the
+// root flips the pair, and the grays invert with it so `faint` always reads
+// nearest the background and `strong` nearest the foreground.
+@layer charcell.base {
+  // The face is Overpass mono (variable, 300 to 700), under charcell's own
+  // name so it cannot merge with a copy the host loads under the usual one.
+  // It is tuned to the cell, an 8 x 16 cell at the 14px token, exactly: the
+  // file (`scripts/font/build.py`) is the upstream font with its units per em
+  // set from 2000 to 2002 (a uniform 0.1% smaller, and renamed), so that
+  // `size-adjust` can land the face at 13px - Chromium rounds the adjusted size
+  // to 0.01px - where its advance, 1232 units, is 8.000px. whole-pixel cells
+  // put every glyph and every stroke at the same pixel phase in every cell.
+  // The ascent and descent overrides make its own line box the 2ch row with
+  // the baseline 11px down, on a whole pixel (Chromium snaps the baseline to
+  // one). The file draws its own cell graphics from there - box drawing,
+  // blocks, shades and braille as whole-pixel outlines, identical to the
+  // reference renderer - as a terminal draws them itself, rather than trust a
+  // face's glyphs, which overshoot the cell and blur where they overlap.
+  //
+  // The italic is Lilex italic (variable, 100 to 700) under the same family,
+  // so `font-style: italic` takes it rather than slanting the upright: its
+  // units per em set from 1000 to 975 (a uniform 2.6% larger, renamed charcell
+  // Lilex), so the same `size-adjust` and line box give its 600-unit advance
+  // 8.000px and the same baseline. It carries the same cell graphics, upright,
+  // as a terminal draws them in italic text.
+  @font-face {
+    font-family: 'Charcell Overpass Mono';
+    font-style: normal;
+    font-weight: 300 700;
+    font-display: swap;
+    src: url('./fonts/OverpassMono.woff2') format('woff2');
+    size-adjust: 92.8575%;
+    ascent-override: 84.6154%;
+    descent-override: 38.4615%;
+    line-gap-override: 0%;
+  }
+
+  @font-face {
+    font-family: 'Charcell Overpass Mono';
+    font-style: italic;
+    font-weight: 100 700;
+    font-display: swap;
+    src: url('./fonts/LilexItalic.woff2') format('woff2');
+    size-adjust: 92.8575%;
+    ascent-override: 84.6154%;
+    descent-override: 38.4615%;
+    line-gap-override: 0%;
+  }
+
+  :root {
+    --charcell-background: #000000;
+    --charcell-foreground: #ffffff;
+    --charcell-faint: #404040; /* 25%, nearest the background */
+    --charcell-mid: #808080; /* 50% */
+    --charcell-strong: #bfbfbf; /* 75%, nearest the foreground */
+
+    --charcell-font-family: 'Charcell Overpass Mono', ui-monospace, monospace;
+    --charcell-font-size: 0.875rem;
+    /* The vertical grid unit: one character cell tall. 2ch gives the terminal
+     * cell aspect (width : height about 1 : 2); half a row is therefore exactly
+     * 1ch, which is what lets the centered-stroke rings land precisely. `ch`
+     * resolves where the token is used, against that block's own face. */
+    --charcell-row: 2ch;
+
+    /* Where a stroke sits in its cell: the center pixel, the same one in
+     * every cell, across and down, as the reference text draws `│` and `─`;
+     * and how far either side of it a double line's two strokes sit, an eighth
+     * of a cell (one pixel apart on the 8 x 16 cell, as a face draws `═`).
+     * Resolved where they are used, against that block's face. */
+    --charcell-stroke-x: round(down, 0.5ch, 1px);
+    --charcell-stroke-y: round(down, calc(var(--charcell-row) / 2), 1px);
+    --charcell-stroke-gap: round(0.125ch, 1px);
+    /* One device pixel, in CSS pixels: how wide the edge of a curved stroke
+     * fades, so an arc antialiases like an outline at any density. */
+    --charcell-device-pixel: 1px;
+
+    /* The floating layers, small integers, each above what it can open
+     * from: a dialog holds popovers, menus and selects, and a select or a menu
+     * can open from inside a popover; a tooltip's hint shows over them all. */
+    --charcell-layer-dialog: 1;
+    --charcell-layer-popover: 2;
+    --charcell-layer-listbox: 3;
+    --charcell-layer-tooltip: 4;
+    /* The most items an open listbox shows before it scrolls. */
+    --charcell-listbox-rows: 12;
+  }
+
+  @media (min-resolution: 1.5dppx) {
+    :root {
+      --charcell-device-pixel: 0.6667px;
+    }
+  }
+
+  @media (min-resolution: 2dppx) {
+    :root {
+      --charcell-device-pixel: 0.5px;
+    }
+  }
+
+  @media (min-resolution: 3dppx) {
+    :root {
+      --charcell-device-pixel: 0.3333px;
+    }
+  }
+
+  // `color-scheme` only where a mode is stamped: stamping the attribute is the
+  // consumer's opt-in, whereas a bare `:root` rule would turn the host's own
+  // scrollbars and form controls dark whether they asked or not.
+  [data-charcell-mode='dark'] {
+    color-scheme: dark;
+  }
+
+  [data-charcell-mode='light'] {
+    --charcell-background: #ffffff;
+    --charcell-foreground: #000000;
+    --charcell-faint: #bfbfbf;
+    /* Darker than the 50% point: mid is the minimum text tone, and #6b6b6b on
+     * white meets the same 5.3:1 that #808080 does on black. */
+    --charcell-mid: #6b6b6b;
+    --charcell-strong: #404040;
+
+    color-scheme: light;
+  }
+}

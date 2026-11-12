@@ -1,0 +1,31 @@
+@use "pkg:charcell/styles/layer-order";
+@use "slots";
+
+// The page canvas, shipped with the preflight: the rules that say charcell owns
+// this document, which is why they are opt-in. In the base layer rather than
+// the reset, because they state what the page is rather than neutralize the
+// browser.
+@layer charcell.base {
+  html {
+    color-scheme: dark;
+    background: var(--charcell-background);
+  }
+
+  // The type sits on `body`, not `html`: `--charcell-font-size` is a rem value,
+  // so stating it on the root would redefine the rem it is measured in, and
+  // the row's `ch` has to resolve against the face at that size.
+  body {
+    font-family: var(--charcell-font-family);
+    font-size: var(--charcell-font-size);
+    line-height: var(--charcell-row);
+    color: var(--charcell-foreground);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  // Selected text on the page is reverse video, as in every charcell block.
+  ::selection {
+    color: var(--charcell-background);
+    background: var(--charcell-foreground);
+  }
+}

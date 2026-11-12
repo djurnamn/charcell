@@ -1,0 +1,57 @@
+// The state slots: the private custom properties a component declares a
+// property against once, and lets its modifiers and states assign
+// (`background: var(--charcell-fill--resolved, none)`).
+//
+// Registered non-inheriting, so a slot assigned on one box never flows into
+// another: an inverted TreeItem cannot hand its fill to a charcell component a
+// consumer nests inside it, and an element nothing assigns reads its
+// declaration's own fallback. Every slot is assigned and read on the same box
+// (a pseudo-element's slot is assigned on the pseudo-element), which is what
+// makes registering all of them safe.
+//
+// `syntax: "*"` and no initial value: unassigned, a slot is the
+// guaranteed-invalid value, so `var()` falls back. Registration is page-wide
+// and sits outside the layers, and every entry and every component sheet loads
+// this module, so it reaches every route.
+$slots: (
+  // The cell's background tone.
+  "--charcell-fill--resolved",
+  // The text tone.
+  "--charcell-text--resolved",
+  // A drawn stroke's tone: a ring, a rule, the TextInput's outline.
+  "--charcell-stroke--resolved",
+  // The focus pointer's glyph, keyboard focus's cue.
+  "--charcell-pointer--resolved",
+  // Whether forced-colors may repaint the cell: an inverted cell opts out and
+  // paints the system's own selection pair.
+  "--charcell-forced-color-adjust--resolved",
+);
+
+@each $slot in $slots {
+  @property #{$slot} {
+    syntax: "*";
+    inherits: false;
+  }
+}
+
+// The joins: what a box tells a line laid directly in it, so the line's ends
+// can run on to meet the box's ring (`├ ┤ ┬ ┴`). How far past its own box
+// each end runs, to the ring's inner line, and the ring's tone, since a
+// junction is one glyph at one tone. A frame assigns them on its body's
+// direct children only, and registered non-inheriting they go no further: a
+// line nested deeper meets what is beside it instead. A consumer can assign
+// them on a line itself.
+$joins: (
+  "--charcell-join-top",
+  "--charcell-join-right",
+  "--charcell-join-bottom",
+  "--charcell-join-left",
+  "--charcell-join-tone",
+);
+
+@each $join in $joins {
+  @property #{$join} {
+    syntax: "*";
+    inherits: false;
+  }
+}

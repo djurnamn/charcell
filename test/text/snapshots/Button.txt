@@ -1,0 +1,121 @@
+@@ variant-boxed
+{m|┌──────┐}
+{m|│} kick {m|│}
+{m|└──────┘}
+
+@@ variant-boxed:hover
+{s|┌──────┐}
+{s|│}{w| kick }{s|│}
+{s|└──────┘}
+
+@@ variant-boxed:press
+┌──────┐
+│{i| kick }│
+└──────┘
+
+@@ variant-boxed:focus
+┌──────┐
+│❯kick │
+└──────┘
+
+@@ disabled
+{f|┌──────┐}
+{f|│} {m|kick} {f|│}
+{f|└──────┘}
+
+@@ variant-dense
+ kick
+
+@@ variant-dense:hover
+{w| kick }
+
+@@ variant-dense:press
+{i| kick }
+
+@@ variant-dense:focus
+❯kick
+
+@@ nonInteractive
+{m|┌──────┐}
+{m|│} kick {m|│}
+{m|└──────┘}
+
+@@ border-none
+
+  kick
+
+
+@@ border-none:hover
+
+ {w| kick }
+
+
+@@ border-none:press
+
+ {i| kick }
+
+
+@@ border-none:focus
+
+ ❯kick
+
+
+@@ border-rounded
+{m|╭──────╮}
+{m|│} kick {m|│}
+{m|╰──────╯}
+
+@@ border-rounded:hover
+{s|╭──────╮}
+{s|│}{w| kick }{s|│}
+{s|╰──────╯}
+
+@@ border-rounded:press
+╭──────╮
+│{i| kick }│
+╰──────╯
+
+@@ border-rounded:focus
+╭──────╮
+│❯kick │
+╰──────╯
+
+@@ border-heavy
+{m|┏━━━━━━┓}
+{m|┃} kick {m|┃}
+{m|┗━━━━━━┛}
+
+@@ border-heavy:hover
+{s|┏━━━━━━┓}
+{s|┃}{w| kick }{s|┃}
+{s|┗━━━━━━┛}
+
+@@ border-heavy:press
+┏━━━━━━┓
+┃{i| kick }┃
+┗━━━━━━┛
+
+@@ border-heavy:focus
+┏━━━━━━┓
+┃❯kick ┃
+┗━━━━━━┛
+
+@@ border-double
+{m|╔══════╗}
+{m|║} kick {m|║}
+{m|╚══════╝}
+
+@@ border-double:hover
+{s|╔══════╗}
+{s|║}{w| kick }{s|║}
+{s|╚══════╝}
+
+@@ border-double:press
+╔══════╗
+║{i| kick }║
+╚══════╝
+
+@@ border-double:focus
+╔══════╗
+║❯kick ║
+╚══════╝

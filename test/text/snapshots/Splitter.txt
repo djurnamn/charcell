@@ -1,0 +1,238 @@
+@@ orientation-horizontal
+ stops     places
+         {m|⠿}
+
+
+@@ orientation-horizontal:hover
+ stops   {w| } places
+         {sw|⠿}
+         {w| }
+
+@@ orientation-horizontal:press
+ stops   {M| } places
+         {M|⠿}
+         {M| }
+
+@@ orientation-horizontal:focus
+ stops   {M| } places
+         {M|⠿}
+         {M| }
+
+@@ rule-vertical
+ stops
+
+{f|─────}{m|⠶⠶}{f|─────}
+ places
+
+
+@@ rule-vertical:hover
+ stops
+
+{w|     }{sw|⠶⠶}{w|     }
+ places
+
+
+@@ rule-vertical:press
+ stops
+
+{M|     ⠶⠶     }
+ places
+
+
+@@ rule-vertical:focus
+ stops
+
+{M|     ⠶⠶     }
+ places
+
+
+@@ rule-vertical:handle-row
+ stops
+
+ melonweed {f|───}{m|⠶⠶}{f|────} 4 places
+ places
+
+
+@@ minimumCells
+ stops     places
+         {m|⠿}
+
+
+@@ minimumCells:hover
+ stops   {w| } places
+         {sw|⠿}
+         {w| }
+
+@@ minimumCells:press
+ stops   {M| } places
+         {M|⠿}
+         {M| }
+
+@@ minimumCells:focus
+ stops   {M| } places
+         {M|⠿}
+         {M| }
+
+@@ orientation-vertical
+ stops
+
+     {m|⠶⠶}
+ places
+
+
+@@ orientation-vertical:hover
+ stops
+
+{w|     }{sw|⠶⠶}{w|     }
+ places
+
+
+@@ orientation-vertical:press
+ stops
+
+{M|     ⠶⠶     }
+ places
+
+
+@@ orientation-vertical:focus
+ stops
+
+{M|     ⠶⠶     }
+ places
+
+
+@@ snap-none
+ stops     places
+         {m|⠿}
+
+
+@@ snap-none:hover
+ stops   {w| } places
+         {sw|⠿}
+         {w| }
+
+@@ snap-none:press
+ stops   {M| } places
+         {M|⠿}
+         {M| }
+
+@@ snap-none:focus
+ stops   {M| } places
+         {M|⠿}
+         {M| }
+
+@@ keep-start
+ stops     places
+         {m|⠿}
+
+
+@@ keep-start:hover
+ stops   {w| } places
+         {sw|⠿}
+         {w| }
+
+@@ keep-start:press
+ stops   {M| } places
+         {M|⠿}
+         {M| }
+
+@@ keep-start:focus
+ stops   {M| } places
+         {M|⠿}
+         {M| }
+
+@@ keep-end
+ stops     places
+         {m|⠿}
+
+
+@@ keep-end:hover
+ stops   {w| } places
+         {sw|⠿}
+         {w| }
+
+@@ keep-end:press
+ stops   {M| } places
+         {M|⠿}
+         {M| }
+
+@@ keep-end:focus
+ stops   {M| } places
+         {M|⠿}
+         {M| }
+
+@@ rule
+ stops   {f|│} places
+         {m|⠿}
+         {f|│}
+
+@@ rule:hover
+ stops   {w| } places
+         {sw|⠿}
+         {w| }
+
+@@ rule:press
+ stops   {M| } places
+         {M|⠿}
+         {M| }
+
+@@ rule:focus
+ stops   {M| } places
+         {M|⠿}
+         {M| }
+
+@@ rule-join-frame
+{m|┌─────────┬──────────┐}
+{m|│} stops   {m|│} places   {m|│}
+{m|│}         {m|⠿}          {m|│}
+{m|│}         {m|│}          {m|│}
+{m|└─────────┴──────────┘}
+
+@@ rule-join-frame:hover
+{m|┌─────────┬──────────┐}
+{m|│} stops   {w| } places   {m|│}
+{m|│}         {sw|⠿}          {m|│}
+{m|│}         {w| }          {m|│}
+{m|└─────────┴──────────┘}
+
+@@ rule-join-frame:press
+{m|┌─────────┬──────────┐}
+{m|│} stops   {M| } places   {m|│}
+{m|│}         {M|⠿}          {m|│}
+{m|│}         {M| }          {m|│}
+{m|└─────────┴──────────┘}
+
+@@ rule-join-frame:focus
+{m|┌─────────┬──────────┐}
+{m|│} stops   {M| } places   {m|│}
+{m|│}         {M|⠿}          {m|│}
+{m|│}         {M| }          {m|│}
+{m|└─────────┴──────────┘}
+
+@@ rule-join-panel
+ stops   {f|│} in town
+         {f|├──────────}
+         {m|⠿} nearby
+         {f|│}
+         {f|│}
+
+@@ rule-join-panel:hover
+ stops   {w| } in town
+         {w| }{f|──────────}
+         {sw|⠿} nearby
+         {w| }
+         {w| }
+
+@@ rule-join-panel:press
+ stops   {M| } in town
+         {M| }{f|──────────}
+         {M|⠿} nearby
+         {M| }
+         {M| }
+
+@@ rule-join-panel:focus
+ stops   {M| } in town
+         {M| }{f|──────────}
+         {M|⠿} nearby
+         {M| }
+         {M| }

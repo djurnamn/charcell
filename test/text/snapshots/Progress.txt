@@ -1,0 +1,14 @@
+@@ value-42
+{m|filling the gas can} {i|      }{w|          } 42%
+
+@@ zero
+{m|filling the gas can} {w|                 } 0%
+
+@@ full
+{m|filling the gas can} {i|               } 100%
+
+@@ indeterminate
+{m|filling the gas can} {M|                    }
+
+@@ showValue-false
+{m|filling the gas can} {i|        }{w|            }

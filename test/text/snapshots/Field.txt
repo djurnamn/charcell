@@ -1,0 +1,25 @@
+@@ description
+     {m|┌──────────────────────┐}
+{m|name} {m|│} {m|doreen schmorley}     {m|│}
+     {m|└──────────────────────┘}
+     {m|read out by the announcer}
+
+@@ description:hover
+     {s|┌──────────────────────┐}
+{m|name} {s|│} {m|doreen schmorley}     {s|│}
+     {s|└──────────────────────┘}
+     {m|read out by the announcer}
+
+@@ error
+     {m|┌──────────────────────┐}
+{m|name} {m|│} {m|doreen schmorley}     {m|│}
+     {m|└──────────────────────┘}
+     error: give us your name
+     {m|read out by the announcer}
+
+@@ error:hover
+     {s|┌──────────────────────┐}
+{m|name} {s|│} {m|doreen schmorley}     {s|│}
+     {s|└──────────────────────┘}
+     error: give us your name
+     {m|read out by the announcer}

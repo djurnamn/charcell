@@ -1,0 +1,27 @@
+{
+  "// purpose": "type-check the rendered react target and charcell/scripts as a strict consumer would. charcell ships .tsx and .ts source, not .d.ts, so any strict consumer importing charcell/react compiles these files, and skipLibCheck does not cover them; this gate catches a template or a script emitting code that fails under the flags of a fresh vite project, with noUncheckedIndexedAccess besides.",
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+    "noUncheckedIndexedAccess": true,
+    "verbatimModuleSyntax": true,
+    "erasableSyntaxOnly": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "dist/react/**/*",
+    "src/scripts/**/*",
+    "test/consumer-types.ts",
+    "test/bundler-types.d.ts"
+  ]
+}

@@ -1,0 +1,32 @@
+@@ orientation-vertical
+{m|ride with}  (•) polecats
+           ( ) vultures
+           ( ) cavefish
+           {m|( ) rottwheelers}
+
+@@ orientation-vertical:hover
+{m|ride with} {w| (•) polecats }
+           ( ) vultures
+           ( ) cavefish
+           {m|( ) rottwheelers}
+
+@@ orientation-vertical:focus
+{m|ride with} ❯(•) polecats
+           ( ) vultures
+           ( ) cavefish
+           {m|( ) rottwheelers}
+
+@@ disabled
+{m|ride with  (•) polecats}
+           {m|( ) vultures}
+           {m|( ) cavefish}
+           {m|( ) rottwheelers}
+
+@@ orientation-horizontal
+{m|ride with}  (•) polecats  ( ) vultures  ( ) cavefish  {m|( ) rottwheelers}
+
+@@ orientation-horizontal:hover
+{m|ride with} {w| (•) polecats } ( ) vultures  ( ) cavefish  {m|( ) rottwheelers}
+
+@@ orientation-horizontal:focus
+{m|ride with} ❯(•) polecats  ( ) vultures  ( ) cavefish  {m|( ) rottwheelers}

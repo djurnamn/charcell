@@ -1,0 +1,200 @@
+{
+  "name": "charcell",
+  "version": "0.1.0",
+  "description": "a terminal ui kit for react, vue and svelte",
+  "homepage": "https://djurnamn.github.io/charcell/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/djurnamn/charcell.git"
+  },
+  "bugs": "https://github.com/djurnamn/charcell/issues",
+  "type": "module",
+  "files": [
+    "bin",
+    "dist",
+    "!dist/*/.gitkeep",
+    "src/scripts",
+    "src/styles",
+    "README.md"
+  ],
+  "bin": {
+    "charcell": "bin/add.mjs"
+  },
+  "exports": {
+    "./react": "./dist/react/index.ts",
+    "./react/unlinked": "./dist/react/unlinked/index.ts",
+    "./react/unlinked/*": "./dist/react/*.tsx",
+    "./react/linked/*": "./dist/react/linked/*.ts",
+    "./vue": "./dist/vue/index.ts",
+    "./vue/unlinked": "./dist/vue/unlinked/index.ts",
+    "./vue/unlinked/*": "./dist/vue/*.vue",
+    "./vue/linked/*": "./dist/vue/linked/*.ts",
+    "./svelte": "./dist/svelte/index.ts",
+    "./svelte/unlinked": "./dist/svelte/unlinked/index.ts",
+    "./svelte/unlinked/*": "./dist/svelte/*.svelte",
+    "./svelte/linked/*": "./dist/svelte/linked/*.ts",
+    "./css": {
+      "types": "./src/styles/stylesheet.d.ts",
+      "default": "./dist/charcell.css"
+    },
+    "./css/base": {
+      "types": "./src/styles/stylesheet.d.ts",
+      "default": "./dist/charcell.base.css"
+    },
+    "./css/preflight": {
+      "types": "./src/styles/stylesheet.d.ts",
+      "default": "./dist/charcell.preflight.css"
+    },
+    "./css/full": {
+      "types": "./src/styles/stylesheet.d.ts",
+      "default": "./dist/charcell.full.css"
+    },
+    "./css/components/*": {
+      "types": "./src/styles/stylesheet.d.ts",
+      "default": "./dist/stylesheets/*.css"
+    },
+    "./styles": "./src/styles/index.scss",
+    "./styles/base": "./src/styles/base.scss",
+    "./styles/preflight": "./src/styles/preflight.scss",
+    "./styles/full": "./src/styles/full.scss",
+    "./styles/reset": "./src/styles/reset.scss",
+    "./styles/page": "./src/styles/page.scss",
+    "./styles/mixins": "./src/styles/_mixins.scss",
+    "./styles/layer-order": "./dist/react/_layer-order.scss",
+    "./styles/*": "./src/styles/_*.scss",
+    "./scripts": "./src/scripts/index.ts",
+    "./scripts/*": "./src/scripts/*.ts"
+  },
+  "sideEffects": [
+    "*.css",
+    "*.scss"
+  ],
+  "scripts": {
+    "build": "pnpm clean && scaffold-ui-kit build && pnpm generate",
+    "generate": "tsx scripts/generate.ts",
+    "typecheck": "pnpm typecheck:dist && pnpm typecheck:vue && pnpm typecheck:svelte",
+    "typecheck:dist": "tsc -p tsconfig.dist.json",
+    "typecheck:vue": "vue-tsc -p tsconfig.vue.json",
+    "typecheck:svelte": "svelte-check --tsconfig ./tsconfig.svelte.json --fail-on-warnings --output human",
+    "text:build": "esbuild test/text/build-compare.tsx --bundle --platform=node --format=esm --jsx=automatic --external:react --external:react-dom --external:'@zag-js/*' --external:use-bem --external:postcss --external:postcss-selector-parser --external:jsdom --outfile=node_modules/.cache/charcell/build-compare.mjs --log-level=warning && node node_modules/.cache/charcell/build-compare.mjs",
+    "text:check": "node test/text/check.mjs",
+    "text:snapshots": "node test/text/snapshots.mjs",
+    "text:accept": "node test/text/snapshots.mjs --accept",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "node -e \"console.error('A direct publish is refused: the release tooling publishes this package from the repository root, as a tarball stripped of maintainer notes and checked.'); process.exit(1)\"",
+    "test": "vitest run",
+    "verify": "pnpm format:check && pnpm lint && pnpm build && pnpm typecheck && pnpm test",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint . --max-warnings 0"
+  },
+  "keywords": [
+    "ui-kit",
+    "component-library",
+    "terminal",
+    "console",
+    "monospace",
+    "react",
+    "vue",
+    "svelte",
+    "html"
+  ],
+  "dependencies": {
+    "@dnd-kit/abstract": "^0.5.1",
+    "@dnd-kit/collision": "^0.5.1",
+    "@dnd-kit/dom": "^0.5.1",
+    "@dnd-kit/helpers": "^0.5.1",
+    "@dnd-kit/state": "^0.5.1",
+    "@scaffold-ui-kit/add": "^2.3.0",
+    "@scaffold-ui-kit/helpers": "^2.3.0",
+    "@zag-js/combobox": "^1.44.0",
+    "@zag-js/dialog": "^1.44.0",
+    "@zag-js/menu": "^1.44.0",
+    "@zag-js/popover": "^1.44.0",
+    "@zag-js/select": "^1.44.0",
+    "@zag-js/splitter": "^1.44.0",
+    "@zag-js/tabs": "^1.44.0",
+    "@zag-js/tooltip": "^1.44.0",
+    "hard-reset": "^0.1.0",
+    "use-bem": "^2.0.0"
+  },
+  "peerDependencies": {
+    "@zag-js/react": "^1.44.0",
+    "@zag-js/svelte": "^1.44.0",
+    "@zag-js/vue": "^1.44.0",
+    "react": ">=19",
+    "react-dom": ">=19",
+    "svelte": ">=5.29",
+    "vue": ">=3.5"
+  },
+  "peerDependenciesMeta": {
+    "@zag-js/react": {
+      "optional": true
+    },
+    "@zag-js/svelte": {
+      "optional": true
+    },
+    "@zag-js/vue": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    },
+    "svelte": {
+      "optional": true
+    },
+    "vue": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@eslint/js": "^10.0.1",
+    "@js-template-engine/types": "^2.3.0",
+    "@playwright/test": "1.62.1",
+    "@scaffold-ui-kit/testing": "^2.3.0",
+    "@sveltejs/vite-plugin-svelte": "^7.3.1",
+    "@types/react": "^19.2.17",
+    "@vitejs/plugin-vue": "^6.0.9",
+    "@zag-js/react": "^1.44.0",
+    "@zag-js/svelte": "^1.44.0",
+    "@zag-js/vue": "^1.44.0",
+    "esbuild": "^0.28.1",
+    "eslint": "^10.13.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-astro": "^3.2.1",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-svelte": "^3.23.1",
+    "eslint-plugin-vue": "^10.11.1",
+    "globals": "^17.13.0",
+    "jsdom": "^29.1.1",
+    "playwright-core": "1.62.1",
+    "postcss": "^8.5.28",
+    "postcss-selector-parser": "^7.1.6",
+    "prettier": "^3.9.10",
+    "prettier-plugin-astro": "^1.1.1",
+    "prettier-plugin-svelte": "^4.1.1",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "sass": "^1.101.0",
+    "scaffold-ui-kit": "^2.3.0",
+    "svelte": "^5.56.4",
+    "svelte-check": "^4.7.7",
+    "tsx": "^4.22.4",
+    "typescript": "^5.3.3",
+    "typescript-eslint": "^8.71.2",
+    "vitest": "^4.1.9",
+    "vue": "^3.5.39",
+    "vue-eslint-parser": "^10.4.1",
+    "vue-tsc": "^3.3.14"
+  },
+  "author": "Björn Djurnamn <bjorn@djurnamn.co>",
+  "packageManager": "pnpm@11.3.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "MIT"
+}

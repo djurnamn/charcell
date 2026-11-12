@@ -1,0 +1,67 @@
+@@ variant-boxed
+{m|┌──────────────────────┐}
+{m|│} {m|search highway 9}     {m|│}
+{m|└──────────────────────┘}
+
+@@ variant-boxed:hover
+{s|┌──────────────────────┐}
+{s|│} {m|search highway 9}     {s|│}
+{s|└──────────────────────┘}
+
+@@ filled
+{m|┌──────────────────────┐}
+{m|│} doreen schmorley     {m|│}
+{m|└──────────────────────┘}
+
+@@ filled:hover
+{s|┌──────────────────────┐}
+{s|│} doreen schmorley     {s|│}
+{s|└──────────────────────┘}
+
+@@ disabled
+{f|┌──────────────────────┐}
+{f|│} {m|doreen schmorley}     {f|│}
+{f|└──────────────────────┘}
+
+@@ variant-dense
+{w| }{sw|search highway 9}{w|     }
+
+@@ border-none
+
+  {m|search highway 9}
+
+
+@@ border-none:hover
+
+  {m|search highway 9}
+
+
+@@ border-rounded
+{m|╭──────────────────────╮}
+{m|│} {m|search highway 9}     {m|│}
+{m|╰──────────────────────╯}
+
+@@ border-rounded:hover
+{s|╭──────────────────────╮}
+{s|│} {m|search highway 9}     {s|│}
+{s|╰──────────────────────╯}
+
+@@ border-heavy
+{m|┏━━━━━━━━━━━━━━━━━━━━━━┓}
+{m|┃} {m|search highway 9}     {m|┃}
+{m|┗━━━━━━━━━━━━━━━━━━━━━━┛}
+
+@@ border-heavy:hover
+{s|┏━━━━━━━━━━━━━━━━━━━━━━┓}
+{s|┃} {m|search highway 9}     {s|┃}
+{s|┗━━━━━━━━━━━━━━━━━━━━━━┛}
+
+@@ border-double
+{m|╔══════════════════════╗}
+{m|║} {m|search highway 9}     {m|║}
+{m|╚══════════════════════╝}
+
+@@ border-double:hover
+{s|╔══════════════════════╗}
+{s|║} {m|search highway 9}     {s|║}
+{s|╚══════════════════════╝}

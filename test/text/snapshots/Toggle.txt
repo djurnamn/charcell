@@ -1,0 +1,43 @@
+@@ defaultPressed-true
+┌───────────┐
+│{i| autopilot }│
+└───────────┘
+
+@@ defaultPressed-true:hover
+┌───────────┐
+│{I| autopilot }│
+└───────────┘
+
+@@ defaultPressed-true:focus
+┌───────────┐
+│{i|❯autopilot }│
+└───────────┘
+
+@@ variant-dense
+{i| autopilot }
+
+@@ variant-dense:hover
+{I| autopilot }
+
+@@ variant-dense:focus
+{i|❯autopilot }
+
+@@ defaultPressed-false
+{m|┌───────────┐}
+{m|│} autopilot {m|│}
+{m|└───────────┘}
+
+@@ defaultPressed-false:hover
+{s|┌───────────┐}
+{s|│}{w| autopilot }{s|│}
+{s|└───────────┘}
+
+@@ defaultPressed-false:focus
+┌───────────┐
+│❯autopilot │
+└───────────┘
+
+@@ disabled
+┌───────────┐
+│{i| }{im|autopilot}{i| }│
+└───────────┘

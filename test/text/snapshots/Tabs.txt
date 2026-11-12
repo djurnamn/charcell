@@ -1,0 +1,189 @@
+@@ variant-boxed
+{m|┌───────────┬───────────┬──────────┐}
+{m|│} kickstand {m|│} melonweed {m|│} {m|corville} {m|│}
+{m|│}           {m|└───────────┴──────────┴───┐}
+{m|│} a biker bar out on the highway.      {m|│}
+{m|│} quohog pours.                        {m|│}
+{m|└──────────────────────────────────────┘}
+
+@@ variant-boxed:hover
+{m|┌───────────┬───────────┬──────────┐}
+{m|│}{w| kickstand }{m|│} melonweed {m|│} {m|corville} {m|│}
+{m|│}           {m|└───────────┴──────────┴───┐}
+{m|│} a biker bar out on the highway.      {m|│}
+{m|│} quohog pours.                        {m|│}
+{m|└──────────────────────────────────────┘}
+
+@@ variant-boxed:tab-focus
+{m|┌───────────┬───────────┬──────────┐}
+{m|│}❯kickstand {m|│} melonweed {m|│} {m|corville} {m|│}
+{m|│}           {m|└───────────┴──────────┴───┐}
+{m|│} a biker bar out on the highway.      {m|│}
+{m|│} quohog pours.                        {m|│}
+{m|└──────────────────────────────────────┘}
+
+@@ variant-boxed:tab-panel-focus
+{m|┌───────────┬───────────┬──────────┐}
+{m|│} kickstand {m|│} melonweed {m|│} {m|corville} {m|│}
+{m|│}           {m|└───────────┴──────────┴───┐}
+{m|│}❯a biker bar out on the highway.      {m|│}
+{m|│} quohog pours.                        {m|│}
+{m|└──────────────────────────────────────┘}
+
+@@ variant-dense
+{i| kickstand }  melonweed   {m|corville}
+{f|────────────────────────────────────────}
+ a biker bar out on the highway. quohog
+ pours.
+
+@@ variant-dense:selected-hover
+{I| kickstand }  melonweed   {m|corville}
+{f|────────────────────────────────────────}
+ a biker bar out on the highway. quohog
+ pours.
+
+@@ variant-dense:hover
+{i| kickstand } {w| melonweed }  {m|corville}
+{f|────────────────────────────────────────}
+ a biker bar out on the highway. quohog
+ pours.
+
+@@ variant-dense:tab-focus
+{i|❯kickstand }  melonweed   {m|corville}
+{f|────────────────────────────────────────}
+ a biker bar out on the highway. quohog
+ pours.
+
+@@ variant-dense:tab-panel-focus
+{i| kickstand }  melonweed   {m|corville}
+{f|────────────────────────────────────────}
+❯a biker bar out on the highway. quohog
+ pours.
+
+@@ border-none
+{m|┌───────────┬───────────┬──────────┐}
+{m|│} kickstand {m|│} melonweed {m|│} {m|corville} {m|│}
+{m|│}           {m|└───────────┴──────────┴───╴}
+{m|│} a biker bar out on the highway.
+{m|│} quohog pours.
+{m|╵}
+
+@@ border-none:hover
+{m|┌───────────┬───────────┬──────────┐}
+{m|│}{w| kickstand }{m|│} melonweed {m|│} {m|corville} {m|│}
+{m|│}           {m|└───────────┴──────────┴───╴}
+{m|│} a biker bar out on the highway.
+{m|│} quohog pours.
+{m|╵}
+
+@@ border-none:tab-focus
+{m|┌───────────┬───────────┬──────────┐}
+{m|│}❯kickstand {m|│} melonweed {m|│} {m|corville} {m|│}
+{m|│}           {m|└───────────┴──────────┴───╴}
+{m|│} a biker bar out on the highway.
+{m|│} quohog pours.
+{m|╵}
+
+@@ border-none:tab-panel-focus
+{m|┌───────────┬───────────┬──────────┐}
+{m|│} kickstand {m|│} melonweed {m|│} {m|corville} {m|│}
+{m|│}           {m|└───────────┴──────────┴───╴}
+{m|│}❯a biker bar out on the highway.
+{m|│} quohog pours.
+{m|╵}
+
+@@ border-rounded
+{m|┌───────────┬───────────┬──────────┐}
+{m|│} kickstand {m|│} melonweed {m|│} {m|corville} {m|│}
+{m|│}           {m|└───────────┴──────────┴───┐}
+{m|│} a biker bar out on the highway.      {m|│}
+{m|│} quohog pours.                        {m|│}
+{m|└──────────────────────────────────────╯}
+
+@@ border-rounded:hover
+{m|┌───────────┬───────────┬──────────┐}
+{m|│}{w| kickstand }{m|│} melonweed {m|│} {m|corville} {m|│}
+{m|│}           {m|└───────────┴──────────┴───┐}
+{m|│} a biker bar out on the highway.      {m|│}
+{m|│} quohog pours.                        {m|│}
+{m|└──────────────────────────────────────╯}
+
+@@ border-rounded:tab-focus
+{m|┌───────────┬───────────┬──────────┐}
+{m|│}❯kickstand {m|│} melonweed {m|│} {m|corville} {m|│}
+{m|│}           {m|└───────────┴──────────┴───┐}
+{m|│} a biker bar out on the highway.      {m|│}
+{m|│} quohog pours.                        {m|│}
+{m|└──────────────────────────────────────╯}
+
+@@ border-rounded:tab-panel-focus
+{m|┌───────────┬───────────┬──────────┐}
+{m|│} kickstand {m|│} melonweed {m|│} {m|corville} {m|│}
+{m|│}           {m|└───────────┴──────────┴───┐}
+{m|│}❯a biker bar out on the highway.      {m|│}
+{m|│} quohog pours.                        {m|│}
+{m|└──────────────────────────────────────╯}
+
+@@ border-heavy
+{m|┌───────────┬───────────┬──────────┐}
+{m|│} kickstand {m|│} melonweed {m|│} {m|corville} {m|│}
+{m|│}           {m|└───────────┴──────────┴───┒}
+{m|│} a biker bar out on the highway.      {m|┃}
+{m|│} quohog pours.                        {m|┃}
+{m|┕━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛}
+
+@@ border-heavy:hover
+{m|┌───────────┬───────────┬──────────┐}
+{m|│}{w| kickstand }{m|│} melonweed {m|│} {m|corville} {m|│}
+{m|│}           {m|└───────────┴──────────┴───┒}
+{m|│} a biker bar out on the highway.      {m|┃}
+{m|│} quohog pours.                        {m|┃}
+{m|┕━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛}
+
+@@ border-heavy:tab-focus
+{m|┌───────────┬───────────┬──────────┐}
+{m|│}❯kickstand {m|│} melonweed {m|│} {m|corville} {m|│}
+{m|│}           {m|└───────────┴──────────┴───┒}
+{m|│} a biker bar out on the highway.      {m|┃}
+{m|│} quohog pours.                        {m|┃}
+{m|┕━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛}
+
+@@ border-heavy:tab-panel-focus
+{m|┌───────────┬───────────┬──────────┐}
+{m|│} kickstand {m|│} melonweed {m|│} {m|corville} {m|│}
+{m|│}           {m|└───────────┴──────────┴───┒}
+{m|│}❯a biker bar out on the highway.      {m|┃}
+{m|│} quohog pours.                        {m|┃}
+{m|┕━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛}
+
+@@ border-double
+{m|┌───────────┬───────────┬──────────┐}
+{m|│} kickstand {m|│} melonweed {m|│} {m|corville} {m|│}
+{m|│}           {m|└───────────┴──────────┴───╖}
+{m|│} a biker bar out on the highway.      {m|║}
+{m|│} quohog pours.                        {m|║}
+{m|╘══════════════════════════════════════╝}
+
+@@ border-double:hover
+{m|┌───────────┬───────────┬──────────┐}
+{m|│}{w| kickstand }{m|│} melonweed {m|│} {m|corville} {m|│}
+{m|│}           {m|└───────────┴──────────┴───╖}
+{m|│} a biker bar out on the highway.      {m|║}
+{m|│} quohog pours.                        {m|║}
+{m|╘══════════════════════════════════════╝}
+
+@@ border-double:tab-focus
+{m|┌───────────┬───────────┬──────────┐}
+{m|│}❯kickstand {m|│} melonweed {m|│} {m|corville} {m|│}
+{m|│}           {m|└───────────┴──────────┴───╖}
+{m|│} a biker bar out on the highway.      {m|║}
+{m|│} quohog pours.                        {m|║}
+{m|╘══════════════════════════════════════╝}
+
+@@ border-double:tab-panel-focus
+{m|┌───────────┬───────────┬──────────┐}
+{m|│} kickstand {m|│} melonweed {m|│} {m|corville} {m|│}
+{m|│}           {m|└───────────┴──────────┴───╖}
+{m|│}❯a biker bar out on the highway.      {m|║}
+{m|│} quohog pours.                        {m|║}
+{m|╘══════════════════════════════════════╝}

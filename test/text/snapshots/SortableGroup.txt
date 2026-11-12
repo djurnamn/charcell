@@ -1,0 +1,131 @@
+@@ snap-character
+{m|⠿} polecats
+    {m|⠿} ben
+    {m|⠿} darrel
+    {m|⠿} father torque
+{m|⠿} vultures
+    {m|⠿} suzi
+    {m|⠿} maureen
+{m|⠿} cavefish
+
+
+@@ snap-character:hover
+{sw|⠿} polecats
+    {m|⠿} ben
+    {m|⠿} darrel
+    {m|⠿} father torque
+{m|⠿} vultures
+    {m|⠿} suzi
+    {m|⠿} maureen
+{m|⠿} cavefish
+
+
+@@ snap-character:press
+{M|⠿} polecats
+    {m|⠿} ben
+    {m|⠿} darrel
+    {m|⠿} father torque
+{m|⠿} vultures
+    {m|⠿} suzi
+    {m|⠿} maureen
+{m|⠿} cavefish
+
+
+@@ snap-character:focus
+{M|⠿} polecats
+    {m|⠿} ben
+    {m|⠿} darrel
+    {m|⠿} father torque
+{m|⠿} vultures
+    {m|⠿} suzi
+    {m|⠿} maureen
+{m|⠿} cavefish
+
+
+@@ snap-row
+{m|⠿} polecats
+    {m|⠿} ben
+    {m|⠿} darrel
+    {m|⠿} father torque
+{m|⠿} vultures
+    {m|⠿} suzi
+    {m|⠿} maureen
+{m|⠿} cavefish
+
+
+@@ snap-row:hover
+{sw|⠿} polecats
+    {m|⠿} ben
+    {m|⠿} darrel
+    {m|⠿} father torque
+{m|⠿} vultures
+    {m|⠿} suzi
+    {m|⠿} maureen
+{m|⠿} cavefish
+
+
+@@ snap-row:press
+{M|⠿} polecats
+    {m|⠿} ben
+    {m|⠿} darrel
+    {m|⠿} father torque
+{m|⠿} vultures
+    {m|⠿} suzi
+    {m|⠿} maureen
+{m|⠿} cavefish
+
+
+@@ snap-row:focus
+{M|⠿} polecats
+    {m|⠿} ben
+    {m|⠿} darrel
+    {m|⠿} father torque
+{m|⠿} vultures
+    {m|⠿} suzi
+    {m|⠿} maureen
+{m|⠿} cavefish
+
+
+@@ snap-none
+{m|⠿} polecats
+    {m|⠿} ben
+    {m|⠿} darrel
+    {m|⠿} father torque
+{m|⠿} vultures
+    {m|⠿} suzi
+    {m|⠿} maureen
+{m|⠿} cavefish
+
+
+@@ snap-none:hover
+{sw|⠿} polecats
+    {m|⠿} ben
+    {m|⠿} darrel
+    {m|⠿} father torque
+{m|⠿} vultures
+    {m|⠿} suzi
+    {m|⠿} maureen
+{m|⠿} cavefish
+
+
+@@ snap-none:press
+{M|⠿} polecats
+    {m|⠿} ben
+    {m|⠿} darrel
+    {m|⠿} father torque
+{m|⠿} vultures
+    {m|⠿} suzi
+    {m|⠿} maureen
+{m|⠿} cavefish
+
+
+@@ snap-none:focus
+{M|⠿} polecats
+    {m|⠿} ben
+    {m|⠿} darrel
+    {m|⠿} father torque
+{m|⠿} vultures
+    {m|⠿} suzi
+    {m|⠿} maureen
+{m|⠿} cavefish
+

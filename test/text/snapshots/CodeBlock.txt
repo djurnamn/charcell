@@ -1,0 +1,94 @@
+@@ default
+{w|                                                            }
+{w| }{sw|; the kickstand lot}{w|                                        }
+{w| }{sw|object dumpster in room 'behind the kickstand'}{w|             }
+{w| }{sw|verb eyes: say-line ben woken-up-in-worse}{w|                  }
+{w| }{sw|verb foot: start-script kick-the-dumpster}{w|                  }
+{w| }{sw|verb mouth: say-line ben default-refusal  ; "i'm not puttin}
+{w|                                                            }
+
+@@ default:vertical-bar-hover
+{w|                                                            }
+{w| }{sw|; the kickstand lot}{w|                                        }
+{w| }{sw|object dumpster in room 'behind the kickstand'}{w|             }
+{w| }{sw|verb eyes: say-line ben woken-up-in-worse}{w|                  }
+{w| }{sw|verb foot: start-script kick-the-dumpster}{w|                  }
+{w| }{sw|verb mouth: say-line ben default-refusal  ; "i'm not puttin}
+{w|                                                            }
+
+@@ default:step-hover
+{w|                                                            }
+{w| }{sw|; the kickstand lot}{w|                                        }
+{w| }{sw|object dumpster in room 'behind the kickstand'}{w|             }
+{w| }{sw|verb eyes: say-line ben woken-up-in-worse}{w|                  }
+{w| }{sw|verb foot: start-script kick-the-dumpster}{w|                  }
+{w| }{sw|verb mouth: say-line ben default-refusal  ; "i'm not puttin}
+{w|                                                            }
+
+@@ default:horizontal-bar-hover
+{w|                                                            }
+{w| }{sw|; the kickstand lot}{w|                                        }
+{w| }{sw|object dumpster in room 'behind the kickstand'}{w|             }
+{w| }{sw|verb eyes: say-line ben woken-up-in-worse}{w|                  }
+{w| }{sw|verb foot: start-script kick-the-dumpster}{w|                  }
+{w| }{sw|verb mouth: say-line ben default-refusal  ; "i'm not puttin}
+{w|                                                            }
+
+@@ default:press
+{w|                                                            }
+{w| }{sw|; the kickstand lot}{w|                                        }
+{w| }{sw|object dumpster in room 'behind the kickstand'}{w|             }
+{w| }{sw|verb eyes: say-line ben woken-up-in-worse}{w|                  }
+{w| }{sw|verb foot: start-script kick-the-dumpster}{w|                  }
+{w| }{sw|verb mouth: say-line ben default-refusal  ; "i'm not puttin}
+{w|                                                            }
+
+@@ wrap
+{w|                                                           }{m|▴}
+{w| }{sw|; the junk yard}{w|                                            }
+{w| }{sw|verb take forks: start-script little-todd-gives-chase}{w|      }
+{w| }{sw|verb pull lever: start-script lower-the-saucer}{w|             }
+{w| }{sw|verb push button: start-script magnetize-the-saucer}{w|        }
+{w| }{sw|verb use meat car: walk-actor little-todd to car  ;}{w|        }
+{w| }{sw|"here, poochy-pooch, pooch!"}{w|                               }
+{w|                                                           }{m|▾}
+
+@@ wrap:vertical-bar-hover
+{w|                                                           }{m|▴}
+{w| }{sw|; the junk yard}{w|                                            }
+{w| }{sw|verb take forks: start-script little-todd-gives-chase}{w|      }
+{w| }{sw|verb pull lever: start-script lower-the-saucer}{w|             }
+{w| }{sw|verb push button: start-script magnetize-the-saucer}{w|        }
+{w| }{sw|verb use meat car: walk-actor little-todd to car  ;}{w|        }
+{w| }{sw|"here, poochy-pooch, pooch!"}{w|                               }
+{w|                                                           }{m|▾}
+
+@@ wrap:step-hover
+{w|                                                           }{s|▴}
+{w| }{sw|; the junk yard}{w|                                            }
+{w| }{sw|verb take forks: start-script little-todd-gives-chase}{w|      }
+{w| }{sw|verb pull lever: start-script lower-the-saucer}{w|             }
+{w| }{sw|verb push button: start-script magnetize-the-saucer}{w|        }
+{w| }{sw|verb use meat car: walk-actor little-todd to car  ;}{w|        }
+{w| }{sw|"here, poochy-pooch, pooch!"}{w|                               }
+{w|                                                           }{m|▾}
+
+@@ wrap:horizontal-bar-hover
+{w|                                                           }{m|▴}
+{w| }{sw|; the junk yard}{w|                                            }
+{w| }{sw|verb take forks: start-script little-todd-gives-chase}{w|      }
+{w| }{sw|verb pull lever: start-script lower-the-saucer}{w|             }
+{w| }{sw|verb push button: start-script magnetize-the-saucer}{w|        }
+{w| }{sw|verb use meat car: walk-actor little-todd to car  ;}{w|        }
+{w| }{sw|"here, poochy-pooch, pooch!"}{w|                               }
+{w|                                                           }{m|▾}
+
+@@ wrap:press
+{w|                                                           }▴
+{w| }{sw|; the junk yard}{w|                                            }
+{w| }{sw|verb take forks: start-script little-todd-gives-chase}{w|      }
+{w| }{sw|verb pull lever: start-script lower-the-saucer}{w|             }
+{w| }{sw|verb push button: start-script magnetize-the-saucer}{w|        }
+{w| }{sw|verb use meat car: walk-actor little-todd to car  ;}{w|        }
+{w| }{sw|"here, poochy-pooch, pooch!"}{w|                               }
+{w|                                                           }{m|▾}

@@ -1,0 +1,17 @@
+@@ context-warning
+{b|warning: roadblocks ahead}
+         police are turning everyone
+         around on highway 9.
+
+@@ context-information
+{b|info: the safe takes six digits}
+      the combination is back at the
+      vultures' hideout.
+
+@@ context-success
+{b|success: the safe is open}
+         154492 was the combination.
+
+@@ context-error
+{b|error: wrong combination}
+       the safe stays shut.

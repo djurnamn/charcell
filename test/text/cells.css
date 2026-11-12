@@ -1,0 +1,36 @@
+/* the text versions: what a character-cell screen prints for each component,
+ from cases.cjs's markup (renderHtml). one glyph per cell, in the kit's own
+ face and tokens. the comparison page and the docs site both take it. */
+.charcell-text {
+  margin: 0;
+  font-family: var(--charcell-font-family);
+  font-size: var(--charcell-font-size);
+  line-height: var(--charcell-row);
+  font-variant-ligatures: none;
+  font-kerning: none;
+  white-space: pre;
+  color: var(--charcell-foreground);
+  -webkit-font-smoothing: antialiased;
+}
+/* a drawn box-drawing or block glyph: one cell, its bars in the background,
+   the character kept (it copies) but unpainted. */
+.charcell-text .drawn {
+  display: inline-block;
+  width: 1ch;
+  height: 1lh;
+  vertical-align: top;
+  -webkit-text-fill-color: transparent;
+}
+/* the text's tones, one per cell, from charcell's own tokens. */
+.charcell-text .inverted { background: var(--charcell-foreground); color: var(--charcell-background); }
+.charcell-text .inverted-dim { background: var(--charcell-strong); color: var(--charcell-background); }
+.charcell-text .wash { background: var(--charcell-faint); }
+.charcell-text .mid-fill { background: var(--charcell-mid); }
+.charcell-text .mid { color: var(--charcell-mid); }
+.charcell-text .faint { color: var(--charcell-faint); }
+.charcell-text .strong { color: var(--charcell-strong); }
+.charcell-text .bold { font-weight: 700; }
+.charcell-text .underline { text-decoration: underline; text-decoration-thickness: 1px; }
+.charcell-text .struck { text-decoration: line-through; }
+.charcell-text .dotted { text-decoration: underline dotted; text-decoration-thickness: 1px; }
+.charcell-text .italic { font-style: italic; }

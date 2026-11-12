@@ -1,0 +1,33 @@
+@@ border-single
+{f|────────────────────}
+
+@@ join-frame
+{m|┌─────────────────────────────────────┐}
+{m|│} bye, moe.                           {m|│}
+{m|├─────────────────────────────────────┤}
+{m|│} send me a postcard from the ambush! {m|│}
+{m|└─────────────────────────────────────┘}
+
+@@ join-frame-double
+{m|╓─────────────────────────────────────╖}
+{m|║} bye, moe.                           {m|║}
+{m|╟─────────────────────────────────────╢}
+{m|║} send me a postcard from the ambush! {m|║}
+{m|╙─────────────────────────────────────╜}
+
+@@ join-rule
+{f|│}polecats
+{f|├────────}
+{f|│}vultures
+
+@@ orientation-vertical
+ben {f|│} maureen
+
+@@ decorative
+{f|────────────────────}
+
+@@ border-double
+{f|════════════════════}
+
+@@ inset
+{f|╶──────────────────╴}

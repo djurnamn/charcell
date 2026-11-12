@@ -1,0 +1,29 @@
+@@ defaultChecked-true
+ [×] ride with the polecats
+
+@@ defaultChecked-true:hover
+{w| [×] ride with the polecats }
+
+@@ defaultChecked-true:focus
+❯[×] ride with the polecats
+
+@@ defaultChecked-false
+ [ ] ride with the polecats
+
+@@ defaultChecked-false:hover
+{w| [ ] ride with the polecats }
+
+@@ defaultChecked-false:focus
+❯[ ] ride with the polecats
+
+@@ indeterminate
+ [-] ride with the polecats
+
+@@ indeterminate:hover
+{w| [-] ride with the polecats }
+
+@@ indeterminate:focus
+❯[-] ride with the polecats
+
+@@ disabled
+ {m|[×] ride with the polecats}

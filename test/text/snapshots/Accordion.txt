@@ -1,0 +1,248 @@
+@@ variant-boxed
+{m|┌──────────────────────────────────────┐}
+{m|│} {m|▾} the bait                           {m|│}
+{m|│}                                      {m|│}
+{m|│} first prize is the corley hardtail.  {m|│}
+{m|│}                                      {m|│}
+{m|├──────────────────────────────────────┤}
+{m|│} {m|▸} the collision                      {m|│}
+{m|├──────────────────────────────────────┤}
+{m|│} {m|▸} the disguises                      {m|│}
+{m|└──────────────────────────────────────┘}
+
+@@ variant-boxed:hover
+{m|┌──────────────────────────────────────┐}
+{m|│}{w| ▾ the bait                           }{m|│}
+{m|│}                                      {m|│}
+{m|│} first prize is the corley hardtail.  {m|│}
+{m|│}                                      {m|│}
+{m|├──────────────────────────────────────┤}
+{m|│} {m|▸} the collision                      {m|│}
+{m|├──────────────────────────────────────┤}
+{m|│} {m|▸} the disguises                      {m|│}
+{m|└──────────────────────────────────────┘}
+
+@@ variant-boxed:focus
+{m|┌──────────────────────────────────────┐}
+{m|│}❯{m|▾} the bait                           {m|│}
+{m|│}                                      {m|│}
+{m|│} first prize is the corley hardtail.  {m|│}
+{m|│}                                      {m|│}
+{m|├──────────────────────────────────────┤}
+{m|│} {m|▸} the collision                      {m|│}
+{m|├──────────────────────────────────────┤}
+{m|│} {m|▸} the disguises                      {m|│}
+{m|└──────────────────────────────────────┘}
+
+@@ variant-dense
+ {m|▾} the bait
+
+ first prize is the corley hardtail.
+
+ {m|▸} the collision
+ {m|▸} the disguises
+
+@@ variant-dense:hover
+{w| ▾ the bait                             }
+
+ first prize is the corley hardtail.
+
+ {m|▸} the collision
+ {m|▸} the disguises
+
+@@ variant-dense:focus
+❯{m|▾} the bait
+
+ first prize is the corley hardtail.
+
+ {m|▸} the collision
+ {m|▸} the disguises
+
+@@ spacious
+{m|┌──────────────────────────────────────┐}
+{m|│} {m|▾} the bait                           {m|│}
+{m|│}                                      {m|│}
+{m|│}                                      {m|│}
+{m|│} first prize is the corley hardtail.  {m|│}
+{m|│}                                      {m|│}
+{m|├──────────────────────────────────────┤}
+{m|│} {m|▸} the collision                      {m|│}
+{m|│}                                      {m|│}
+{m|├──────────────────────────────────────┤}
+{m|│} {m|▸} the disguises                      {m|│}
+{m|│}                                      {m|│}
+{m|└──────────────────────────────────────┘}
+
+@@ spacious:hover
+{m|┌──────────────────────────────────────┐}
+{m|│}{w| ▾ the bait                           }{m|│}
+{m|│}{w|                                      }{m|│}
+{m|│}                                      {m|│}
+{m|│} first prize is the corley hardtail.  {m|│}
+{m|│}                                      {m|│}
+{m|├──────────────────────────────────────┤}
+{m|│} {m|▸} the collision                      {m|│}
+{m|│}                                      {m|│}
+{m|├──────────────────────────────────────┤}
+{m|│} {m|▸} the disguises                      {m|│}
+{m|│}                                      {m|│}
+{m|└──────────────────────────────────────┘}
+
+@@ spacious:focus
+{m|┌──────────────────────────────────────┐}
+{m|│}❯{m|▾} the bait                           {m|│}
+{m|│}                                      {m|│}
+{m|│}                                      {m|│}
+{m|│} first prize is the corley hardtail.  {m|│}
+{m|│}                                      {m|│}
+{m|├──────────────────────────────────────┤}
+{m|│} {m|▸} the collision                      {m|│}
+{m|│}                                      {m|│}
+{m|├──────────────────────────────────────┤}
+{m|│} {m|▸} the disguises                      {m|│}
+{m|│}                                      {m|│}
+{m|└──────────────────────────────────────┘}
+
+@@ border-none
+
+  {m|▾} the bait
+
+  first prize is the corley hardtail.
+
+{m|╶──────────────────────────────────────╴}
+  {m|▸} the collision
+{m|╶──────────────────────────────────────╴}
+  {m|▸} the disguises
+
+
+@@ border-none:hover
+
+ {w| ▾ the bait                           }
+
+  first prize is the corley hardtail.
+
+{m|╶──────────────────────────────────────╴}
+  {m|▸} the collision
+{m|╶──────────────────────────────────────╴}
+  {m|▸} the disguises
+
+
+@@ border-none:focus
+
+ ❯{m|▾} the bait
+
+  first prize is the corley hardtail.
+
+{m|╶──────────────────────────────────────╴}
+  {m|▸} the collision
+{m|╶──────────────────────────────────────╴}
+  {m|▸} the disguises
+
+
+@@ border-rounded
+{m|╭──────────────────────────────────────╮}
+{m|│} {m|▾} the bait                           {m|│}
+{m|│}                                      {m|│}
+{m|│} first prize is the corley hardtail.  {m|│}
+{m|│}                                      {m|│}
+{m|├──────────────────────────────────────┤}
+{m|│} {m|▸} the collision                      {m|│}
+{m|├──────────────────────────────────────┤}
+{m|│} {m|▸} the disguises                      {m|│}
+{m|╰──────────────────────────────────────╯}
+
+@@ border-rounded:hover
+{m|╭──────────────────────────────────────╮}
+{m|│}{w| ▾ the bait                           }{m|│}
+{m|│}                                      {m|│}
+{m|│} first prize is the corley hardtail.  {m|│}
+{m|│}                                      {m|│}
+{m|├──────────────────────────────────────┤}
+{m|│} {m|▸} the collision                      {m|│}
+{m|├──────────────────────────────────────┤}
+{m|│} {m|▸} the disguises                      {m|│}
+{m|╰──────────────────────────────────────╯}
+
+@@ border-rounded:focus
+{m|╭──────────────────────────────────────╮}
+{m|│}❯{m|▾} the bait                           {m|│}
+{m|│}                                      {m|│}
+{m|│} first prize is the corley hardtail.  {m|│}
+{m|│}                                      {m|│}
+{m|├──────────────────────────────────────┤}
+{m|│} {m|▸} the collision                      {m|│}
+{m|├──────────────────────────────────────┤}
+{m|│} {m|▸} the disguises                      {m|│}
+{m|╰──────────────────────────────────────╯}
+
+@@ border-heavy
+{m|┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓}
+{m|┃} {m|▾} the bait                           {m|┃}
+{m|┃}                                      {m|┃}
+{m|┃} first prize is the corley hardtail.  {m|┃}
+{m|┃}                                      {m|┃}
+{m|┠──────────────────────────────────────┨}
+{m|┃} {m|▸} the collision                      {m|┃}
+{m|┠──────────────────────────────────────┨}
+{m|┃} {m|▸} the disguises                      {m|┃}
+{m|┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛}
+
+@@ border-heavy:hover
+{m|┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓}
+{m|┃}{w| ▾ the bait                           }{m|┃}
+{m|┃}                                      {m|┃}
+{m|┃} first prize is the corley hardtail.  {m|┃}
+{m|┃}                                      {m|┃}
+{m|┠──────────────────────────────────────┨}
+{m|┃} {m|▸} the collision                      {m|┃}
+{m|┠──────────────────────────────────────┨}
+{m|┃} {m|▸} the disguises                      {m|┃}
+{m|┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛}
+
+@@ border-heavy:focus
+{m|┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓}
+{m|┃}❯{m|▾} the bait                           {m|┃}
+{m|┃}                                      {m|┃}
+{m|┃} first prize is the corley hardtail.  {m|┃}
+{m|┃}                                      {m|┃}
+{m|┠──────────────────────────────────────┨}
+{m|┃} {m|▸} the collision                      {m|┃}
+{m|┠──────────────────────────────────────┨}
+{m|┃} {m|▸} the disguises                      {m|┃}
+{m|┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛}
+
+@@ border-double
+{m|╔══════════════════════════════════════╗}
+{m|║} {m|▾} the bait                           {m|║}
+{m|║}                                      {m|║}
+{m|║} first prize is the corley hardtail.  {m|║}
+{m|║}                                      {m|║}
+{m|╟──────────────────────────────────────╢}
+{m|║} {m|▸} the collision                      {m|║}
+{m|╟──────────────────────────────────────╢}
+{m|║} {m|▸} the disguises                      {m|║}
+{m|╚══════════════════════════════════════╝}
+
+@@ border-double:hover
+{m|╔══════════════════════════════════════╗}
+{m|║}{w| ▾ the bait                           }{m|║}
+{m|║}                                      {m|║}
+{m|║} first prize is the corley hardtail.  {m|║}
+{m|║}                                      {m|║}
+{m|╟──────────────────────────────────────╢}
+{m|║} {m|▸} the collision                      {m|║}
+{m|╟──────────────────────────────────────╢}
+{m|║} {m|▸} the disguises                      {m|║}
+{m|╚══════════════════════════════════════╝}
+
+@@ border-double:focus
+{m|╔══════════════════════════════════════╗}
+{m|║}❯{m|▾} the bait                           {m|║}
+{m|║}                                      {m|║}
+{m|║} first prize is the corley hardtail.  {m|║}
+{m|║}                                      {m|║}
+{m|╟──────────────────────────────────────╢}
+{m|║} {m|▸} the collision                      {m|║}
+{m|╟──────────────────────────────────────╢}
+{m|║} {m|▸} the disguises                      {m|║}
+{m|╚══════════════════════════════════════╝}

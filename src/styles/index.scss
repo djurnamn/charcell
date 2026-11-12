@@ -1,0 +1,9 @@
+// charcell's default stylesheet: the base layer and every component, and
+// nothing that paints through a bare element selector. Safe in a document
+// charcell does not own. `charcell/styles` (SCSS) and `charcell/css` (prebuilt)
+// resolve here; the page opinions are `preflight.scss`.
+//
+// The components are the build's own index of the rendered sheets
+// (`dist/react/_index.scss`); React is the CSS source of truth.
+@use "base";
+@use "../../dist/react" as components;
