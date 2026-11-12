@@ -1,0 +1,1 @@
+import{G as e}from"./unlinked.DAjBgYoT.js";import{t}from"./jsx-runtime._2bRE77D.js";var n=t();function r(){return(0,n.jsx)(e,{context:`warning`,title:`roadblocks ahead`,children:`police are turning everyone around on highway 9.`})}export{r as InlineMessageExample};

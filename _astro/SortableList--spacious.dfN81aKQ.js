@@ -1,0 +1,1 @@
+import{k as e}from"./unlinked.DAjBgYoT.js";import{t}from"./jsx-runtime._2bRE77D.js";var n=t();function r(){return(0,n.jsx)(e,{items:[`fix the fuel leak`,`knife up quohog's table`,`sell mink meat to the schools`,`dodge the cavefish`],spacious:!0,children:({item:e})=>(0,n.jsx)(`span`,{children:e})})}export{r as SortableListExample};

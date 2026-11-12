@@ -1,0 +1,140 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="no page at this address"><title>not found - charcell</title><link rel="icon" type="image/svg+xml" href="/charcell/favicon.svg"><link rel="canonical" href="https://djurnamn.github.io/charcell/404/"><link rel="preload" as="font" type="font/woff2" href="/charcell/_astro/OverpassMono.BceKvgcu.woff2" crossorigin><meta property="og:type" content="website"><meta property="og:site_name" content="charcell"><meta property="og:title" content="not found - charcell"><meta property="og:description" content="no page at this address"><meta property="og:url" content="https://djurnamn.github.io/charcell/404/"><meta property="og:image" content="https://djurnamn.github.io/charcell/social.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="the charcell logo in block characters, over the words a terminal ui kit for react, vue and svelte"><meta name="twitter:card" content="summary_large_image"><script>
+      // The mode before the first paint: the visitor's choice, or the system's.
+      (() => {
+        let mode;
+        try {
+          mode = localStorage.getItem("charcell-mode");
+        } catch {
+          // Blocked storage: the system preference decides.
+        }
+        // Dark is the default, which takes no attribute.
+        if (
+          (mode ??
+            (matchMedia("(prefers-color-scheme: light)").matches
+              ? "light"
+              : "dark")) === "light"
+        )
+          document.documentElement.dataset.charcellMode = "light";
+        // The switch works from here on; a wide screen keeps a closed sidebar
+        // closed. A small one starts closed every time.
+        document.documentElement.dataset.siteScripted = "";
+        let navigation;
+        try {
+          navigation = localStorage.getItem("charcell-navigation");
+        } catch {
+          // Blocked storage: the sidebar starts as the screen's size has it.
+        }
+        if (
+          navigation === "closed" &&
+          !matchMedia("(max-width: 63.99ch)").matches
+        )
+          document.documentElement.dataset.siteNavigation = "closed";
+      })();
+    </script><link rel="stylesheet" href="/charcell/_astro/Site.BqWKAtJZ.css"></head><body><div class="site"><header class="site__bar"><a class="site__home" href="/charcell/">charcell <span class="site__version">0.1.0</span></a><div class="site__tools"><div class="site__navigation"><span class="site__label">navigation</span><button aria-expanded="true" aria-controls="site-nav" aria-label="open navigation" class="CharcellButton CharcellButton--dense CharcellButton--interactive site__navigation-switch" type="button">open</button></div><noscript><a class="site__link site__navigation-link" href="#site-nav">navigation</a></noscript><div class="site__group"><div class="site__links"><span class="site__label">links</span><a class="site__link" href="https://github.com/djurnamn/charcell">github</a><a class="site__link" href="https://www.npmjs.com/package/charcell">npm</a></div><div class="site__mode"><span class="site__label">mode</span><button aria-label="mode: dark" class="CharcellButton CharcellButton--dense CharcellButton--interactive site__mode-switch" type="button">dark</button></div></div></div></header><div class="CharcellSeparator CharcellSeparator--inset site__rule" role="none"></div><div class="CharcellSeparator CharcellSeparator--vertical CharcellSeparator--inset site__divider" role="none"></div><nav class="site__nav" id="site-nav" aria-label="site"><style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event("astro:load"));})();</script><script>(()=>{var g=Object.defineProperty;var w=(a,s,c)=>s in a?g(a,s,{enumerable:!0,configurable:!0,writable:!0,value:c}):a[s]=c;var l=(a,s,c)=>w(a,typeof s!="symbol"?s+"":s,c);var E=new Set(["__proto__","constructor","prototype"]);{let a={0:t=>y(t),1:t=>c(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(c(t)),5:t=>new Set(c(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t),11:t=>Number.POSITIVE_INFINITY*t},s=t=>{let[p,e]=t;return p in a?a[p](e):void 0},c=t=>t.map(s),y=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([p,e])=>[p,s(e)]));class f extends HTMLElement{constructor(){super(...arguments);l(this,"Component");l(this,"hydrator");l(this,"hydrate",async()=>{var b;if(!this.hydrator||!this.isConnected)return;let e=(b=this.parentElement)==null?void 0:b.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let r=this.querySelectorAll("astro-slot"),n={},d=this.querySelectorAll("template[data-astro-template]");for(let o of d){let i=o.closest(this.tagName);i!=null&&i.isSameNode(this)&&(n[o.getAttribute("data-astro-template")||"default"]=o.innerHTML,o.remove())}for(let o of r){let i=o.closest(this.tagName);i!=null&&i.isSameNode(this)&&(n[o.getAttribute("name")||"default"]=o.innerHTML)}let u;try{u=this.hasAttribute("props")?y(JSON.parse(this.getAttribute("props"))):{}}catch(o){let i=this.getAttribute("component-url")||"<unknown>",v=this.getAttribute("component-export");throw v&&(i+=` (export ${v})`),console.error(`[hydrate] Error parsing props for component ${i}`,this.getAttribute("props"),o),o}let h;await this.hydrator(this)(this.Component,u,n,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});l(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),r.disconnect(),this.childrenConnectedCallback()},r=new MutationObserver(()=>{var n;((n=this.lastChild)==null?void 0:n.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});r.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}getRetryImportUrl(e){let r=new URL(e,document.baseURI);return r.searchParams.set("astro-retry",Date.now().toString()),r.toString()}async importWithRetry(e){try{return await import(e)}catch(r){return await new Promise(n=>setTimeout(n,1e3)),import(this.getRetryImportUrl(e))}}handleHydrationError(e){let r=this.getAttribute("component-url"),n=new CustomEvent("astro:hydration-error",{cancelable:!0,bubbles:!0,composed:!0,detail:{error:e,componentUrl:r}});this.dispatchEvent(n)&&console.error(`[astro-island] Error hydrating ${r}`,e)}async start(){let e=JSON.parse(this.getAttribute("opts")),r=this.getAttribute("client");if(Astro[r]===void 0){window.addEventListener(`astro:${r}`,()=>this.start(),{once:!0});return}try{await Astro[r](async()=>{let n=this.getAttribute("renderer-url");try{let[d,{default:u}]=await Promise.all([this.importWithRetry(this.getAttribute("component-url")),n?this.importWithRetry(n):Promise.resolve({default:()=>()=>{}})]),h=this.getAttribute("component-export")||"default";if(h.includes(".")){this.Component=d;for(let m of h.split(".")){if(E.has(m)||!this.Component||typeof this.Component!="object"&&typeof this.Component!="function"||!Object.hasOwn(this.Component,m))throw new Error(`Invalid component export path: ${h}`);this.Component=this.Component[m]}}else{if(E.has(h))throw new Error(`Invalid component export path: ${h}`);this.Component=d[h]}return this.hydrator=u,this.hydrate}catch(d){return this.handleHydrationError(d),()=>{}}},e,this)}catch(n){this.handleHydrationError(n)}}attributeChangedCallback(){this.hydrate()}}l(f,"observedAttributes",["props"]),customElements.get("astro-island")||customElements.define("astro-island",f)}})();</script><astro-island uid="Z2onKkX" prefix="r17" component-url="/charcell/_astro/index.B5masBFO.js" component-export="ScrollArea" renderer-url="/charcell/_astro/client.Cfu6ohxu.js" props="{&quot;label&quot;:[0,&quot;site&quot;],&quot;fill&quot;:[0,true]}" ssr client="load" opts="{&quot;name&quot;:&quot;ScrollArea&quot;,&quot;value&quot;:true}" await-children><div class="CharcellScrollArea CharcellScrollArea--stepped CharcellScrollArea--fill"><div class="CharcellScrollArea__viewport" tabindex="0" role="region" aria-label="site"><div class="CharcellScrollArea__clip"><div class="CharcellScrollArea__rows"><div class="CharcellScrollArea__columns"><astro-slot><div class="site__nav-body"><div class="site__go"><astro-island uid="ZlBc1r" prefix="r12" component-url="/charcell/_astro/GoTo.CKLGY7hy.js" component-export="default" renderer-url="/charcell/_astro/client.Cfu6ohxu.js" props="{&quot;id&quot;:[0,&quot;site-go&quot;]}" ssr client="load" opts="{&quot;name&quot;:&quot;GoTo&quot;,&quot;value&quot;:true}" await-children><div data-scope="combobox" data-part="control" id="combobox:_r12R_0_:control" data-state="closed" class="CharcellComboboxField CharcellComboboxField--dense"><input data-scope="combobox" data-part="input" autoComplete="off" autoCorrect="off" autoCapitalize="none" spellCheck="false" placeholder="go to  /" id="site-go" type="text" role="combobox" aria-autocomplete="list" aria-controls="combobox:_r12R_0_:content" aria-expanded="false" data-state="closed" aria-label="go to a page" aria-keyshortcuts="/" class="CharcellComboboxField__input" value=""/><button data-scope="combobox" data-part="trigger" id="combobox:_r12R_0_:toggle-btn" aria-haspopup="listbox" type="button" tabindex="-1" aria-label="toggle suggestions" aria-expanded="false" data-state="closed" class="CharcellComboboxField__button"><span aria-hidden="true">▾</span></button></div><!--astro:end--></astro-island></div><astro-island uid="Z27WOri" prefix="r13" component-url="/charcell/_astro/Navigation.CDJ9H0fq.js" component-export="default" renderer-url="/charcell/_astro/client.Cfu6ohxu.js" props="{&quot;current&quot;:[0,&quot;/charcell/404/&quot;]}" ssr client="load" opts="{&quot;name&quot;:&quot;Navigation&quot;,&quot;value&quot;:true}" await-children><div aria-label="site" class="CharcellTree site__tree"><div class="CharcellTreeGroup"><div class="CharcellTreeGroup__summary"><span class="CharcellTreeGroup__summary-label">overview</span></div><div class="CharcellTreeGroup__children"><a class="CharcellTreeItem" href="/charcell/"><span class="CharcellTreeItem__content">introduction</span></a><a class="CharcellTreeItem" href="/charcell/use/"><span class="CharcellTreeItem__content">use</span></a></div></div><div class="CharcellTreeGroup"><div class="CharcellTreeGroup__summary"><span class="CharcellTreeGroup__summary-label">components</span></div><div class="CharcellTreeGroup__children"><a class="CharcellTreeItem" href="/charcell/components/accordion/"><span class="CharcellTreeItem__content">Accordion</span></a><a class="CharcellTreeItem" href="/charcell/components/action-menu/"><span class="CharcellTreeItem__content">ActionMenu</span></a><a class="CharcellTreeItem" href="/charcell/components/button/"><span class="CharcellTreeItem__content">Button</span></a><a class="CharcellTreeItem" href="/charcell/components/checkbox/"><span class="CharcellTreeItem__content">Checkbox</span></a><a class="CharcellTreeItem" href="/charcell/components/code-block/"><span class="CharcellTreeItem__content">CodeBlock</span></a><a class="CharcellTreeItem" href="/charcell/components/combobox/"><span class="CharcellTreeItem__content">Combobox</span></a><a class="CharcellTreeItem" href="/charcell/components/dialog/"><span class="CharcellTreeItem__content">Dialog</span></a><a class="CharcellTreeItem" href="/charcell/components/field/"><span class="CharcellTreeItem__content">Field</span></a><a class="CharcellTreeItem" href="/charcell/components/frame/"><span class="CharcellTreeItem__content">Frame</span></a><a class="CharcellTreeItem" href="/charcell/components/inline-message/"><span class="CharcellTreeItem__content">InlineMessage</span></a><a class="CharcellTreeItem" href="/charcell/components/popover/"><span class="CharcellTreeItem__content">Popover</span></a><a class="CharcellTreeItem" href="/charcell/components/progress/"><span class="CharcellTreeItem__content">Progress</span></a><a class="CharcellTreeItem" href="/charcell/components/radio-group/"><span class="CharcellTreeItem__content">RadioGroup</span></a><a class="CharcellTreeItem" href="/charcell/components/rich-text/"><span class="CharcellTreeItem__content">RichText</span></a><a class="CharcellTreeItem" href="/charcell/components/scroll-area/"><span class="CharcellTreeItem__content">ScrollArea</span></a><a class="CharcellTreeItem" href="/charcell/components/select/"><span class="CharcellTreeItem__content">Select</span></a><a class="CharcellTreeItem" href="/charcell/components/separator/"><span class="CharcellTreeItem__content">Separator</span></a><a class="CharcellTreeItem" href="/charcell/components/sortable-group/"><span class="CharcellTreeItem__content">SortableGroup</span></a><a class="CharcellTreeItem" href="/charcell/components/sortable-list/"><span class="CharcellTreeItem__content">SortableList</span></a><a class="CharcellTreeItem" href="/charcell/components/split-grid/"><span class="CharcellTreeItem__content">SplitGrid</span></a><a class="CharcellTreeItem" href="/charcell/components/splitter/"><span class="CharcellTreeItem__content">Splitter</span></a><a class="CharcellTreeItem" href="/charcell/components/table/"><span class="CharcellTreeItem__content">Table</span></a><a class="CharcellTreeItem" href="/charcell/components/tabs/"><span class="CharcellTreeItem__content">Tabs</span></a><a class="CharcellTreeItem" href="/charcell/components/textarea/"><span class="CharcellTreeItem__content">Textarea</span></a><a class="CharcellTreeItem" href="/charcell/components/text-input/"><span class="CharcellTreeItem__content">TextInput</span></a><a class="CharcellTreeItem" href="/charcell/components/toggle/"><span class="CharcellTreeItem__content">Toggle</span></a><a class="CharcellTreeItem" href="/charcell/components/tooltip/"><span class="CharcellTreeItem__content">Tooltip</span></a><a class="CharcellTreeItem" href="/charcell/components/tree/"><span class="CharcellTreeItem__content">Tree</span></a></div></div></div><!--astro:end--></astro-island><div class="site__links site__links--drawer"><span class="site__label">links</span><a class="site__link" href="https://github.com/djurnamn/charcell">github</a><a class="site__link" href="https://www.npmjs.com/package/charcell">npm</a></div></div></astro-slot></div></div></div></div><div class="CharcellScrollArea__vertical-bar" aria-hidden="true"><div class="CharcellScrollArea__step">▴</div><div class="CharcellScrollArea__vertical-track"><div class="CharcellScrollArea__vertical-thumb"></div></div><div class="CharcellScrollArea__step">▾</div></div><div class="CharcellScrollArea__horizontal-bar CharcellScrollArea__horizontal-bar--fitting" aria-hidden="true"><div class="CharcellScrollArea__step"></div><div class="CharcellScrollArea__horizontal-track"><div class="CharcellScrollArea__horizontal-thumb"></div></div><div class="CharcellScrollArea__step"></div></div></div><!--astro:end--></astro-island></nav><main class="site__main" id="site-main"><astro-island uid="2vIIoy" prefix="r15" component-url="/charcell/_astro/index.B5masBFO.js" component-export="ScrollArea" renderer-url="/charcell/_astro/client.Cfu6ohxu.js" props="{&quot;label&quot;:[0,&quot;page&quot;],&quot;fill&quot;:[0,true]}" ssr client="load" opts="{&quot;name&quot;:&quot;ScrollArea&quot;,&quot;value&quot;:true}" await-children><div class="CharcellScrollArea CharcellScrollArea--stepped CharcellScrollArea--fill"><div class="CharcellScrollArea__viewport" tabindex="0" role="region" aria-label="page"><div class="CharcellScrollArea__clip"><div class="CharcellScrollArea__rows"><div class="CharcellScrollArea__columns"><astro-slot><div class="site__content"><div class="site__page"><div class="CharcellRichText"><h1>not found</h1><p>no page at this address. <a href="/charcell/">back to charcell</a>, or pick one from the nav.</p></div></div></div></astro-slot></div></div></div></div><div class="CharcellScrollArea__vertical-bar" aria-hidden="true"><div class="CharcellScrollArea__step">▴</div><div class="CharcellScrollArea__vertical-track"><div class="CharcellScrollArea__vertical-thumb"></div></div><div class="CharcellScrollArea__step">▾</div></div><div class="CharcellScrollArea__horizontal-bar CharcellScrollArea__horizontal-bar--fitting" aria-hidden="true"><div class="CharcellScrollArea__step"></div><div class="CharcellScrollArea__horizontal-track"><div class="CharcellScrollArea__horizontal-thumb"></div></div><div class="CharcellScrollArea__step"></div></div></div><!--astro:end--></astro-island></main><div class="CharcellSeparator CharcellSeparator--inset site__foot-rule" role="none"></div><footer class="site__keys" aria-label="keys"><button class="site__key" type="button" data-key="/"><span class="site__key-name">/</span> go to</button><button class="site__key" type="button" data-key="n"><span class="site__key-name">n</span> navigation</button><button class="site__key" type="button" data-key="m"><span class="site__key-name">m</span> mode</button></footer></div><script>
+      // The mode switch: a button naming the mode, pressed (or `m`) for the
+      // other. A choice is kept; until there is one, the system decides.
+      (() => {
+        const root = document.documentElement;
+        const switches = [...document.querySelectorAll(".site__mode-switch")];
+        const stored = () => {
+          try {
+            return localStorage.getItem("charcell-mode");
+          } catch {
+            return null;
+          }
+        };
+        const show = (mode) => {
+          // Dark is the default, which takes no attribute.
+          if (mode === "light") root.dataset.charcellMode = "light";
+          else delete root.dataset.charcellMode;
+          for (const button of switches) {
+            button.textContent = mode;
+            button.setAttribute("aria-label", `mode: ${mode}`);
+          }
+        };
+        const toggle = () => {
+          const mode = root.dataset.charcellMode === "light" ? "dark" : "light";
+          show(mode);
+          try {
+            localStorage.setItem("charcell-mode", mode);
+          } catch {
+            // Blocked storage: the choice lasts until the page is left.
+          }
+        };
+        show(root.dataset.charcellMode ?? "dark");
+        for (const button of switches) button.addEventListener("click", toggle);
+        matchMedia("(prefers-color-scheme: light)").addEventListener(
+          "change",
+          (event) => {
+            if (!stored()) show(event.matches ? "light" : "dark");
+          },
+        );
+
+        // The navigation switch: a button reading open, inverted while the
+        // sidebar is. With no choice made, the sidebar is open on a wide screen and closed on a
+        // small one; a wide screen keeps a choice to close it.
+        const navigation = document.querySelector(".site__navigation-switch");
+        const narrow = matchMedia("(max-width: 63.99ch)");
+        const open = () =>
+          (root.dataset.siteNavigation ??
+            (narrow.matches ? "closed" : "open")) === "open";
+        const showNavigation = () => {
+          navigation.setAttribute("aria-expanded", String(open()));
+        };
+        const setNavigation = (to) => {
+          root.dataset.siteNavigation = to ? "open" : "closed";
+          if (!narrow.matches)
+            try {
+              if (to) localStorage.removeItem("charcell-navigation");
+              else localStorage.setItem("charcell-navigation", "closed");
+            } catch {
+              // Blocked storage: the choice lasts until the page is left.
+            }
+          showNavigation();
+        };
+        const toggleNavigation = () => setNavigation(!open());
+        showNavigation();
+        navigation.addEventListener("click", toggleNavigation);
+        narrow.addEventListener("change", showNavigation);
+        // The go-to sits in the sidebar, so going to it opens that first.
+        const goTo = () => {
+          if (!open()) setNavigation(true);
+          document.getElementById("site-go")?.focus();
+        };
+        document.addEventListener("site:go-to", goTo);
+
+        // The keys the footer lists, anywhere outside a field: `n` the
+        // navigation, `m` the mode, `[` and `]` the pages before and after
+        // (`/` is the go-to's own). Escape closes a sidebar open over the page.
+        const typing = (target) =>
+          target instanceof HTMLElement &&
+          (target.isContentEditable ||
+            ["INPUT", "TEXTAREA", "SELECT"].includes(target.tagName));
+        const key = (name) =>
+          document.querySelector(`.site__key[data-key="${name}"]`);
+        document.addEventListener("keydown", (event) => {
+          // Option stays allowed: some layouts type `[` and `]` with it.
+          if (event.ctrlKey || event.metaKey) return;
+          if (
+            event.key === "Escape" &&
+            !event.defaultPrevented &&
+            narrow.matches &&
+            open()
+          ) {
+            setNavigation(false);
+            navigation.focus();
+            return;
+          }
+          if (typing(event.target)) return;
+          if (event.key === "m") toggle();
+          else if (event.key === "n") toggleNavigation();
+          else if (event.key === "[" || event.key === "]")
+            key(event.key)?.click();
+          else return;
+          event.preventDefault();
+        });
+        key("m")?.addEventListener("click", toggle);
+        key("n")?.addEventListener("click", toggleNavigation);
+        key("/")?.addEventListener("click", goTo);
+      })();
+    </script></body></html>

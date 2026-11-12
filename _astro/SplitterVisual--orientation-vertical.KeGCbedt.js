@@ -1,0 +1,1 @@
+import{y as e}from"./unlinked.DAjBgYoT.js";import{t}from"./jsx-runtime._2bRE77D.js";var n=t();function r(){return(0,n.jsx)(e,{orientation:`vertical`})}export{r as SplitterVisualExample};

@@ -1,0 +1,1 @@
+import{H as e,rt as t}from"./unlinked.DAjBgYoT.js";import{t as n}from"./jsx-runtime._2bRE77D.js";var r=n();function i(){return(0,r.jsx)(e,{placement:`right-start`,label:`rider details`,trigger:({triggerProps:e})=>(0,r.jsx)(t,{...e,label:`details`}),children:`ben, leader of the polecats`})}export{i as PopoverExample};

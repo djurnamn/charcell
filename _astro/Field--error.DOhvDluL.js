@@ -1,0 +1,1 @@
+import{K as e,d as t}from"./unlinked.DAjBgYoT.js";import{t as n}from"./jsx-runtime._2bRE77D.js";var r=n();function i(){return(0,r.jsx)(e,{label:`name`,htmlFor:`name`,description:`read out by the announcer`,errorMessage:`give us your name`,children:({control:e})=>(0,r.jsx)(t,{...e,placeholder:`doreen schmorley`})})}export{i as FieldExample};

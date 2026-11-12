@@ -1,0 +1,1 @@
+import{T as e}from"./unlinked.DAjBgYoT.js";import{t}from"./jsx-runtime._2bRE77D.js";var n=t();function r(){return(0,n.jsx)(e,{fill:!0})}export{r as SplitGridVisualExample};

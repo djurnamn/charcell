@@ -1,0 +1,1 @@
+import{r as e,t}from"./react.C1VktWof.js";import{u as n}from"./unlinked.DAjBgYoT.js";import{t as r}from"./jsx-runtime._2bRE77D.js";var i=e(t(),1),a=r();function o(){let[e,t]=(0,i.useState)(`do not kick dumpster.`);return(0,a.jsx)(n,{value:e,onValueChange:t,placeholder:`warning: do not`,"aria-label":`sign`,disabled:!0})}export{o as TextareaExample};

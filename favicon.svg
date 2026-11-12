@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <!-- one cell, a block cursor in it: 1 wide to 2 tall, as the kit's cell. -->
+  <style>
+    .ground { fill: #000; }
+    .cursor { fill: #fff; }
+    @media (prefers-color-scheme: light) {
+      .ground { fill: #fff; }
+      .cursor { fill: #000; }
+    }
+  </style>
+  <rect class="ground" width="16" height="16" />
+  <rect class="cursor" x="5" y="2" width="6" height="12" />
+</svg>

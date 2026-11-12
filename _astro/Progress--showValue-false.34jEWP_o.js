@@ -1,0 +1,1 @@
+import{V as e}from"./unlinked.DAjBgYoT.js";import{t}from"./jsx-runtime._2bRE77D.js";var n=t();function r(){return(0,n.jsx)(e,{value:42,label:`filling the gas can`,showValue:!1})}export{r as ProgressExample};

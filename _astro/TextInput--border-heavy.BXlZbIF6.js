@@ -1,0 +1,1 @@
+import{d as e}from"./unlinked.DAjBgYoT.js";import{t}from"./jsx-runtime._2bRE77D.js";var n=t();function r(){return(0,n.jsx)(e,{border:`heavy`,placeholder:`search highway 9`,"aria-label":`search highway 9`})}export{r as TextInputExample};

@@ -1,0 +1,1 @@
+import{o as e,rt as t}from"./unlinked.DAjBgYoT.js";import{t as n}from"./jsx-runtime._2bRE77D.js";var r=n();function i(){return(0,r.jsx)(e,{placement:`right`,trigger:({triggerProps:e})=>(0,r.jsx)(t,{...e,label:`?`}),children:`road combat tips`})}export{i as TooltipExample};

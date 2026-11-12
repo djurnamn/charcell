@@ -1,0 +1,1 @@
+import{G as e}from"./unlinked.DAjBgYoT.js";import{t}from"./jsx-runtime._2bRE77D.js";var n=t();function r(){return(0,n.jsx)(e,{context:`success`,title:`the safe is open`,children:`154492 was the combination.`})}export{r as InlineMessageExample};

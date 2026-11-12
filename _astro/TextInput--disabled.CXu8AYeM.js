@@ -1,0 +1,1 @@
+import{r as e,t}from"./react.C1VktWof.js";import{d as n}from"./unlinked.DAjBgYoT.js";import{t as r}from"./jsx-runtime._2bRE77D.js";var i=e(t(),1),a=r();function o(){let[e,t]=(0,i.useState)(`doreen schmorley`);return(0,a.jsx)(n,{value:e,onValueChange:t,placeholder:`search highway 9`,"aria-label":`search highway 9`,disabled:!0})}export{o as TextInputExample};

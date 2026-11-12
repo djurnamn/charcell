@@ -1,0 +1,1 @@
+import{X as e}from"./unlinked.DAjBgYoT.js";import{t}from"./jsx-runtime._2bRE77D.js";var n=t();function r(){return(0,n.jsx)(e,{title:`quohog`,border:`heavy`,children:`the customer with the knife is always right.`})}export{r as FrameExample};
