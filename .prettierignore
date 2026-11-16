@@ -14,9 +14,6 @@ test/text/scenarios.json
 expressibility/cells/
 pnpm-lock.yaml
 
-# Written by the sibling pin tool, in its own layout.
-sibling-pin.json
-
 # Agent worktrees, which are full copies of the repository.
 .claude/
 

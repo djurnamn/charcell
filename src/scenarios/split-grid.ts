@@ -9,16 +9,11 @@ const rows = [{ id: "free" }, { id: "jailed" }];
 
 // A pane's names, a row each, where the grid gives this column and row.
 const names = (column: string, row: string, lines: string[]): Content => ({
-  when: "column",
-  is: column,
+  when: { column, row },
   children: {
-    when: "row",
-    is: row,
-    children: {
-      tag: "div",
-      props: { style: "padding: 0 1ch;" },
-      children: lines.map((name) => ({ tag: "div", children: name })),
-    },
+    tag: "div",
+    props: { style: "padding: 0 1ch;" },
+    children: lines.map((name) => ({ tag: "div", children: name })),
   },
 });
 

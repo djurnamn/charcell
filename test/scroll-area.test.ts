@@ -40,6 +40,52 @@ describe("the scroll area", () => {
     }
   });
 
+  test("the viewport is marked along an axis only while that axis has something to scroll", () => {
+    // The stylesheet holds overscroll along a marked axis alone: an area
+    // that held an axis with nothing to scroll would swallow a finger's
+    // drag, the page's share of it too.
+    const root = document.createElement("div");
+    root.innerHTML = `<div class="CharcellScrollArea__viewport"></div>`;
+    const viewport = root.firstElementChild as HTMLElement;
+    const size = { scrollWidth: 320, clientWidth: 320 };
+    for (const name of ["scrollWidth", "clientWidth"] as const)
+      Object.defineProperty(viewport, name, { get: () => size[name] });
+    Object.defineProperty(viewport, "scrollHeight", { get: () => 480 });
+    Object.defineProperty(viewport, "clientHeight", { get: () => 160 });
+    const vertical = "CharcellScrollArea__viewport--scrolling-vertical";
+    const horizontal = "CharcellScrollArea__viewport--scrolling-horizontal";
+    const marks = () =>
+      [vertical, horizontal].filter((name) =>
+        viewport.classList.contains(name),
+      );
+    const canvas = HTMLCanvasElement.prototype.getContext;
+    HTMLCanvasElement.prototype.getContext = (() => ({
+      font: "",
+      measureText: () => ({ width: 8 }),
+    })) as unknown as typeof canvas;
+    const engine = new ScrollAreaEngine(root, {
+      stepped: false,
+      orientation: "horizontal",
+    });
+    try {
+      // Across, the content fits; down, the area does not scroll.
+      expect(marks()).toEqual([]);
+      size.scrollWidth = 640;
+      engine.update({ stepped: false, orientation: "horizontal" });
+      expect(marks()).toEqual([horizontal]);
+      engine.update({ stepped: false, orientation: "both" });
+      expect(marks()).toEqual([vertical, horizontal]);
+      size.scrollWidth = 320;
+      engine.update({ stepped: false, orientation: "both" });
+      expect(marks()).toEqual([vertical]);
+    } finally {
+      // Without an engine nothing is held.
+      engine.destroy();
+      HTMLCanvasElement.prototype.getContext = canvas;
+    }
+    expect(marks()).toEqual([]);
+  });
+
   test("the thumb is whole cells, at either end only when the content is", () => {
     // 20 rows over 200: two cells of a 20-cell track.
     const at = (offset: number) => thumbCells(20, 320, 3200, offset, 2880);

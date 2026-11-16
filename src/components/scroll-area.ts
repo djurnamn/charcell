@@ -57,7 +57,7 @@ export default defineTemplate({
       type: "'vertical' | 'horizontal' | 'both'",
       default: "vertical",
     },
-    /** `contain` keeps a scroll at the end from moving the page; `none` also stops the platform's bounce. */
+    /** `contain` keeps a scroll at the end from moving the page; `none` also stops the platform's bounce. Held along an axis with something to scroll; an area that scrolls across alone holds it for a mouse or a trackpad only, so a finger's drag still moves the page. */
     overscroll: { type: "'auto' | 'contain' | 'none'", default: "auto" },
     /** The region's accessible name. */
     label: { type: "string" },

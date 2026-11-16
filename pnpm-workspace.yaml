@@ -1,4 +1,3 @@
-overrides:
 allowBuilds:
   "@parcel/watcher": true
   esbuild: true
@@ -19,6 +18,7 @@ minimumReleaseAgeExclude:
   - "@scaffold-ui-kit/add"
   - "@scaffold-ui-kit/helpers"
   - "@scaffold-ui-kit/testing"
+  - charcell
   - hard-reset
   - scaffold-ui-kit
   - use-bem

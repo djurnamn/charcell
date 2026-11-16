@@ -168,6 +168,8 @@ export class ScrollAreaEngine {
   destroy() {
     // The tab stop as the template gave it, for an engine attached again.
     if (this.focusable && this.viewport) this.viewport.tabIndex = 0;
+    for (const axis of ["block", "inline"] as const)
+      this.viewport?.classList.remove(this.scrolling(axis));
     this.observer?.disconnect();
     this.cleanups.forEach((cleanup) => cleanup());
     this.cleanups = [];
@@ -210,6 +212,11 @@ export class ScrollAreaEngine {
     );
   }
 
+  /** The viewport's class while an axis has something to scroll. */
+  private scrolling(axis: "block" | "inline") {
+    return `${BLOCK}__viewport--scrolling-${axis === "block" ? "vertical" : "horizontal"}`;
+  }
+
   /** Each axis's range on whole cells (padding the content to the next
    *  one), and the steps the stylesheet takes it in. */
   private measure() {
@@ -245,16 +252,21 @@ export class ScrollAreaEngine {
     }
     this.draw();
     this.revealActive?.();
+    const vertical =
+      this.scrolls("block") &&
+      viewport.scrollHeight - viewport.clientHeight > 0.5;
+    const horizontal =
+      this.scrolls("inline") &&
+      viewport.scrollWidth - viewport.clientWidth > 0.5;
+    // The stylesheet holds overscroll only along an axis marked here. An
+    // area with nothing to scroll along one would otherwise still hold it,
+    // and a finger's drag over it, never quite straight, would move
+    // neither the area nor the page around it.
+    viewport.classList.toggle(this.scrolling("block"), vertical);
+    viewport.classList.toggle(this.scrolling("inline"), horizontal);
     // A tab stop only while something scrolls, so focus never lands where
     // nothing shows it; it stays on an area that stops scrolling under it.
-    if (this.focusable) {
-      const scrolls =
-        (this.scrolls("block") &&
-          viewport.scrollHeight - viewport.clientHeight > 0.5) ||
-        (this.scrolls("inline") &&
-          viewport.scrollWidth - viewport.clientWidth > 0.5);
-      viewport.tabIndex = scrolls ? 0 : -1;
-    }
+    if (this.focusable) viewport.tabIndex = vertical || horizontal ? 0 : -1;
   }
 
   /** The thumbs, in whole cells, at the painted offset. */

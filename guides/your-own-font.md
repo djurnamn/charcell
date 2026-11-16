@@ -16,7 +16,7 @@ starts between two pixels. the frame on the left is drawn with css and holds.
 the same frame as text, on the right, with each line drawn on its cell's whole
 pixels, breaks at every cell:
 
-![a frame titled inbox in jetbrains mono, drawn with css on the left and as text on the right, where its lines break at every cell](your-own-font/frame-jetbrains-mono.png)
+![a frame titled polecats in jetbrains mono, drawn with css on the left and as text on the right, where its lines break at every cell](your-own-font/frame-jetbrains-mono.png)
 
 in the bundled font, the two are the same:
 
@@ -209,17 +209,17 @@ component and its text version spill the same way. the adjusted jetbrains mono
 fails it in a few cells:
 
 ```
-dark tree: 2 unread, 12,2 |?/i|  14,2 |?/i|
+dark tree: 2 unread, 16,2 |?/i|  18,2 |?/i|
 ```
 
 each unread cell is given by its column and row, then `?` for the character
 it couldn't read and the style it found. here, two cells of the selected row
-in the tree, columns 12 and 14 of row 2. the row below is `folders [-]`, and
+in the tree, columns 16 and 18 of row 2. the row below is `the gorge [–]`, and
 its brackets reach 0.07px past the line, the two listed in the build's output.
 enlarged from 1x, the faint marks on the selected row's bottom edge are the
 tops of `[` and `]`:
 
-![the selected row sent above folders [-], enlarged, with faint marks on the selected row's bottom edge above each bracket](your-own-font/tree-past-the-line.png)
+![the selected row melonweed above the gorge and its disclosure brackets, enlarged, with faint marks on the selected row's bottom edge above each bracket](your-own-font/tree-past-the-line.png)
 
 `pnpm text:build` writes the comparison page, `test/text/compare.html`. it
 shows every case beside its text version, side by side or overlaid as a

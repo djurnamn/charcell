@@ -1,6 +1,6 @@
 {
   "name": "charcell",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "a terminal ui kit for react, vue and svelte",
   "homepage": "https://djurnamn.github.io/charcell/",
   "repository": {

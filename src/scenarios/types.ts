@@ -29,7 +29,9 @@ export type Value =
  * the part again with the props it names, and `when` renders its children
  * only where the scope holds a value at its path, so the part ends where the
  * data does, however deep. With `is`, it renders them only where that value
- * is the one named: a panel's content for one tab.
+ * is the one named: a panel's content for one tab. Given paths and the values
+ * they hold instead, `{ column: "gangs", row: "free" }`, it renders them only
+ * where every one holds its own: a grid's content for one cell.
  */
 export type Content =
   | string
@@ -55,7 +57,8 @@ export type Content =
       children: Content;
     }
   | { call: string; props?: Record<string, Value> }
-  | { when: string; is?: string; children: Content };
+  | { when: string; is?: string; children: Content }
+  | { when: Record<string, string>; children: Content };
 
 /** One configuration of a component: the props it sets over the shared ones. */
 export interface Scenario {

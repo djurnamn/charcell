@@ -47,7 +47,7 @@ export default defineTemplate({
       type: "'vertical' | 'horizontal' | 'both'",
       default: "vertical",
     },
-    /** `contain` keeps a scroll at the end from moving the page; `none` also stops the platform's bounce. */
+    /** `contain` keeps a scroll at the end from moving the page; `none` also stops the platform's bounce. Held along an axis with something to scroll; an area that scrolls across alone holds it for a mouse or a trackpad only, so a finger's drag still moves the page. */
     overscroll: { type: "'auto' | 'contain' | 'none'", default: "auto" },
     /** The region's accessible name. */
     label: { type: "string" },
@@ -113,28 +113,44 @@ export default defineTemplate({
               "--charcell-scroll-area--block block, --charcell-scroll-area--inline inline",
           },
           // The axes the viewport scrolls.
-          // `overscroll` holds only the axes that scroll: a wheel along the
-          // other goes on to the page.
+          ...oneOf(["--horizontal", "--both"], {
+            none: { "&__viewport": { overflow: "hidden auto" } },
+            "--horizontal": { "&__viewport": { overflow: "auto hidden" } },
+            "--both": { "&__viewport": { overflow: "auto" } },
+          }),
+          // `overscroll` holds an axis only while the engine marks it as
+          // having something to scroll: a wheel along the other goes on to
+          // the page. So does a finger's drag, which is never straight:
+          // Chromium drops a whole touch scroll, the page's share of it
+          // too, at an area that holds an axis the drag has any movement
+          // along and cannot scroll it.
+          "&__viewport--scrolling-vertical": {
+            overscrollBehaviorY: "var(--charcell-scroll-area--overscroll)",
+          },
+          "&__viewport--scrolling-horizontal": {
+            overscrollBehaviorX:
+              "var(--charcell-scroll-area--overscroll-across)",
+          },
+          // An area that scrolls across alone sits in a page that scrolls
+          // down, and under a finger even an axis it can scroll costs the
+          // page: a drag that slants toward the end the area rests at moves
+          // nothing. So it holds across for a mouse or a trackpad only,
+          // where the hold is what stops the bounce and the swipe back.
           ...oneOf(["--horizontal", "--both"], {
             none: {
-              "&__viewport": {
-                overflow: "hidden auto",
-                overscrollBehavior:
-                  "auto var(--charcell-scroll-area--overscroll)",
-              },
+              "--charcell-scroll-area--overscroll-across":
+                "var(--charcell-scroll-area--overscroll)",
             },
             "--horizontal": {
-              "&__viewport": {
-                overflow: "auto hidden",
-                overscrollBehavior:
-                  "var(--charcell-scroll-area--overscroll) auto",
+              "--charcell-scroll-area--overscroll-across": "auto",
+              "@media (hover: hover) and (pointer: fine)": {
+                "--charcell-scroll-area--overscroll-across":
+                  "var(--charcell-scroll-area--overscroll)",
               },
             },
             "--both": {
-              "&__viewport": {
-                overflow: "auto",
-                overscrollBehavior: "var(--charcell-scroll-area--overscroll)",
-              },
+              "--charcell-scroll-area--overscroll-across":
+                "var(--charcell-scroll-area--overscroll)",
             },
           }),
           ...oneOf(["--overscroll-contain", "--overscroll-none"], {

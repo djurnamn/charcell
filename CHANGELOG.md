@@ -5,6 +5,18 @@ notable changes to charcell. the format follows
 [semantic versioning](https://semver.org/) from 1.0. before that, a minor
 version may break.
 
+## [0.1.1] - 2026-11-16
+
+### Fixed
+
+- **a touch drag that starts on a table or a code block moves the page.** a
+  `ScrollArea` held `overscroll` along an axis it had nothing to scroll, and
+  chromium on android drops a whole drag there, so a page did not follow a
+  finger that started on a `Table` or a `CodeBlock`. an area now holds
+  `overscroll` only along an axis with something to scroll, and one that
+  scrolls across alone holds it for a mouse or a trackpad only: under a
+  finger it takes the browser's own overscroll.
+
 ## [0.1.0] - 2026-11-12
 
 the first release: a monochrome, monospace ui kit that draws only what a

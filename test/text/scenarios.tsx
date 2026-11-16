@@ -138,9 +138,13 @@ function render(
   }
   if ("when" in content)
     return (
-      content.is === undefined
-        ? lookUp(scope, content.when)
-        : lookUp(scope, content.when) === content.is
+      typeof content.when !== "string"
+        ? Object.entries(content.when).every(
+            ([path, value]) => lookUp(scope, path) === value,
+          )
+        : !("is" in content) || content.is === undefined
+          ? lookUp(scope, content.when)
+          : lookUp(scope, content.when) === content.is
     )
       ? render(content.children, scope, key, parts)
       : null;

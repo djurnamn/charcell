@@ -6,7 +6,7 @@ const props = {
   columns: [
     { key: "rider", label: "rider" },
     { key: "weapon", label: "weapon" },
-    { key: "hits", label: "hits", align: "end" },
+    { key: "hits", label: "hits", align: "end" as const },
   ],
   rows: [
     { rider: "a vulture", weapon: "chain", hits: "4" },

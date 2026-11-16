@@ -14,17 +14,11 @@ import {
   TreeGroup,
   TreeItem,
 } from "../../dist/react/unlinked/index";
+import table from "../../src/scenarios/table";
 
-const COLUMNS = [
-  { key: "rider", label: "rider" },
-  { key: "weapon", label: "weapon" },
-  { key: "hits", label: "hits", align: "end" as const },
-];
-const RECORDS = [
-  { rider: "a vulture", weapon: "chain", hits: "4" },
-  { rider: "a vulture", weapon: "chainsaw", hits: "1" },
-  { rider: "a rottwheeler", weapon: "mace", hits: "4" },
-];
+// The table the scenarios show. Its text in `cases.cjs` is written out by
+// hand, as every text version is.
+const { columns: COLUMNS, rows: RECORDS } = table.props;
 const sized = (width: string, element: ReactElement) => (
   <div style={{ width }}>{element}</div>
 );
